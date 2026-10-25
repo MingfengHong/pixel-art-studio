@@ -22,8 +22,6 @@ import package_skill
 
 CONFIG = json.loads((SRC / "site.json").read_text(encoding="utf-8"))
 LANGS = CONFIG["languages"]
-FONTS = ["https://cdn.jsdelivr.net/npm/@fontsource/fusion-pixel-12px-proportional-sc@5.3.0/index.css",
-         "https://cdn.jsdelivr.net/npm/@fontsource/fusion-pixel-12px-monospaced-sc@5.3.0/index.css"]
 
 
 def esc(value):
@@ -96,8 +94,8 @@ class Page:
 <meta property="og:image" content="{esc(CONFIG['url'])}examples/interface-kit/preview.png">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="{favicon}">
-<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-{"".join(f'<link rel="stylesheet" href="{font}">' for font in FONTS)}
+<link rel="preload" href="{self.root}assets/fonts/fusion-pixel-12px-proportional-zh-hans.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="{self.root}assets/fonts/fonts.css">
 <link rel="stylesheet" href="{self.root}assets/style.css">
 </head>
 <body>
@@ -258,6 +256,14 @@ def main():
     art_common.load_image(SKILL / "assets", "examples/rpg-kit/mage.json#down-stand").resize((32, 32), 0).save(OUT / "assets" / "favicon.png")
     ui.generate(SKILL / "assets" / "examples" / "interface-kit" / "recipe.json", OUT / "playground")
     shutil.copy2(OUT / "playground" / "preview.html", OUT / "playground" / "index.html")
+    # Serve the embedded playground and example previews with the site's bundled fonts.
+    for preview in [*(OUT / "examples").rglob("*.html"), *(OUT / "playground").glob("*.html")]:
+        root = "../" * (len(preview.relative_to(OUT).parts) - 1)
+        content = preview.read_text(encoding="utf-8")
+        content = re.sub(r"<!-- Pixel font with Chinese glyphs.*?-->\n", "", content)
+        content = re.sub(r"https://cdn\.jsdelivr\.net/npm/@fontsource/fusion-pixel-[^\"]+/index\.css",
+                         f"{root}assets/fonts/fonts.css", content)
+        preview.write_text(content, encoding="utf-8")
     for lang in LANGS:
         write(*home(lang))
         for index, slug in enumerate(CONFIG["docs"]):

@@ -1,0 +1,4 @@
+* text=auto eol=lf
+*.png binary
+*.skill binary
+skills/pixel-art-studio/assets/kenney/**/License.txt -text

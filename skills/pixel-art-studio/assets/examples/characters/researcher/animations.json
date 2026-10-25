@@ -1,0 +1,142 @@
+{
+  "name": "researcher",
+  "atlas": "atlas.json",
+  "clips": {
+    "front-idle": {
+      "loop": true,
+      "frames": [
+        {
+          "name": "front-stand",
+          "duration_ms": 700
+        },
+        {
+          "name": "front-idle",
+          "duration_ms": 180
+        }
+      ]
+    },
+    "front-walk": {
+      "loop": true,
+      "frames": [
+        {
+          "name": "front-walk-a",
+          "duration_ms": 160
+        },
+        {
+          "name": "front-stand",
+          "duration_ms": 160
+        },
+        {
+          "name": "front-walk-b",
+          "duration_ms": 160
+        },
+        {
+          "name": "front-stand",
+          "duration_ms": 160
+        }
+      ]
+    },
+    "back-idle": {
+      "loop": true,
+      "frames": [
+        {
+          "name": "back-stand",
+          "duration_ms": 700
+        },
+        {
+          "name": "back-idle",
+          "duration_ms": 180
+        }
+      ]
+    },
+    "back-walk": {
+      "loop": true,
+      "frames": [
+        {
+          "name": "back-walk-a",
+          "duration_ms": 160
+        },
+        {
+          "name": "back-stand",
+          "duration_ms": 160
+        },
+        {
+          "name": "back-walk-b",
+          "duration_ms": 160
+        },
+        {
+          "name": "back-stand",
+          "duration_ms": 160
+        }
+      ]
+    },
+    "right-idle": {
+      "loop": true,
+      "frames": [
+        {
+          "name": "right-stand",
+          "duration_ms": 700
+        },
+        {
+          "name": "right-idle",
+          "duration_ms": 180
+        }
+      ]
+    },
+    "right-walk": {
+      "loop": true,
+      "frames": [
+        {
+          "name": "right-walk-a",
+          "duration_ms": 160
+        },
+        {
+          "name": "right-stand",
+          "duration_ms": 160
+        },
+        {
+          "name": "right-walk-b",
+          "duration_ms": 160
+        },
+        {
+          "name": "right-stand",
+          "duration_ms": 160
+        }
+      ]
+    },
+    "left-idle": {
+      "loop": true,
+      "frames": [
+        {
+          "name": "left-stand",
+          "duration_ms": 700
+        },
+        {
+          "name": "left-idle",
+          "duration_ms": 180
+        }
+      ]
+    },
+    "left-walk": {
+      "loop": true,
+      "frames": [
+        {
+          "name": "left-walk-a",
+          "duration_ms": 160
+        },
+        {
+          "name": "left-stand",
+          "duration_ms": 160
+        },
+        {
+          "name": "left-walk-b",
+          "duration_ms": 160
+        },
+        {
+          "name": "left-stand",
+          "duration_ms": 160
+        }
+      ]
+    }
+  }
+}

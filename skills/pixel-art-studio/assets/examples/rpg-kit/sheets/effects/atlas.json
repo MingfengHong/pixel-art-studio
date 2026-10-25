@@ -1,0 +1,100 @@
+{
+  "format": "pixel-art-studio-atlas-v1",
+  "name": "effects",
+  "image": "atlas.png",
+  "canvas": [
+    16,
+    16
+  ],
+  "size": [
+    101,
+    16
+  ],
+  "padding": 1,
+  "frames": [
+    {
+      "name": "spark-a",
+      "rect": [
+        0,
+        0,
+        16,
+        16
+      ],
+      "duration_ms": 80,
+      "pivot": [
+        8,
+        8
+      ]
+    },
+    {
+      "name": "spark-b",
+      "rect": [
+        17,
+        0,
+        16,
+        16
+      ],
+      "duration_ms": 80,
+      "pivot": [
+        8,
+        8
+      ]
+    },
+    {
+      "name": "spark-c",
+      "rect": [
+        34,
+        0,
+        16,
+        16
+      ],
+      "duration_ms": 80,
+      "pivot": [
+        8,
+        8
+      ]
+    },
+    {
+      "name": "heal-a",
+      "rect": [
+        51,
+        0,
+        16,
+        16
+      ],
+      "duration_ms": 80,
+      "pivot": [
+        8,
+        8
+      ]
+    },
+    {
+      "name": "heal-b",
+      "rect": [
+        68,
+        0,
+        16,
+        16
+      ],
+      "duration_ms": 80,
+      "pivot": [
+        8,
+        8
+      ]
+    },
+    {
+      "name": "heal-c",
+      "rect": [
+        85,
+        0,
+        16,
+        16
+      ],
+      "duration_ms": 80,
+      "pivot": [
+        8,
+        8
+      ]
+    }
+  ]
+}

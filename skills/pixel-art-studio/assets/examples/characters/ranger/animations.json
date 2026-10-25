@@ -1,0 +1,142 @@
+{
+  "name": "ranger",
+  "atlas": "atlas.json",
+  "clips": {
+    "front-idle": {
+      "loop": true,
+      "frames": [
+        {
+          "name": "front-stand",
+          "duration_ms": 800
+        },
+        {
+          "name": "front-idle",
+          "duration_ms": 180
+        }
+      ]
+    },
+    "front-walk": {
+      "loop": true,
+      "frames": [
+        {
+          "name": "front-walk-a",
+          "duration_ms": 140
+        },
+        {
+          "name": "front-stand",
+          "duration_ms": 140
+        },
+        {
+          "name": "front-walk-b",
+          "duration_ms": 140
+        },
+        {
+          "name": "front-stand",
+          "duration_ms": 140
+        }
+      ]
+    },
+    "back-idle": {
+      "loop": true,
+      "frames": [
+        {
+          "name": "back-stand",
+          "duration_ms": 800
+        },
+        {
+          "name": "back-idle",
+          "duration_ms": 180
+        }
+      ]
+    },
+    "back-walk": {
+      "loop": true,
+      "frames": [
+        {
+          "name": "back-walk-a",
+          "duration_ms": 140
+        },
+        {
+          "name": "back-stand",
+          "duration_ms": 140
+        },
+        {
+          "name": "back-walk-b",
+          "duration_ms": 140
+        },
+        {
+          "name": "back-stand",
+          "duration_ms": 140
+        }
+      ]
+    },
+    "right-idle": {
+      "loop": true,
+      "frames": [
+        {
+          "name": "right-stand",
+          "duration_ms": 800
+        },
+        {
+          "name": "right-idle",
+          "duration_ms": 180
+        }
+      ]
+    },
+    "right-walk": {
+      "loop": true,
+      "frames": [
+        {
+          "name": "right-walk-a",
+          "duration_ms": 140
+        },
+        {
+          "name": "right-stand",
+          "duration_ms": 140
+        },
+        {
+          "name": "right-walk-b",
+          "duration_ms": 140
+        },
+        {
+          "name": "right-stand",
+          "duration_ms": 140
+        }
+      ]
+    },
+    "left-idle": {
+      "loop": true,
+      "frames": [
+        {
+          "name": "left-stand",
+          "duration_ms": 800
+        },
+        {
+          "name": "left-idle",
+          "duration_ms": 180
+        }
+      ]
+    },
+    "left-walk": {
+      "loop": true,
+      "frames": [
+        {
+          "name": "left-walk-a",
+          "duration_ms": 140
+        },
+        {
+          "name": "left-stand",
+          "duration_ms": 140
+        },
+        {
+          "name": "left-walk-b",
+          "duration_ms": 140
+        },
+        {
+          "name": "left-stand",
+          "duration_ms": 140
+        }
+      ]
+    }
+  }
+}

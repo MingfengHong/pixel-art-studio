@@ -1,0 +1,337 @@
+{
+  "name": "river-town",
+  "tile_size": 16,
+  "seed": 5,
+  "map": [
+    "gggggggggggggggggggg",
+    "gggggggggggggggggggg",
+    "gggggggggggggggggggg",
+    "gggggggggggggggggggg",
+    "ggggggggggggpggggggg",
+    "pppppppppppppppppppp",
+    "gggggggggpgggggggggg",
+    "gfffgggggpgggggggggg",
+    "gfffgggggpgggggwwwwg",
+    "gfffgggggpggggwwwwww",
+    "gfffggpggpggggwwwwww",
+    "ggggggpggpgggggwwwwg"
+  ],
+  "objects": [
+    {
+      "source": "inputs/object-18.png",
+      "at": [
+        88,
+        32
+      ],
+      "shadow": true
+    },
+    {
+      "source": "inputs/object-16.png",
+      "at": [
+        176,
+        32
+      ],
+      "depth": -8
+    },
+    {
+      "source": "inputs/object-15.png",
+      "at": [
+        80,
+        112
+      ],
+      "depth": -8
+    },
+    {
+      "source": "inputs/object-17.png",
+      "at": [
+        112,
+        0
+      ],
+      "shadow": true
+    },
+    {
+      "source": "inputs/object-17.png",
+      "at": [
+        224,
+        16
+      ],
+      "shadow": true
+    },
+    {
+      "source": "inputs/object-17.png",
+      "at": [
+        256,
+        32
+      ],
+      "shadow": true
+    },
+    {
+      "source": "inputs/object-17.png",
+      "at": [
+        144,
+        96
+      ],
+      "shadow": true
+    },
+    {
+      "source": "inputs/object-17.png",
+      "at": [
+        176,
+        112
+      ],
+      "shadow": true
+    },
+    {
+      "source": "inputs/object-17.png",
+      "at": [
+        288,
+        80
+      ],
+      "shadow": true
+    },
+    {
+      "source": "inputs/object-17.png",
+      "at": [
+        -16,
+        144
+      ],
+      "shadow": true
+    },
+    {
+      "source": "inputs/object-17.png",
+      "at": [
+        48,
+        16
+      ],
+      "shadow": true
+    },
+    {
+      "source": "inputs/object-7.png",
+      "at": [
+        226,
+        48
+      ],
+      "shadow": true
+    },
+    {
+      "source": "inputs/object-6.png",
+      "at": [
+        228,
+        64
+      ],
+      "shadow": true
+    },
+    {
+      "source": "inputs/object-12.png",
+      "at": [
+        160,
+        64
+      ],
+      "shadow": false
+    },
+    {
+      "source": "inputs/object-9.png",
+      "at": [
+        214,
+        64
+      ],
+      "shadow": false
+    },
+    {
+      "source": "inputs/object-6.png",
+      "at": [
+        130,
+        144
+      ],
+      "shadow": true
+    },
+    {
+      "source": "inputs/object-10.png",
+      "at": [
+        176,
+        160
+      ],
+      "shadow": false
+    },
+    {
+      "source": "inputs/object-8.png",
+      "at": [
+        136,
+        64
+      ],
+      "shadow": false
+    },
+    {
+      "source": "inputs/object-8.png",
+      "at": [
+        256,
+        96
+      ],
+      "shadow": false
+    },
+    {
+      "source": "inputs/object-14.png",
+      "at": [
+        32,
+        96
+      ],
+      "shadow": false
+    },
+    {
+      "source": "inputs/object-14.png",
+      "at": [
+        176,
+        96
+      ],
+      "shadow": false
+    },
+    {
+      "source": "inputs/object-11.png",
+      "at": [
+        304,
+        128
+      ],
+      "shadow": true
+    },
+    {
+      "source": "inputs/object-13.png",
+      "at": [
+        66,
+        176
+      ],
+      "shadow": true
+    },
+    {
+      "source": "inputs/object-1.png",
+      "at": [
+        16,
+        110
+      ]
+    },
+    {
+      "source": "inputs/object-1.png",
+      "at": [
+        32,
+        110
+      ]
+    },
+    {
+      "source": "inputs/object-1.png",
+      "at": [
+        48,
+        110
+      ]
+    },
+    {
+      "source": "inputs/object-1.png",
+      "at": [
+        16,
+        126
+      ]
+    },
+    {
+      "source": "inputs/object-1.png",
+      "at": [
+        32,
+        126
+      ]
+    },
+    {
+      "source": "inputs/object-1.png",
+      "at": [
+        48,
+        126
+      ]
+    },
+    {
+      "source": "inputs/object-1.png",
+      "at": [
+        16,
+        142
+      ]
+    },
+    {
+      "source": "inputs/object-1.png",
+      "at": [
+        32,
+        142
+      ]
+    },
+    {
+      "source": "inputs/object-1.png",
+      "at": [
+        48,
+        142
+      ]
+    },
+    {
+      "source": "inputs/object-1.png",
+      "at": [
+        16,
+        158
+      ]
+    },
+    {
+      "source": "inputs/object-1.png",
+      "at": [
+        32,
+        158
+      ]
+    },
+    {
+      "source": "inputs/object-1.png",
+      "at": [
+        48,
+        158
+      ]
+    },
+    {
+      "source": "inputs/object-2.png",
+      "at": [
+        144,
+        96
+      ],
+      "shadow": true
+    },
+    {
+      "source": "inputs/object-3.png",
+      "at": [
+        208,
+        80
+      ],
+      "shadow": true
+    },
+    {
+      "source": "inputs/object-5.png",
+      "at": [
+        64,
+        80
+      ],
+      "shadow": true
+    },
+    {
+      "source": "inputs/object-0.png",
+      "at": [
+        256,
+        80
+      ],
+      "shadow": true
+    },
+    {
+      "source": "inputs/object-4.png",
+      "at": [
+        100,
+        84
+      ],
+      "shadow": true
+    }
+  ],
+  "scatter": [
+    {
+      "source": "inputs/object-8.png",
+      "count": 6,
+      "on": "g",
+      "seed": 9
+    }
+  ]
+}

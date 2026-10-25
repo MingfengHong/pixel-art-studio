@@ -1,0 +1,76 @@
+{
+  "name": "layered-attack",
+  "canvas": [
+    48,
+    48
+  ],
+  "pivot": [
+    24,
+    38
+  ],
+  "frame_count": 12,
+  "duration_ms": 80,
+  "loop": true,
+  "layers": [
+    {
+      "id": "body",
+      "source": "inputs/0.png",
+      "pivot": [
+        8,
+        16
+      ],
+      "keys": [
+        {
+          "time": 0,
+          "x": 24,
+          "y": 34
+        },
+        {
+          "time": 0.4,
+          "x": 24,
+          "y": 32
+        },
+        {
+          "time": 1,
+          "x": 24,
+          "y": 34
+        }
+      ]
+    },
+    {
+      "id": "blade",
+      "parent": "body",
+      "source": "inputs/1.png",
+      "pivot": [
+        3,
+        13
+      ],
+      "keys": [
+        {
+          "time": 0,
+          "x": 5,
+          "y": -5,
+          "angle": -15
+        },
+        {
+          "time": 0.25,
+          "x": 5,
+          "y": -7,
+          "angle": 25
+        },
+        {
+          "time": 0.55,
+          "x": 7,
+          "y": -5,
+          "angle": -70
+        },
+        {
+          "time": 1,
+          "x": 5,
+          "y": -5,
+          "angle": -15
+        }
+      ]
+    }
+  ]
+}

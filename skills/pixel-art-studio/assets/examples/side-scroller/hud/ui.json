@@ -1,0 +1,879 @@
+{
+  "name": "meadow-hud",
+  "theme": {
+    "ink": "#151515",
+    "border": "#6d7a8a",
+    "light": "#c9d2dc",
+    "surface": "#3a4656",
+    "inset": "#252d38",
+    "text": "#ffffff",
+    "muted": "#9aa6b3",
+    "accent": "#f4c542",
+    "health": "#e84a3f",
+    "mana": "#4aa3e8",
+    "xp": "#f4c542",
+    "shadow": "#151515",
+    "frame": "#e9e2cf",
+    "frame_light": "#ffffff",
+    "frame_dark": "#9f9786",
+    "button": "#56657a",
+    "title": "#f4c542",
+    "select": "#f4c542",
+    "bar_bg": "#252d38",
+    "corner": 1,
+    "rim": 2,
+    "style": "arcade"
+  },
+  "components": {
+    "world": {
+      "type": "image",
+      "size": [
+        320,
+        180
+      ],
+      "label": "",
+      "source": "inputs/world.png",
+      "default": "normal",
+      "states": {
+        "normal": "components/world/normal.png"
+      },
+      "layers": {}
+    },
+    "portrait": {
+      "type": "image",
+      "size": [
+        34,
+        34
+      ],
+      "label": "",
+      "source": "inputs/portrait.png",
+      "default": "normal",
+      "states": {
+        "normal": "components/portrait/normal.png"
+      },
+      "layers": {}
+    },
+    "stats": {
+      "type": "panel",
+      "size": [
+        116,
+        34
+      ],
+      "label": "",
+      "nine_slice": [
+        4,
+        4,
+        4,
+        4
+      ],
+      "slice_source": "skin",
+      "minimum_skin_size": [
+        9,
+        9
+      ],
+      "default": "normal",
+      "states": {
+        "normal": "components/stats/normal.png"
+      },
+      "layers": {
+        "skin": "components/stats/layer-skin.png"
+      }
+    },
+    "level": {
+      "type": "xp-bar",
+      "size": [
+        108,
+        9
+      ],
+      "label": "Lv 4",
+      "fill_rect": [
+        2,
+        2,
+        104,
+        5
+      ],
+      "value": 0.35,
+      "default": "normal",
+      "states": {
+        "empty": "components/level/empty.png",
+        "half": "components/level/half.png",
+        "full": "components/level/full.png",
+        "normal": "components/level/normal.png"
+      },
+      "layers": {
+        "track": "components/level/layer-track.png",
+        "fill": "components/level/layer-fill.png",
+        "text": "components/level/layer-text.png"
+      }
+    },
+    "health": {
+      "type": "health-bar",
+      "size": [
+        108,
+        10
+      ],
+      "label": "HP",
+      "fill_rect": [
+        2,
+        2,
+        104,
+        6
+      ],
+      "value_text": "45/60",
+      "value": 0.75,
+      "default": "normal",
+      "states": {
+        "empty": "components/health/empty.png",
+        "half": "components/health/half.png",
+        "full": "components/health/full.png",
+        "normal": "components/health/normal.png"
+      },
+      "layers": {
+        "track": "components/health/layer-track.png",
+        "fill": "components/health/layer-fill.png",
+        "text": "components/health/layer-text.png"
+      }
+    },
+    "stamina": {
+      "type": "stamina-bar",
+      "size": [
+        53,
+        8
+      ],
+      "label": "",
+      "fill_rect": [
+        2,
+        2,
+        49,
+        4
+      ],
+      "value": 0.8,
+      "default": "normal",
+      "states": {
+        "empty": "components/stamina/empty.png",
+        "half": "components/stamina/half.png",
+        "full": "components/stamina/full.png",
+        "normal": "components/stamina/normal.png"
+      },
+      "layers": {
+        "track": "components/stamina/layer-track.png",
+        "fill": "components/stamina/layer-fill.png"
+      }
+    },
+    "hunger": {
+      "type": "bar",
+      "size": [
+        53,
+        8
+      ],
+      "label": "",
+      "fill_rect": [
+        2,
+        2,
+        49,
+        4
+      ],
+      "value": 0.45,
+      "default": "normal",
+      "states": {
+        "empty": "components/hunger/empty.png",
+        "half": "components/hunger/half.png",
+        "full": "components/hunger/full.png",
+        "normal": "components/hunger/normal.png"
+      },
+      "layers": {
+        "track": "components/hunger/layer-track.png",
+        "fill": "components/hunger/layer-fill.png"
+      }
+    },
+    "coin": {
+      "type": "image",
+      "size": [
+        12,
+        12
+      ],
+      "label": "",
+      "source": "inputs/coin.png",
+      "default": "normal",
+      "states": {
+        "normal": "components/coin/normal.png"
+      },
+      "layers": {}
+    },
+    "coins": {
+      "type": "label",
+      "size": [
+        30,
+        9
+      ],
+      "label": "537",
+      "text": "537",
+      "duration_ms": 90,
+      "editable_text": true,
+      "default": "normal",
+      "states": {
+        "normal": "components/coins/normal.png"
+      },
+      "layers": {}
+    },
+    "gem": {
+      "type": "image",
+      "size": [
+        12,
+        12
+      ],
+      "label": "",
+      "source": "inputs/gem.png",
+      "default": "normal",
+      "states": {
+        "normal": "components/gem/normal.png"
+      },
+      "layers": {}
+    },
+    "gems": {
+      "type": "label",
+      "size": [
+        30,
+        9
+      ],
+      "label": "26",
+      "text": "26",
+      "duration_ms": 90,
+      "editable_text": true,
+      "default": "normal",
+      "states": {
+        "normal": "components/gems/normal.png"
+      },
+      "layers": {}
+    },
+    "craft": {
+      "type": "button",
+      "size": [
+        40,
+        36
+      ],
+      "label": "Craft",
+      "nine_slice": [
+        4,
+        4,
+        4,
+        4
+      ],
+      "slice_source": "skin",
+      "minimum_skin_size": [
+        9,
+        9
+      ],
+      "default": "normal",
+      "states": {
+        "normal": "components/craft/normal.png",
+        "hover": "components/craft/hover.png",
+        "focus": "components/craft/focus.png",
+        "pressed": "components/craft/pressed.png",
+        "disabled": "components/craft/disabled.png",
+        "selected": "components/craft/selected.png"
+      },
+      "layers": {
+        "skin": "components/craft/layer-skin.png",
+        "skin-normal": "components/craft/layer-skin-normal.png",
+        "skin-hover": "components/craft/layer-skin-hover.png",
+        "skin-focus": "components/craft/layer-skin-focus.png",
+        "skin-pressed": "components/craft/layer-skin-pressed.png",
+        "skin-disabled": "components/craft/layer-skin-disabled.png",
+        "skin-selected": "components/craft/layer-skin-selected.png"
+      },
+      "source": "inputs/craft.png"
+    },
+    "quests": {
+      "type": "button",
+      "size": [
+        40,
+        36
+      ],
+      "label": "Quests",
+      "nine_slice": [
+        4,
+        4,
+        4,
+        4
+      ],
+      "slice_source": "skin",
+      "minimum_skin_size": [
+        9,
+        9
+      ],
+      "default": "normal",
+      "states": {
+        "normal": "components/quests/normal.png",
+        "hover": "components/quests/hover.png",
+        "focus": "components/quests/focus.png",
+        "pressed": "components/quests/pressed.png",
+        "disabled": "components/quests/disabled.png",
+        "selected": "components/quests/selected.png"
+      },
+      "layers": {
+        "skin": "components/quests/layer-skin.png",
+        "skin-normal": "components/quests/layer-skin-normal.png",
+        "skin-hover": "components/quests/layer-skin-hover.png",
+        "skin-focus": "components/quests/layer-skin-focus.png",
+        "skin-pressed": "components/quests/layer-skin-pressed.png",
+        "skin-disabled": "components/quests/layer-skin-disabled.png",
+        "skin-selected": "components/quests/layer-skin-selected.png"
+      },
+      "source": "inputs/quests.png"
+    },
+    "clock": {
+      "type": "dial",
+      "size": [
+        40,
+        46
+      ],
+      "label": "Day 3",
+      "time": 0.62,
+      "face_rect": [
+        3,
+        0,
+        34,
+        34
+      ],
+      "default": "normal",
+      "states": {
+        "normal": "components/clock/normal.png",
+        "quarter-0": "components/clock/quarter-0.png",
+        "quarter-1": "components/clock/quarter-1.png",
+        "quarter-2": "components/clock/quarter-2.png",
+        "quarter-3": "components/clock/quarter-3.png"
+      },
+      "layers": {
+        "face": "components/clock/layer-face.png"
+      }
+    },
+    "bag-button": {
+      "type": "button",
+      "size": [
+        28,
+        28
+      ],
+      "label": "",
+      "nine_slice": [
+        4,
+        4,
+        4,
+        4
+      ],
+      "slice_source": "skin",
+      "minimum_skin_size": [
+        9,
+        9
+      ],
+      "default": "normal",
+      "states": {
+        "normal": "components/bag-button/normal.png",
+        "hover": "components/bag-button/hover.png",
+        "focus": "components/bag-button/focus.png",
+        "pressed": "components/bag-button/pressed.png",
+        "disabled": "components/bag-button/disabled.png",
+        "selected": "components/bag-button/selected.png"
+      },
+      "layers": {
+        "skin": "components/bag-button/layer-skin.png",
+        "skin-normal": "components/bag-button/layer-skin-normal.png",
+        "skin-hover": "components/bag-button/layer-skin-hover.png",
+        "skin-focus": "components/bag-button/layer-skin-focus.png",
+        "skin-pressed": "components/bag-button/layer-skin-pressed.png",
+        "skin-disabled": "components/bag-button/layer-skin-disabled.png",
+        "skin-selected": "components/bag-button/layer-skin-selected.png"
+      },
+      "source": "inputs/bag-button.png"
+    },
+    "tool-button": {
+      "type": "button",
+      "size": [
+        28,
+        28
+      ],
+      "label": "",
+      "nine_slice": [
+        4,
+        4,
+        4,
+        4
+      ],
+      "slice_source": "skin",
+      "minimum_skin_size": [
+        9,
+        9
+      ],
+      "default": "normal",
+      "states": {
+        "normal": "components/tool-button/normal.png",
+        "hover": "components/tool-button/hover.png",
+        "focus": "components/tool-button/focus.png",
+        "pressed": "components/tool-button/pressed.png",
+        "disabled": "components/tool-button/disabled.png",
+        "selected": "components/tool-button/selected.png"
+      },
+      "layers": {
+        "skin": "components/tool-button/layer-skin.png",
+        "skin-normal": "components/tool-button/layer-skin-normal.png",
+        "skin-hover": "components/tool-button/layer-skin-hover.png",
+        "skin-focus": "components/tool-button/layer-skin-focus.png",
+        "skin-pressed": "components/tool-button/layer-skin-pressed.png",
+        "skin-disabled": "components/tool-button/layer-skin-disabled.png",
+        "skin-selected": "components/tool-button/layer-skin-selected.png"
+      },
+      "source": "inputs/tool-button.png"
+    },
+    "left": {
+      "type": "button",
+      "size": [
+        30,
+        22
+      ],
+      "label": "<",
+      "nine_slice": [
+        4,
+        4,
+        4,
+        4
+      ],
+      "slice_source": "skin",
+      "minimum_skin_size": [
+        9,
+        9
+      ],
+      "default": "normal",
+      "states": {
+        "normal": "components/left/normal.png",
+        "hover": "components/left/hover.png",
+        "focus": "components/left/focus.png",
+        "pressed": "components/left/pressed.png",
+        "disabled": "components/left/disabled.png",
+        "selected": "components/left/selected.png"
+      },
+      "layers": {
+        "skin": "components/left/layer-skin.png",
+        "skin-normal": "components/left/layer-skin-normal.png",
+        "skin-hover": "components/left/layer-skin-hover.png",
+        "skin-focus": "components/left/layer-skin-focus.png",
+        "skin-pressed": "components/left/layer-skin-pressed.png",
+        "skin-disabled": "components/left/layer-skin-disabled.png",
+        "skin-selected": "components/left/layer-skin-selected.png"
+      }
+    },
+    "right": {
+      "type": "button",
+      "size": [
+        30,
+        22
+      ],
+      "label": ">",
+      "nine_slice": [
+        4,
+        4,
+        4,
+        4
+      ],
+      "slice_source": "skin",
+      "minimum_skin_size": [
+        9,
+        9
+      ],
+      "default": "normal",
+      "states": {
+        "normal": "components/right/normal.png",
+        "hover": "components/right/hover.png",
+        "focus": "components/right/focus.png",
+        "pressed": "components/right/pressed.png",
+        "disabled": "components/right/disabled.png",
+        "selected": "components/right/selected.png"
+      },
+      "layers": {
+        "skin": "components/right/layer-skin.png",
+        "skin-normal": "components/right/layer-skin-normal.png",
+        "skin-hover": "components/right/layer-skin-hover.png",
+        "skin-focus": "components/right/layer-skin-focus.png",
+        "skin-pressed": "components/right/layer-skin-pressed.png",
+        "skin-disabled": "components/right/layer-skin-disabled.png",
+        "skin-selected": "components/right/layer-skin-selected.png"
+      }
+    },
+    "hotbar": {
+      "type": "hotbar",
+      "size": [
+        134,
+        26
+      ],
+      "label": "",
+      "slot_rects": [
+        [
+          8,
+          4,
+          18,
+          18
+        ],
+        [
+          28,
+          4,
+          18,
+          18
+        ],
+        [
+          48,
+          4,
+          18,
+          18
+        ],
+        [
+          68,
+          4,
+          18,
+          18
+        ],
+        [
+          88,
+          4,
+          18,
+          18
+        ],
+        [
+          108,
+          4,
+          18,
+          18
+        ]
+      ],
+      "selected": 0,
+      "items": [
+        {
+          "source": "inputs/hotbar-item-0.png"
+        },
+        {
+          "source": "inputs/hotbar-item-1.png",
+          "count": 12
+        },
+        {
+          "source": "inputs/hotbar-item-2.png",
+          "count": 7
+        },
+        {
+          "source": "inputs/hotbar-item-3.png",
+          "count": 5
+        },
+        {
+          "source": "inputs/hotbar-item-4.png",
+          "count": 2
+        },
+        {
+          "source": "inputs/hotbar-item-5.png",
+          "count": 1
+        }
+      ],
+      "default": "normal",
+      "states": {
+        "selected-0": "components/hotbar/selected-0.png",
+        "selected-1": "components/hotbar/selected-1.png",
+        "selected-2": "components/hotbar/selected-2.png",
+        "selected-3": "components/hotbar/selected-3.png",
+        "selected-4": "components/hotbar/selected-4.png",
+        "selected-5": "components/hotbar/selected-5.png",
+        "normal": "components/hotbar/normal.png"
+      },
+      "layers": {
+        "skin": "components/hotbar/layer-skin.png"
+      }
+    },
+    "use": {
+      "type": "button",
+      "size": [
+        28,
+        28
+      ],
+      "label": "",
+      "nine_slice": [
+        4,
+        4,
+        4,
+        4
+      ],
+      "slice_source": "skin",
+      "minimum_skin_size": [
+        9,
+        9
+      ],
+      "default": "normal",
+      "states": {
+        "normal": "components/use/normal.png",
+        "hover": "components/use/hover.png",
+        "focus": "components/use/focus.png",
+        "pressed": "components/use/pressed.png",
+        "disabled": "components/use/disabled.png",
+        "selected": "components/use/selected.png"
+      },
+      "layers": {
+        "skin": "components/use/layer-skin.png",
+        "skin-normal": "components/use/layer-skin-normal.png",
+        "skin-hover": "components/use/layer-skin-hover.png",
+        "skin-focus": "components/use/layer-skin-focus.png",
+        "skin-pressed": "components/use/layer-skin-pressed.png",
+        "skin-disabled": "components/use/layer-skin-disabled.png",
+        "skin-selected": "components/use/layer-skin-selected.png"
+      },
+      "source": "inputs/use.png"
+    },
+    "jump": {
+      "type": "button",
+      "size": [
+        34,
+        34
+      ],
+      "label": "Jump",
+      "nine_slice": [
+        4,
+        4,
+        4,
+        4
+      ],
+      "slice_source": "skin",
+      "minimum_skin_size": [
+        9,
+        9
+      ],
+      "default": "normal",
+      "states": {
+        "normal": "components/jump/normal.png",
+        "hover": "components/jump/hover.png",
+        "focus": "components/jump/focus.png",
+        "pressed": "components/jump/pressed.png",
+        "disabled": "components/jump/disabled.png",
+        "selected": "components/jump/selected.png"
+      },
+      "layers": {
+        "skin": "components/jump/layer-skin.png",
+        "skin-normal": "components/jump/layer-skin-normal.png",
+        "skin-hover": "components/jump/layer-skin-hover.png",
+        "skin-focus": "components/jump/layer-skin-focus.png",
+        "skin-pressed": "components/jump/layer-skin-pressed.png",
+        "skin-disabled": "components/jump/layer-skin-disabled.png",
+        "skin-selected": "components/jump/layer-skin-selected.png"
+      }
+    },
+    "pickup": {
+      "type": "floating-text",
+      "size": [
+        50,
+        22
+      ],
+      "label": "+1 Log",
+      "text": "+1 Log",
+      "duration_ms": 90,
+      "editable_text": true,
+      "default": "frame-0",
+      "states": {
+        "frame-0": "components/pickup/frame-0.png",
+        "frame-1": "components/pickup/frame-1.png",
+        "frame-2": "components/pickup/frame-2.png",
+        "frame-3": "components/pickup/frame-3.png",
+        "frame-4": "components/pickup/frame-4.png",
+        "frame-5": "components/pickup/frame-5.png",
+        "frame-6": "components/pickup/frame-6.png",
+        "frame-7": "components/pickup/frame-7.png"
+      },
+      "layers": {}
+    },
+    "axe-tip": {
+      "type": "tooltip",
+      "size": [
+        92,
+        54
+      ],
+      "label": "Stone Axe",
+      "nine_slice": [
+        4,
+        4,
+        4,
+        4
+      ],
+      "slice_source": "skin",
+      "minimum_skin_size": [
+        9,
+        9
+      ],
+      "pointer": [
+        15,
+        53
+      ],
+      "default": "normal",
+      "states": {
+        "normal": "components/axe-tip/normal.png"
+      },
+      "layers": {
+        "skin": "components/axe-tip/layer-skin.png"
+      }
+    }
+  },
+  "screens": [
+    {
+      "id": "hud",
+      "title": "Adventure HUD",
+      "size": [
+        320,
+        180
+      ],
+      "description": "Hover the hotbar for a tool tip.",
+      "children": [
+        {
+          "component": "world",
+          "at": [
+            0,
+            0
+          ]
+        },
+        {
+          "component": "portrait",
+          "at": [
+            4,
+            4
+          ]
+        },
+        {
+          "component": "stats",
+          "at": [
+            40,
+            4
+          ]
+        },
+        {
+          "component": "level",
+          "at": [
+            44,
+            8
+          ]
+        },
+        {
+          "component": "health",
+          "at": [
+            44,
+            18
+          ]
+        },
+        {
+          "component": "stamina",
+          "at": [
+            44,
+            29
+          ]
+        },
+        {
+          "component": "hunger",
+          "at": [
+            99,
+            29
+          ]
+        },
+        {
+          "component": "coin",
+          "at": [
+            160,
+            5
+          ]
+        },
+        {
+          "component": "coins",
+          "at": [
+            174,
+            8
+          ]
+        },
+        {
+          "component": "gem",
+          "at": [
+            160,
+            19
+          ]
+        },
+        {
+          "component": "gems",
+          "at": [
+            174,
+            22
+          ]
+        },
+        {
+          "component": "craft",
+          "at": [
+            194,
+            4
+          ],
+          "action": "float:pickup"
+        },
+        {
+          "component": "quests",
+          "at": [
+            236,
+            4
+          ]
+        },
+        {
+          "component": "clock",
+          "at": [
+            278,
+            4
+          ]
+        },
+        {
+          "component": "bag-button",
+          "at": [
+            4,
+            44
+          ]
+        },
+        {
+          "component": "tool-button",
+          "at": [
+            4,
+            76
+          ]
+        },
+        {
+          "component": "left",
+          "at": [
+            6,
+            152
+          ]
+        },
+        {
+          "component": "right",
+          "at": [
+            40,
+            152
+          ]
+        },
+        {
+          "component": "hotbar",
+          "at": [
+            93,
+            151
+          ],
+          "tooltip": "axe-tip",
+          "label": "Hotbar"
+        },
+        {
+          "component": "use",
+          "at": [
+            244,
+            148
+          ],
+          "action": "float:pickup"
+        },
+        {
+          "component": "jump",
+          "at": [
+            278,
+            142
+          ]
+        }
+      ]
+    }
+  ]
+}

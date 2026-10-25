@@ -1,0 +1,20 @@
+{
+  "name": "adventurer",
+  "directions": 8,
+  "parts": [
+    "coat"
+  ],
+  "colors": {
+    "hair": "#e0b46f",
+    "hair_shadow": "#9e7247",
+    "top": "#688c7a",
+    "top_shadow": "#395d58",
+    "pants": "#616986",
+    "pants_shadow": "#3e435f"
+  },
+  "timing_ms": {
+    "stand": 700,
+    "idle": 180,
+    "step": 140
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "atlas": "atlas.json",
+  "canvas": [
+    48,
+    48
+  ],
+  "pivot": [
+    24,
+    38
+  ],
+  "loop": true,
+  "frames": [
+    {
+      "name": "frame-000",
+      "duration_ms": 80
+    },
+    {
+      "name": "frame-001",
+      "duration_ms": 80
+    },
+    {
+      "name": "frame-002",
+      "duration_ms": 80
+    },
+    {
+      "name": "frame-003",
+      "duration_ms": 80
+    },
+    {
+      "name": "frame-004",
+      "duration_ms": 80
+    },
+    {
+      "name": "frame-005",
+      "duration_ms": 80
+    },
+    {
+      "name": "frame-006",
+      "duration_ms": 80
+    },
+    {
+      "name": "frame-007",
+      "duration_ms": 80
+    },
+    {
+      "name": "frame-008",
+      "duration_ms": 80
+    },
+    {
+      "name": "frame-009",
+      "duration_ms": 80
+    },
+    {
+      "name": "frame-010",
+      "duration_ms": 80
+    },
+    {
+      "name": "frame-011",
+      "duration_ms": 80
+    }
+  ]
+}

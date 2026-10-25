@@ -1,0 +1,4 @@
+interface:
+  display_name: "Pixel Art Studio"
+  short_description: "Create consistent pixel sprites, tiles, UI, and effects"
+  default_prompt: "Use $pixel-art-studio to make a cohesive pixel art asset set from my brief."

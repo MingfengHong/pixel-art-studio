@@ -1,0 +1,444 @@
+{
+  "name": "meadow-hud",
+  "theme": {
+    "style": "arcade"
+  },
+  "components": [
+    {
+      "id": "world",
+      "type": "image",
+      "size": [
+        320,
+        180
+      ],
+      "source": "inputs/world.png"
+    },
+    {
+      "id": "portrait",
+      "type": "image",
+      "size": [
+        34,
+        34
+      ],
+      "frame": true,
+      "source": "inputs/portrait.png",
+      "crop": [
+        2,
+        1,
+        13,
+        13
+      ]
+    },
+    {
+      "id": "stats",
+      "type": "panel",
+      "size": [
+        116,
+        34
+      ]
+    },
+    {
+      "id": "level",
+      "type": "xp-bar",
+      "size": [
+        108,
+        9
+      ],
+      "value": 0.35,
+      "label": "Lv 4"
+    },
+    {
+      "id": "health",
+      "type": "health-bar",
+      "size": [
+        108,
+        10
+      ],
+      "value": 0.75,
+      "label": "HP",
+      "max": 60
+    },
+    {
+      "id": "stamina",
+      "type": "stamina-bar",
+      "size": [
+        53,
+        8
+      ],
+      "value": 0.8,
+      "color": "#5ec24a"
+    },
+    {
+      "id": "hunger",
+      "type": "bar",
+      "size": [
+        53,
+        8
+      ],
+      "value": 0.45,
+      "color": "#f08a2c"
+    },
+    {
+      "id": "coin",
+      "type": "image",
+      "size": [
+        12,
+        12
+      ],
+      "source": "inputs/coin.png"
+    },
+    {
+      "id": "coins",
+      "type": "label",
+      "size": [
+        30,
+        9
+      ],
+      "label": "537",
+      "align": "left",
+      "color": "#ffffff",
+      "outline": "#151515"
+    },
+    {
+      "id": "gem",
+      "type": "image",
+      "size": [
+        12,
+        12
+      ],
+      "source": "inputs/gem.png"
+    },
+    {
+      "id": "gems",
+      "type": "label",
+      "size": [
+        30,
+        9
+      ],
+      "label": "26",
+      "align": "left",
+      "color": "#ffffff",
+      "outline": "#151515"
+    },
+    {
+      "id": "craft",
+      "type": "button",
+      "size": [
+        40,
+        36
+      ],
+      "label": "Craft",
+      "source": "inputs/craft.png",
+      "layout": "stack"
+    },
+    {
+      "id": "quests",
+      "type": "button",
+      "size": [
+        40,
+        36
+      ],
+      "label": "Quests",
+      "source": "inputs/quests.png",
+      "layout": "stack"
+    },
+    {
+      "id": "clock",
+      "type": "dial",
+      "size": [
+        40,
+        46
+      ],
+      "time": 0.62,
+      "label": "Day 3"
+    },
+    {
+      "id": "bag-button",
+      "type": "button",
+      "size": [
+        28,
+        28
+      ],
+      "source": "inputs/bag-button.png"
+    },
+    {
+      "id": "tool-button",
+      "type": "button",
+      "size": [
+        28,
+        28
+      ],
+      "source": "inputs/tool-button.png"
+    },
+    {
+      "id": "left",
+      "type": "button",
+      "size": [
+        30,
+        22
+      ],
+      "label": "<",
+      "opacity": 0.7
+    },
+    {
+      "id": "right",
+      "type": "button",
+      "size": [
+        30,
+        22
+      ],
+      "label": ">",
+      "opacity": 0.7
+    },
+    {
+      "id": "hotbar",
+      "type": "hotbar",
+      "size": [
+        134,
+        26
+      ],
+      "cell": 18,
+      "gap": 2,
+      "slots": 6,
+      "selected": 0,
+      "numbers": false,
+      "items": [
+        {
+          "source": "inputs/hotbar-item-0.png"
+        },
+        {
+          "source": "inputs/hotbar-item-1.png",
+          "count": 12
+        },
+        {
+          "source": "inputs/hotbar-item-2.png",
+          "count": 7
+        },
+        {
+          "source": "inputs/hotbar-item-3.png",
+          "count": 5
+        },
+        {
+          "source": "inputs/hotbar-item-4.png",
+          "count": 2
+        },
+        {
+          "source": "inputs/hotbar-item-5.png",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": "use",
+      "type": "button",
+      "size": [
+        28,
+        28
+      ],
+      "shape": "round",
+      "source": "inputs/use.png",
+      "opacity": 0.85
+    },
+    {
+      "id": "jump",
+      "type": "button",
+      "size": [
+        34,
+        34
+      ],
+      "shape": "round",
+      "label": "Jump",
+      "opacity": 0.85
+    },
+    {
+      "id": "pickup",
+      "type": "floating-text",
+      "size": [
+        50,
+        22
+      ],
+      "label": "+1 Log",
+      "color": "#ffffff",
+      "outline": "#151515",
+      "frames": 8,
+      "rise": 2
+    },
+    {
+      "id": "axe-tip",
+      "type": "tooltip",
+      "size": [
+        92,
+        46
+      ],
+      "label": "Stone Axe",
+      "lines": [
+        "Chops trees.",
+        "Power 3"
+      ]
+    }
+  ],
+  "screens": [
+    {
+      "id": "hud",
+      "title": "Adventure HUD",
+      "size": [
+        320,
+        180
+      ],
+      "description": "Hover the hotbar for a tool tip.",
+      "children": [
+        {
+          "component": "world",
+          "at": [
+            0,
+            0
+          ]
+        },
+        {
+          "component": "portrait",
+          "at": [
+            4,
+            4
+          ]
+        },
+        {
+          "component": "stats",
+          "at": [
+            40,
+            4
+          ]
+        },
+        {
+          "component": "level",
+          "at": [
+            44,
+            8
+          ]
+        },
+        {
+          "component": "health",
+          "at": [
+            44,
+            18
+          ]
+        },
+        {
+          "component": "stamina",
+          "at": [
+            44,
+            29
+          ]
+        },
+        {
+          "component": "hunger",
+          "at": [
+            99,
+            29
+          ]
+        },
+        {
+          "component": "coin",
+          "at": [
+            160,
+            5
+          ]
+        },
+        {
+          "component": "coins",
+          "at": [
+            174,
+            8
+          ]
+        },
+        {
+          "component": "gem",
+          "at": [
+            160,
+            19
+          ]
+        },
+        {
+          "component": "gems",
+          "at": [
+            174,
+            22
+          ]
+        },
+        {
+          "component": "craft",
+          "at": [
+            194,
+            4
+          ],
+          "action": "float:pickup"
+        },
+        {
+          "component": "quests",
+          "at": [
+            236,
+            4
+          ]
+        },
+        {
+          "component": "clock",
+          "at": [
+            278,
+            4
+          ]
+        },
+        {
+          "component": "bag-button",
+          "at": [
+            4,
+            44
+          ]
+        },
+        {
+          "component": "tool-button",
+          "at": [
+            4,
+            76
+          ]
+        },
+        {
+          "component": "left",
+          "at": [
+            6,
+            152
+          ]
+        },
+        {
+          "component": "right",
+          "at": [
+            40,
+            152
+          ]
+        },
+        {
+          "component": "hotbar",
+          "at": [
+            93,
+            151
+          ],
+          "tooltip": "axe-tip",
+          "label": "Hotbar"
+        },
+        {
+          "component": "use",
+          "at": [
+            244,
+            148
+          ],
+          "action": "float:pickup"
+        },
+        {
+          "component": "jump",
+          "at": [
+            278,
+            142
+          ]
+        }
+      ]
+    }
+  ]
+}

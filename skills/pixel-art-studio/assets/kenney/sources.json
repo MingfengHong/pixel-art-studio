@@ -1,0 +1,334 @@
+{
+  "assets": [
+    {
+      "path": "tiny-dungeon/tile_0084.png",
+      "creator": "Kenney",
+      "pack_version": "1.0",
+      "source_url": "https://kenney.nl/assets/tiny-dungeon",
+      "original_path": "Tiles/tile_0084.png",
+      "license": "CC0-1.0",
+      "license_file": "tiny-dungeon/License.txt",
+      "modification": "Original tile"
+    },
+    {
+      "path": "tiny-dungeon/tile_0099.png",
+      "creator": "Kenney",
+      "pack_version": "1.0",
+      "source_url": "https://kenney.nl/assets/tiny-dungeon",
+      "original_path": "Tiles/tile_0099.png",
+      "license": "CC0-1.0",
+      "license_file": "tiny-dungeon/License.txt",
+      "modification": "Original tile"
+    },
+    {
+      "path": "tiny-dungeon/tile_0089.png",
+      "creator": "Kenney",
+      "pack_version": "1.0",
+      "source_url": "https://kenney.nl/assets/tiny-dungeon",
+      "original_path": "Tiles/tile_0089.png",
+      "license": "CC0-1.0",
+      "license_file": "tiny-dungeon/License.txt",
+      "modification": "Original tile"
+    },
+    {
+      "path": "tiny-dungeon/tile_0101.png",
+      "creator": "Kenney",
+      "pack_version": "1.0",
+      "source_url": "https://kenney.nl/assets/tiny-dungeon",
+      "original_path": "Tiles/tile_0101.png",
+      "license": "CC0-1.0",
+      "license_file": "tiny-dungeon/License.txt",
+      "modification": "Original tile"
+    },
+    {
+      "path": "tiny-dungeon/tile_0113.png",
+      "creator": "Kenney",
+      "pack_version": "1.0",
+      "source_url": "https://kenney.nl/assets/tiny-dungeon",
+      "original_path": "Tiles/tile_0113.png",
+      "license": "CC0-1.0",
+      "license_file": "tiny-dungeon/License.txt",
+      "modification": "Original tile"
+    },
+    {
+      "path": "tiny-dungeon/tile_0114.png",
+      "creator": "Kenney",
+      "pack_version": "1.0",
+      "source_url": "https://kenney.nl/assets/tiny-dungeon",
+      "original_path": "Tiles/tile_0114.png",
+      "license": "CC0-1.0",
+      "license_file": "tiny-dungeon/License.txt",
+      "modification": "Original tile"
+    },
+    {
+      "path": "tiny-dungeon/tile_0115.png",
+      "creator": "Kenney",
+      "pack_version": "1.0",
+      "source_url": "https://kenney.nl/assets/tiny-dungeon",
+      "original_path": "Tiles/tile_0115.png",
+      "license": "CC0-1.0",
+      "license_file": "tiny-dungeon/License.txt",
+      "modification": "Original tile"
+    },
+    {
+      "path": "tiny-dungeon/tile_0116.png",
+      "creator": "Kenney",
+      "pack_version": "1.0",
+      "source_url": "https://kenney.nl/assets/tiny-dungeon",
+      "original_path": "Tiles/tile_0116.png",
+      "license": "CC0-1.0",
+      "license_file": "tiny-dungeon/License.txt",
+      "modification": "Original tile"
+    },
+    {
+      "path": "tiny-town/tile_0000.png",
+      "creator": "Kenney",
+      "pack_version": "1.1",
+      "source_url": "https://kenney.nl/assets/tiny-town",
+      "original_path": "Tiles/tile_0000.png",
+      "license": "CC0-1.0",
+      "license_file": "tiny-town/License.txt",
+      "modification": "Original tile"
+    },
+    {
+      "path": "tiny-town/tile_0004.png",
+      "creator": "Kenney",
+      "pack_version": "1.1",
+      "source_url": "https://kenney.nl/assets/tiny-town",
+      "original_path": "Tiles/tile_0004.png",
+      "license": "CC0-1.0",
+      "license_file": "tiny-town/License.txt",
+      "modification": "Original tile"
+    },
+    {
+      "path": "tiny-town/tile_0016.png",
+      "creator": "Kenney",
+      "pack_version": "1.1",
+      "source_url": "https://kenney.nl/assets/tiny-town",
+      "original_path": "Tiles/tile_0016.png",
+      "license": "CC0-1.0",
+      "license_file": "tiny-town/License.txt",
+      "modification": "Original tile"
+    },
+    {
+      "path": "tiny-town/tile_0012.png",
+      "creator": "Kenney",
+      "pack_version": "1.1",
+      "source_url": "https://kenney.nl/assets/tiny-town",
+      "original_path": "Tiles/tile_0012.png",
+      "license": "CC0-1.0",
+      "license_file": "tiny-town/License.txt",
+      "modification": "Original tile"
+    },
+    {
+      "path": "tiny-town/tile_0013.png",
+      "creator": "Kenney",
+      "pack_version": "1.1",
+      "source_url": "https://kenney.nl/assets/tiny-town",
+      "original_path": "Tiles/tile_0013.png",
+      "license": "CC0-1.0",
+      "license_file": "tiny-town/License.txt",
+      "modification": "Original tile"
+    },
+    {
+      "path": "tiny-town/tile_0014.png",
+      "creator": "Kenney",
+      "pack_version": "1.1",
+      "source_url": "https://kenney.nl/assets/tiny-town",
+      "original_path": "Tiles/tile_0014.png",
+      "license": "CC0-1.0",
+      "license_file": "tiny-town/License.txt",
+      "modification": "Original tile"
+    },
+    {
+      "path": "tiny-town/tile_0024.png",
+      "creator": "Kenney",
+      "pack_version": "1.1",
+      "source_url": "https://kenney.nl/assets/tiny-town",
+      "original_path": "Tiles/tile_0024.png",
+      "license": "CC0-1.0",
+      "license_file": "tiny-town/License.txt",
+      "modification": "Original tile"
+    },
+    {
+      "path": "tiny-town/tile_0025.png",
+      "creator": "Kenney",
+      "pack_version": "1.1",
+      "source_url": "https://kenney.nl/assets/tiny-town",
+      "original_path": "Tiles/tile_0025.png",
+      "license": "CC0-1.0",
+      "license_file": "tiny-town/License.txt",
+      "modification": "Original tile"
+    },
+    {
+      "path": "tiny-town/tile_0026.png",
+      "creator": "Kenney",
+      "pack_version": "1.1",
+      "source_url": "https://kenney.nl/assets/tiny-town",
+      "original_path": "Tiles/tile_0026.png",
+      "license": "CC0-1.0",
+      "license_file": "tiny-town/License.txt",
+      "modification": "Original tile"
+    },
+    {
+      "path": "tiny-town/tile_0036.png",
+      "creator": "Kenney",
+      "pack_version": "1.1",
+      "source_url": "https://kenney.nl/assets/tiny-town",
+      "original_path": "Tiles/tile_0036.png",
+      "license": "CC0-1.0",
+      "license_file": "tiny-town/License.txt",
+      "modification": "Original tile"
+    },
+    {
+      "path": "tiny-town/tile_0037.png",
+      "creator": "Kenney",
+      "pack_version": "1.1",
+      "source_url": "https://kenney.nl/assets/tiny-town",
+      "original_path": "Tiles/tile_0037.png",
+      "license": "CC0-1.0",
+      "license_file": "tiny-town/License.txt",
+      "modification": "Original tile"
+    },
+    {
+      "path": "tiny-town/tile_0038.png",
+      "creator": "Kenney",
+      "pack_version": "1.1",
+      "source_url": "https://kenney.nl/assets/tiny-town",
+      "original_path": "Tiles/tile_0038.png",
+      "license": "CC0-1.0",
+      "license_file": "tiny-town/License.txt",
+      "modification": "Original tile"
+    },
+    {
+      "path": "tiny-town/tile_0048.png",
+      "creator": "Kenney",
+      "pack_version": "1.1",
+      "source_url": "https://kenney.nl/assets/tiny-town",
+      "original_path": "Tiles/tile_0048.png",
+      "license": "CC0-1.0",
+      "license_file": "tiny-town/License.txt",
+      "modification": "Original tile"
+    },
+    {
+      "path": "tiny-town/tile_0049.png",
+      "creator": "Kenney",
+      "pack_version": "1.1",
+      "source_url": "https://kenney.nl/assets/tiny-town",
+      "original_path": "Tiles/tile_0049.png",
+      "license": "CC0-1.0",
+      "license_file": "tiny-town/License.txt",
+      "modification": "Original tile"
+    },
+    {
+      "path": "tiny-town/tile_0050.png",
+      "creator": "Kenney",
+      "pack_version": "1.1",
+      "source_url": "https://kenney.nl/assets/tiny-town",
+      "original_path": "Tiles/tile_0050.png",
+      "license": "CC0-1.0",
+      "license_file": "tiny-town/License.txt",
+      "modification": "Original tile"
+    },
+    {
+      "path": "tiny-town/tile_0060.png",
+      "creator": "Kenney",
+      "pack_version": "1.1",
+      "source_url": "https://kenney.nl/assets/tiny-town",
+      "original_path": "Tiles/tile_0060.png",
+      "license": "CC0-1.0",
+      "license_file": "tiny-town/License.txt",
+      "modification": "Original tile"
+    },
+    {
+      "path": "tiny-town/tile_0061.png",
+      "creator": "Kenney",
+      "pack_version": "1.1",
+      "source_url": "https://kenney.nl/assets/tiny-town",
+      "original_path": "Tiles/tile_0061.png",
+      "license": "CC0-1.0",
+      "license_file": "tiny-town/License.txt",
+      "modification": "Original tile"
+    },
+    {
+      "path": "tiny-town/tile_0062.png",
+      "creator": "Kenney",
+      "pack_version": "1.1",
+      "source_url": "https://kenney.nl/assets/tiny-town",
+      "original_path": "Tiles/tile_0062.png",
+      "license": "CC0-1.0",
+      "license_file": "tiny-town/License.txt",
+      "modification": "Original tile"
+    },
+    {
+      "path": "tiny-town/tile_0072.png",
+      "creator": "Kenney",
+      "pack_version": "1.1",
+      "source_url": "https://kenney.nl/assets/tiny-town",
+      "original_path": "Tiles/tile_0072.png",
+      "license": "CC0-1.0",
+      "license_file": "tiny-town/License.txt",
+      "modification": "Original tile"
+    },
+    {
+      "path": "tiny-town/tile_0074.png",
+      "creator": "Kenney",
+      "pack_version": "1.1",
+      "source_url": "https://kenney.nl/assets/tiny-town",
+      "original_path": "Tiles/tile_0074.png",
+      "license": "CC0-1.0",
+      "license_file": "tiny-town/License.txt",
+      "modification": "Original tile"
+    },
+    {
+      "path": "tiny-town/tile_0075.png",
+      "creator": "Kenney",
+      "pack_version": "1.1",
+      "source_url": "https://kenney.nl/assets/tiny-town",
+      "original_path": "Tiles/tile_0075.png",
+      "license": "CC0-1.0",
+      "license_file": "tiny-town/License.txt",
+      "modification": "Original tile"
+    },
+    {
+      "path": "ui-pixel-adventure/tile_0000.png",
+      "creator": "Kenney",
+      "pack_version": "2.0",
+      "source_url": "https://kenney.nl/assets/ui-pack-pixel-adventure",
+      "original_path": "Tiles/Small tiles/Thin outline/tile_0000.png",
+      "license": "CC0-1.0",
+      "license_file": "ui-pixel-adventure/License.txt",
+      "modification": "Original tile"
+    },
+    {
+      "path": "ui-pixel-adventure/tile_0001.png",
+      "creator": "Kenney",
+      "pack_version": "2.0",
+      "source_url": "https://kenney.nl/assets/ui-pack-pixel-adventure",
+      "original_path": "Tiles/Small tiles/Thin outline/tile_0001.png",
+      "license": "CC0-1.0",
+      "license_file": "ui-pixel-adventure/License.txt",
+      "modification": "Original tile"
+    },
+    {
+      "path": "ui-pixel-adventure/tile_0002.png",
+      "creator": "Kenney",
+      "pack_version": "2.0",
+      "source_url": "https://kenney.nl/assets/ui-pack-pixel-adventure",
+      "original_path": "Tiles/Small tiles/Thin outline/tile_0002.png",
+      "license": "CC0-1.0",
+      "license_file": "ui-pixel-adventure/License.txt",
+      "modification": "Original tile"
+    },
+    {
+      "path": "ui-pixel-adventure/tile_0033.png",
+      "creator": "Kenney",
+      "pack_version": "2.0",
+      "source_url": "https://kenney.nl/assets/ui-pack-pixel-adventure",
+      "original_path": "Tiles/Small tiles/Thin outline/tile_0033.png",
+      "license": "CC0-1.0",
+      "license_file": "ui-pixel-adventure/License.txt",
+      "modification": "Original tile"
+    }
+  ]
+}

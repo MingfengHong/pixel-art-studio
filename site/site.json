@@ -1,0 +1,419 @@
+{
+  "url": "https://mingfenghong.github.io/pixel-art-studio/",
+  "repo": "https://github.com/MingfengHong/pixel-art-studio",
+  "languages": {
+    "en": {
+      "label": "EN",
+      "prefix": ""
+    },
+    "zh-CN": {
+      "label": "中文",
+      "prefix": "zh/"
+    }
+  },
+  "docs": [
+    "getting-started",
+    "hand-drawn",
+    "characters",
+    "ui-kit",
+    "worlds",
+    "animation",
+    "image-editing",
+    "pixel-grids",
+    "generation"
+  ],
+  "text": {
+    "en": {
+      "site_title": "Pixel Art Studio",
+      "description": "An open-source Agent Skill that makes cohesive pixel art sprites, tilesets, scenes, game UI and animation with editable sources and PNG atlases.",
+      "skip": "Skip to content",
+      "nav": {
+        "playground": "Playground",
+        "features": "Features",
+        "examples": "Examples",
+        "docs": "Docs",
+        "github": "GitHub"
+      },
+      "docs_title": "Docs",
+      "docs_heading": "Guide",
+      "prev": "Previous",
+      "next": "Next",
+      "edit": "Edit this page on GitHub",
+      "hero": {
+        "eyebrow": "Open-source Agent Skill",
+        "title": "Pixel Art Studio",
+        "tagline": "Pixel art sprites, tilesets, scenes and game UI, made by your coding agent.",
+        "lede": "Describe what you want, share a reference or palette, and get editable sources with crisp PNG atlases. Works with Claude Code, Codex, Gemini CLI, GitHub Copilot, Cursor and any host that reads SKILL.md folders. Everything runs locally; no account or API key needed.",
+        "actions": [
+          {
+            "label": "Get started",
+            "href": "docs/getting-started.html",
+            "primary": true
+          },
+          {
+            "label": "View on GitHub",
+            "href": "{repo}"
+          },
+          {
+            "label": "Try the playground",
+            "href": "#playground"
+          }
+        ]
+      },
+      "install_title": "Install",
+      "install": [
+        {
+          "label": "Ask your agent",
+          "plain": true,
+          "code": "Please read the install instructions at https://github.com/MingfengHong/pixel-art-studio/blob/main/INSTALL.md and install Pixel Art Studio for me.",
+          "note": "Paste this into any coding agent. INSTALL.md walks it through installing, verifying and reporting back."
+        },
+        {
+          "label": "Any agent",
+          "code": "npx skills add MingfengHong/pixel-art-studio",
+          "note": "The skills CLI detects your agents and installs into the right folder. Add -g for a user-wide install."
+        },
+        {
+          "label": "Claude Code",
+          "code": "/plugin marketplace add MingfengHong/pixel-art-studio\n/plugin install pixel-art-studio@pixel-art-studio",
+          "note": "Run inside Claude Code, or copy the skill folder into ~/.claude/skills/."
+        },
+        {
+          "label": "Codex",
+          "code": "git clone https://github.com/MingfengHong/pixel-art-studio.git\ncp -R pixel-art-studio/skills/pixel-art-studio ~/.agents/skills/",
+          "note": "Gemini CLI and GitHub Copilot also read ~/.agents/skills/."
+        },
+        {
+          "label": "Gemini CLI",
+          "code": "gemini skills install https://github.com/MingfengHong/pixel-art-studio.git --path skills/pixel-art-studio",
+          "note": "Add --scope workspace to install into the current project."
+        },
+        {
+          "label": "Claude.ai",
+          "code": "curl -LO {url}pixel-art-studio.skill",
+          "note": "Upload the file under Customize > Skills with code execution turned on."
+        }
+      ],
+      "playground": {
+        "title": "Interface playground",
+        "intro": "This whole kit was generated from one JSON recipe by the UI tool. Drag the sliders, flip the switches, open the dropdown, scroll the inventory, hover the blade, and trigger a hit or a reward.",
+        "open": "Open full screen",
+        "learn": "How the UI kit works",
+        "recipe": "View the recipe"
+      },
+      "features": {
+        "title": "What you can make",
+        "intro": "Each workflow ships with a guide, a complete recipe and a local tool that writes editable sources, native PNGs and metadata.",
+        "more": "Read the guide",
+        "items": [
+          {
+            "doc": "characters",
+            "icon": "examples/rpg-kit/mage.json#down-stand",
+            "title": "Characters",
+            "text": "Hand-drawn 16x16 class figures with walk cycles and attacks, emote bubbles and 4/8-direction generator characters."
+          },
+          {
+            "doc": "ui-kit",
+            "icon": "examples/rpg-kit/items.json#shield",
+            "title": "Game UI",
+            "text": "HUDs, bars, hotbars, lists, shops, NPC dialogue boxes, day/night dials, menus and tooltips in three frame styles."
+          },
+          {
+            "doc": "worlds",
+            "icon": "examples/side-scroller/props.json#bush",
+            "title": "Worlds",
+            "text": "Hand-drawn tilesets assembled on a grid with autotiled edges and parallax layers, plus procedural top-down terrain."
+          },
+          {
+            "doc": "animation",
+            "icon": "examples/rpg-kit/items.json#sword",
+            "title": "Animation",
+            "text": "Import frame sequences or animate parented layers with pixel-snapped position, rotation and opacity keys."
+          },
+          {
+            "doc": "image-editing",
+            "icon": "examples/rpg-kit/items.json#potion",
+            "title": "Image editing",
+            "text": "Recolor, reduce palettes, key out backgrounds, outline, patch with masks and extend the canvas."
+          },
+          {
+            "doc": "pixel-grids",
+            "icon": "examples/rpg-kit/items.json#gem",
+            "title": "Pixel grids and export",
+            "text": "Hand-authored grids, PNG import, contact sheets, automated checks and engine-ready atlas metadata."
+          }
+        ]
+      },
+      "examples": {
+        "title": "Examples",
+        "intro": "Every example ships with its recipe and editable source. Click one to see how it was made.",
+        "items": [
+          {
+            "doc": "hand-drawn",
+            "src": "examples/side-scroller/hud/screens/hud.png",
+            "title": "Side-scroller scene",
+            "text": "Hand-drawn tiles assembled on a grid, with a full HUD."
+          },
+          {
+            "doc": "ui-kit",
+            "src": "examples/interface-kit/screens/dialogue.png",
+            "title": "RPG dialogue",
+            "text": "Inset portrait, name tab, typewriter text and choices."
+          },
+          {
+            "doc": "characters",
+            "src": "examples/interface-kit/screens/select.png",
+            "title": "Character select",
+            "text": "Four class figures with emote bubbles."
+          },
+          {
+            "doc": "animation",
+            "src": "examples/skill-cast/preview.gif",
+            "title": "Fireball skill",
+            "text": "Cast pose, flight and burst from hand-drawn frames on keyframed layers."
+          },
+          {
+            "doc": "ui-kit",
+            "src": "examples/interface-kit/screens/battle.png",
+            "title": "Battle screen",
+            "text": "Hand-drawn enemies, slash and hit effects, commands and party."
+          },
+          {
+            "doc": "worlds",
+            "src": "examples/world-workshop/scene.png",
+            "title": "River town",
+            "text": "Procedural ground with houses, props and characters."
+          },
+          {
+            "doc": "hand-drawn",
+            "src": "examples/rpg-kit/sheets/items/preview.png",
+            "title": "Item icons",
+            "text": "24 hand-drawn icons sharing light and outline."
+          }
+        ]
+      },
+      "footer": {
+        "about": "Pixel Art Studio is an open-source Agent Skill for making cohesive pixel art game assets with editable sources.",
+        "links": [
+          {
+            "label": "GitHub",
+            "href": "{repo}"
+          },
+          {
+            "label": "Releases",
+            "href": "{repo}/releases"
+          },
+          {
+            "label": "Issues",
+            "href": "{repo}/issues"
+          },
+          {
+            "label": "SKILL.md",
+            "href": "{repo}/blob/main/skills/pixel-art-studio/SKILL.md"
+          },
+          {
+            "label": "License",
+            "href": "{repo}/blob/main/LICENSE"
+          }
+        ],
+        "fine": "Code and docs: MIT. Reference tiles by Kenney (kenney.nl), CC0. The playground on this site is generated by the skill's own UI tool. Font: Fusion Pixel by TakWolf (OFL-1.1)."
+      }
+    },
+    "zh-CN": {
+      "site_title": "Pixel Art Studio",
+      "description": "开源 Agent Skill：让编程助手制作风格统一的像素角色、瓦片、场景、游戏界面与动画，交付可编辑源文件和 PNG 图集。",
+      "skip": "跳到正文",
+      "nav": {
+        "playground": "界面演示",
+        "features": "功能",
+        "examples": "示例",
+        "docs": "文档",
+        "github": "GitHub"
+      },
+      "docs_title": "文档",
+      "docs_heading": "使用指南",
+      "prev": "上一篇",
+      "next": "下一篇",
+      "edit": "在 GitHub 上编辑此页",
+      "hero": {
+        "eyebrow": "开源 Agent Skill",
+        "title": "Pixel Art Studio",
+        "tagline": "让编程助手为你制作像素角色、瓦片场景与游戏界面。",
+        "lede": "描述想要的素材，提供参考图或调色板，即可得到可编辑源文件和清晰的 PNG 图集。支持 Claude Code、Codex、Gemini CLI、GitHub Copilot、Cursor 等所有能读取 SKILL.md 的助手。全部在本地运行，无需账号或 API 密钥。",
+        "actions": [
+          {
+            "label": "快速上手",
+            "href": "docs/getting-started.html",
+            "primary": true
+          },
+          {
+            "label": "GitHub 仓库",
+            "href": "{repo}"
+          },
+          {
+            "label": "试玩界面演示",
+            "href": "#playground"
+          }
+        ]
+      },
+      "install_title": "安装",
+      "install": [
+        {
+          "label": "让助手安装",
+          "plain": true,
+          "code": "请阅读以下安装说明并帮我安装 Pixel Art Studio：https://github.com/MingfengHong/pixel-art-studio/blob/main/INSTALL.md",
+          "note": "发给任意编程助手即可。INSTALL.md 会引导它完成安装、验证并汇报结果。"
+        },
+        {
+          "label": "任意助手",
+          "code": "npx skills add MingfengHong/pixel-art-studio",
+          "note": "skills CLI 会识别本机的助手并安装到对应目录；加 -g 安装到用户级目录。"
+        },
+        {
+          "label": "Claude Code",
+          "code": "/plugin marketplace add MingfengHong/pixel-art-studio\n/plugin install pixel-art-studio@pixel-art-studio",
+          "note": "在 Claude Code 中运行；也可以把 Skill 文件夹复制到 ~/.claude/skills/。"
+        },
+        {
+          "label": "Codex",
+          "code": "git clone https://github.com/MingfengHong/pixel-art-studio.git\ncp -R pixel-art-studio/skills/pixel-art-studio ~/.agents/skills/",
+          "note": "Gemini CLI 和 GitHub Copilot 也会读取 ~/.agents/skills/。"
+        },
+        {
+          "label": "Gemini CLI",
+          "code": "gemini skills install https://github.com/MingfengHong/pixel-art-studio.git --path skills/pixel-art-studio",
+          "note": "加 --scope workspace 安装到当前项目。"
+        },
+        {
+          "label": "Claude.ai",
+          "code": "curl -LO {url}pixel-art-studio.skill",
+          "note": "开启代码执行后，在 Customize > Skills 中上传该文件。"
+        }
+      ],
+      "playground": {
+        "title": "界面演示",
+        "intro": "整套界面由 UI 工具根据一份 JSON 配方生成。拖动滑块、切换开关、打开下拉菜单、滚动背包、悬停武器，或者触发受击与奖励。",
+        "open": "全屏打开",
+        "learn": "了解 UI 套件",
+        "recipe": "查看配方"
+      },
+      "features": {
+        "title": "可以制作什么",
+        "intro": "每个工作流都配有指南、完整配方和本地工具，输出可编辑源文件、原生 PNG 与元数据。",
+        "more": "阅读指南",
+        "items": [
+          {
+            "doc": "characters",
+            "icon": "examples/rpg-kit/mage.json#down-stand",
+            "title": "角色",
+            "text": "手绘 16x16 职业角色（行走与攻击）、表情气泡，以及四／八方向生成角色。"
+          },
+          {
+            "doc": "ui-kit",
+            "icon": "examples/rpg-kit/items.json#shield",
+            "title": "游戏界面",
+            "text": "HUD、状态条、快捷栏、列表、商店、NPC 对话框、昼夜表盘、菜单与提示，三种边框风格。"
+          },
+          {
+            "doc": "worlds",
+            "icon": "examples/side-scroller/props.json#bush",
+            "title": "地图与地形",
+            "text": "手绘瓦片集按网格拼接，自动选边角、分视差层；另有程序生成的俯视地形。"
+          },
+          {
+            "doc": "animation",
+            "icon": "examples/rpg-kit/items.json#sword",
+            "title": "动画",
+            "text": "导入帧序列，或用像素对齐的位置、旋转、透明度关键帧驱动父子图层。"
+          },
+          {
+            "doc": "image-editing",
+            "icon": "examples/rpg-kit/items.json#potion",
+            "title": "图像编辑",
+            "text": "换色、减色、去背景、描边、蒙版补图和扩展画布。"
+          },
+          {
+            "doc": "pixel-grids",
+            "icon": "examples/rpg-kit/items.json#gem",
+            "title": "像素网格与导出",
+            "text": "手绘网格、PNG 导入、参考拼图、自动检查，以及可直接导入引擎的图集元数据。"
+          }
+        ]
+      },
+      "examples": {
+        "title": "示例",
+        "intro": "每个示例都附带配方和可编辑源文件。点击即可查看制作方法。",
+        "items": [
+          {
+            "doc": "hand-drawn",
+            "src": "examples/side-scroller/hud/screens/hud.png",
+            "title": "横版场景",
+            "text": "手绘瓦片按网格拼接，加完整 HUD。"
+          },
+          {
+            "doc": "ui-kit",
+            "src": "examples/interface-kit/screens/dialogue.png",
+            "title": "RPG 对话",
+            "text": "嵌入式头像、名字标签、打字机文字与选项。"
+          },
+          {
+            "doc": "characters",
+            "src": "examples/interface-kit/screens/select.png",
+            "title": "角色选择",
+            "text": "四个职业角色，头顶带表情气泡。"
+          },
+          {
+            "doc": "animation",
+            "src": "examples/skill-cast/preview.gif",
+            "title": "火球术",
+            "text": "施法姿势、飞行和爆炸，用手绘帧在关键帧图层上演出。"
+          },
+          {
+            "doc": "ui-kit",
+            "src": "examples/interface-kit/screens/battle.png",
+            "title": "战斗界面",
+            "text": "手绘敌人、刀光与命中特效、指令和队伍。"
+          },
+          {
+            "doc": "worlds",
+            "src": "examples/world-workshop/scene.png",
+            "title": "河边小镇",
+            "text": "程序地形加房屋、道具和角色。"
+          },
+          {
+            "doc": "hand-drawn",
+            "src": "examples/rpg-kit/sheets/items/preview.png",
+            "title": "道具图标",
+            "text": "24 个手绘图标，统一光向与描边。"
+          }
+        ]
+      },
+      "footer": {
+        "about": "Pixel Art Studio 是一个开源 Agent Skill，用于制作风格统一、可编辑的像素游戏素材。",
+        "links": [
+          {
+            "label": "GitHub",
+            "href": "{repo}"
+          },
+          {
+            "label": "版本发布",
+            "href": "{repo}/releases"
+          },
+          {
+            "label": "问题反馈",
+            "href": "{repo}/issues"
+          },
+          {
+            "label": "SKILL.md",
+            "href": "{repo}/blob/main/skills/pixel-art-studio/SKILL.md"
+          },
+          {
+            "label": "许可证",
+            "href": "{repo}/blob/main/LICENSE"
+          }
+        ],
+        "fine": "代码与文档采用 MIT 许可。参考图块来自 Kenney（kenney.nl），CC0。本站的界面演示由 Skill 自带的 UI 工具生成。字体：TakWolf 的缝合像素字体（OFL-1.1）。"
+      }
+    }
+  }
+}

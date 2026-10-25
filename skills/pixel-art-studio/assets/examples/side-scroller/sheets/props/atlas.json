@@ -1,0 +1,198 @@
+{
+  "format": "pixel-art-studio-atlas-v1",
+  "name": "side-props",
+  "image": "atlas.png",
+  "canvas": [
+    16,
+    16
+  ],
+  "size": [
+    135,
+    33
+  ],
+  "padding": 1,
+  "frames": [
+    {
+      "name": "bush",
+      "rect": [
+        0,
+        0,
+        16,
+        16
+      ],
+      "duration_ms": 100,
+      "pivot": [
+        8,
+        16
+      ]
+    },
+    {
+      "name": "rock",
+      "rect": [
+        17,
+        0,
+        16,
+        16
+      ],
+      "duration_ms": 100,
+      "pivot": [
+        8,
+        16
+      ]
+    },
+    {
+      "name": "crate",
+      "rect": [
+        34,
+        0,
+        16,
+        16
+      ],
+      "duration_ms": 100,
+      "pivot": [
+        8,
+        16
+      ]
+    },
+    {
+      "name": "barrel",
+      "rect": [
+        51,
+        0,
+        16,
+        16
+      ],
+      "duration_ms": 100,
+      "pivot": [
+        8,
+        16
+      ]
+    },
+    {
+      "name": "sign",
+      "rect": [
+        68,
+        0,
+        16,
+        16
+      ],
+      "duration_ms": 100,
+      "pivot": [
+        8,
+        16
+      ]
+    },
+    {
+      "name": "stump",
+      "rect": [
+        85,
+        0,
+        16,
+        16
+      ],
+      "duration_ms": 100,
+      "pivot": [
+        8,
+        16
+      ]
+    },
+    {
+      "name": "slime",
+      "rect": [
+        102,
+        0,
+        16,
+        16
+      ],
+      "duration_ms": 100,
+      "pivot": [
+        8,
+        16
+      ]
+    },
+    {
+      "name": "flowers",
+      "rect": [
+        119,
+        0,
+        16,
+        16
+      ],
+      "duration_ms": 100,
+      "pivot": [
+        8,
+        16
+      ]
+    },
+    {
+      "name": "campfire",
+      "rect": [
+        0,
+        17,
+        16,
+        16
+      ],
+      "duration_ms": 100,
+      "pivot": [
+        8,
+        16
+      ]
+    },
+    {
+      "name": "fence",
+      "rect": [
+        17,
+        17,
+        16,
+        16
+      ],
+      "duration_ms": 100,
+      "pivot": [
+        8,
+        16
+      ]
+    },
+    {
+      "name": "mushrooms",
+      "rect": [
+        34,
+        17,
+        16,
+        16
+      ],
+      "duration_ms": 100,
+      "pivot": [
+        8,
+        16
+      ]
+    },
+    {
+      "name": "lantern",
+      "rect": [
+        51,
+        17,
+        16,
+        16
+      ],
+      "duration_ms": 100,
+      "pivot": [
+        8,
+        16
+      ]
+    },
+    {
+      "name": "tuft",
+      "rect": [
+        68,
+        17,
+        16,
+        16
+      ],
+      "duration_ms": 100,
+      "pivot": [
+        8,
+        16
+      ]
+    }
+  ]
+}

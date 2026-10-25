@@ -1,0 +1,1115 @@
+{
+  "format": "pixel-art-studio-packed-v1",
+  "image": "atlas.png",
+  "size": [
+    512,
+    505
+  ],
+  "padding": 1,
+  "frames": {
+    "world/normal": {
+      "rect": [
+        0,
+        0,
+        320,
+        180
+      ],
+      "pivot": [
+        160,
+        180
+      ]
+    },
+    "portrait/normal": {
+      "rect": [
+        321,
+        0,
+        34,
+        34
+      ],
+      "pivot": [
+        17,
+        34
+      ]
+    },
+    "stats/normal": {
+      "rect": [
+        356,
+        0,
+        116,
+        34
+      ],
+      "pivot": [
+        58,
+        34
+      ]
+    },
+    "level/empty": {
+      "rect": [
+        0,
+        181,
+        108,
+        9
+      ],
+      "pivot": [
+        54,
+        9
+      ]
+    },
+    "level/half": {
+      "rect": [
+        109,
+        181,
+        108,
+        9
+      ],
+      "pivot": [
+        54,
+        9
+      ]
+    },
+    "level/full": {
+      "rect": [
+        218,
+        181,
+        108,
+        9
+      ],
+      "pivot": [
+        54,
+        9
+      ]
+    },
+    "level/normal": {
+      "rect": [
+        327,
+        181,
+        108,
+        9
+      ],
+      "pivot": [
+        54,
+        9
+      ]
+    },
+    "health/empty": {
+      "rect": [
+        0,
+        191,
+        108,
+        10
+      ],
+      "pivot": [
+        54,
+        10
+      ]
+    },
+    "health/half": {
+      "rect": [
+        109,
+        191,
+        108,
+        10
+      ],
+      "pivot": [
+        54,
+        10
+      ]
+    },
+    "health/full": {
+      "rect": [
+        218,
+        191,
+        108,
+        10
+      ],
+      "pivot": [
+        54,
+        10
+      ]
+    },
+    "health/normal": {
+      "rect": [
+        327,
+        191,
+        108,
+        10
+      ],
+      "pivot": [
+        54,
+        10
+      ]
+    },
+    "stamina/empty": {
+      "rect": [
+        436,
+        191,
+        53,
+        8
+      ],
+      "pivot": [
+        26,
+        8
+      ]
+    },
+    "stamina/half": {
+      "rect": [
+        0,
+        202,
+        53,
+        8
+      ],
+      "pivot": [
+        26,
+        8
+      ]
+    },
+    "stamina/full": {
+      "rect": [
+        54,
+        202,
+        53,
+        8
+      ],
+      "pivot": [
+        26,
+        8
+      ]
+    },
+    "stamina/normal": {
+      "rect": [
+        108,
+        202,
+        53,
+        8
+      ],
+      "pivot": [
+        26,
+        8
+      ]
+    },
+    "hunger/empty": {
+      "rect": [
+        162,
+        202,
+        53,
+        8
+      ],
+      "pivot": [
+        26,
+        8
+      ]
+    },
+    "hunger/half": {
+      "rect": [
+        216,
+        202,
+        53,
+        8
+      ],
+      "pivot": [
+        26,
+        8
+      ]
+    },
+    "hunger/full": {
+      "rect": [
+        270,
+        202,
+        53,
+        8
+      ],
+      "pivot": [
+        26,
+        8
+      ]
+    },
+    "hunger/normal": {
+      "rect": [
+        324,
+        202,
+        53,
+        8
+      ],
+      "pivot": [
+        26,
+        8
+      ]
+    },
+    "coin/normal": {
+      "rect": [
+        378,
+        202,
+        12,
+        12
+      ],
+      "pivot": [
+        6,
+        12
+      ]
+    },
+    "coins/normal": {
+      "rect": [
+        391,
+        202,
+        30,
+        9
+      ],
+      "pivot": [
+        15,
+        9
+      ]
+    },
+    "gem/normal": {
+      "rect": [
+        422,
+        202,
+        12,
+        12
+      ],
+      "pivot": [
+        6,
+        12
+      ]
+    },
+    "gems/normal": {
+      "rect": [
+        435,
+        202,
+        30,
+        9
+      ],
+      "pivot": [
+        15,
+        9
+      ]
+    },
+    "craft/normal": {
+      "rect": [
+        466,
+        202,
+        40,
+        36
+      ],
+      "pivot": [
+        20,
+        36
+      ]
+    },
+    "craft/hover": {
+      "rect": [
+        0,
+        239,
+        40,
+        36
+      ],
+      "pivot": [
+        20,
+        36
+      ]
+    },
+    "craft/focus": {
+      "rect": [
+        41,
+        239,
+        40,
+        36
+      ],
+      "pivot": [
+        20,
+        36
+      ]
+    },
+    "craft/pressed": {
+      "rect": [
+        82,
+        239,
+        40,
+        36
+      ],
+      "pivot": [
+        20,
+        36
+      ]
+    },
+    "craft/disabled": {
+      "rect": [
+        123,
+        239,
+        40,
+        36
+      ],
+      "pivot": [
+        20,
+        36
+      ]
+    },
+    "craft/selected": {
+      "rect": [
+        164,
+        239,
+        40,
+        36
+      ],
+      "pivot": [
+        20,
+        36
+      ]
+    },
+    "quests/normal": {
+      "rect": [
+        205,
+        239,
+        40,
+        36
+      ],
+      "pivot": [
+        20,
+        36
+      ]
+    },
+    "quests/hover": {
+      "rect": [
+        246,
+        239,
+        40,
+        36
+      ],
+      "pivot": [
+        20,
+        36
+      ]
+    },
+    "quests/focus": {
+      "rect": [
+        287,
+        239,
+        40,
+        36
+      ],
+      "pivot": [
+        20,
+        36
+      ]
+    },
+    "quests/pressed": {
+      "rect": [
+        328,
+        239,
+        40,
+        36
+      ],
+      "pivot": [
+        20,
+        36
+      ]
+    },
+    "quests/disabled": {
+      "rect": [
+        369,
+        239,
+        40,
+        36
+      ],
+      "pivot": [
+        20,
+        36
+      ]
+    },
+    "quests/selected": {
+      "rect": [
+        410,
+        239,
+        40,
+        36
+      ],
+      "pivot": [
+        20,
+        36
+      ]
+    },
+    "clock/normal": {
+      "rect": [
+        451,
+        239,
+        40,
+        46
+      ],
+      "pivot": [
+        20,
+        46
+      ]
+    },
+    "clock/quarter-0": {
+      "rect": [
+        0,
+        286,
+        40,
+        46
+      ],
+      "pivot": [
+        20,
+        46
+      ]
+    },
+    "clock/quarter-1": {
+      "rect": [
+        41,
+        286,
+        40,
+        46
+      ],
+      "pivot": [
+        20,
+        46
+      ]
+    },
+    "clock/quarter-2": {
+      "rect": [
+        82,
+        286,
+        40,
+        46
+      ],
+      "pivot": [
+        20,
+        46
+      ]
+    },
+    "clock/quarter-3": {
+      "rect": [
+        123,
+        286,
+        40,
+        46
+      ],
+      "pivot": [
+        20,
+        46
+      ]
+    },
+    "bag-button/normal": {
+      "rect": [
+        164,
+        286,
+        28,
+        28
+      ],
+      "pivot": [
+        14,
+        28
+      ]
+    },
+    "bag-button/hover": {
+      "rect": [
+        193,
+        286,
+        28,
+        28
+      ],
+      "pivot": [
+        14,
+        28
+      ]
+    },
+    "bag-button/focus": {
+      "rect": [
+        222,
+        286,
+        28,
+        28
+      ],
+      "pivot": [
+        14,
+        28
+      ]
+    },
+    "bag-button/pressed": {
+      "rect": [
+        251,
+        286,
+        28,
+        28
+      ],
+      "pivot": [
+        14,
+        28
+      ]
+    },
+    "bag-button/disabled": {
+      "rect": [
+        280,
+        286,
+        28,
+        28
+      ],
+      "pivot": [
+        14,
+        28
+      ]
+    },
+    "bag-button/selected": {
+      "rect": [
+        309,
+        286,
+        28,
+        28
+      ],
+      "pivot": [
+        14,
+        28
+      ]
+    },
+    "tool-button/normal": {
+      "rect": [
+        338,
+        286,
+        28,
+        28
+      ],
+      "pivot": [
+        14,
+        28
+      ]
+    },
+    "tool-button/hover": {
+      "rect": [
+        367,
+        286,
+        28,
+        28
+      ],
+      "pivot": [
+        14,
+        28
+      ]
+    },
+    "tool-button/focus": {
+      "rect": [
+        396,
+        286,
+        28,
+        28
+      ],
+      "pivot": [
+        14,
+        28
+      ]
+    },
+    "tool-button/pressed": {
+      "rect": [
+        425,
+        286,
+        28,
+        28
+      ],
+      "pivot": [
+        14,
+        28
+      ]
+    },
+    "tool-button/disabled": {
+      "rect": [
+        454,
+        286,
+        28,
+        28
+      ],
+      "pivot": [
+        14,
+        28
+      ]
+    },
+    "tool-button/selected": {
+      "rect": [
+        483,
+        286,
+        28,
+        28
+      ],
+      "pivot": [
+        14,
+        28
+      ]
+    },
+    "left/normal": {
+      "rect": [
+        0,
+        333,
+        30,
+        22
+      ],
+      "pivot": [
+        15,
+        22
+      ]
+    },
+    "left/hover": {
+      "rect": [
+        31,
+        333,
+        30,
+        22
+      ],
+      "pivot": [
+        15,
+        22
+      ]
+    },
+    "left/focus": {
+      "rect": [
+        62,
+        333,
+        30,
+        22
+      ],
+      "pivot": [
+        15,
+        22
+      ]
+    },
+    "left/pressed": {
+      "rect": [
+        93,
+        333,
+        30,
+        22
+      ],
+      "pivot": [
+        15,
+        22
+      ]
+    },
+    "left/disabled": {
+      "rect": [
+        124,
+        333,
+        30,
+        22
+      ],
+      "pivot": [
+        15,
+        22
+      ]
+    },
+    "left/selected": {
+      "rect": [
+        155,
+        333,
+        30,
+        22
+      ],
+      "pivot": [
+        15,
+        22
+      ]
+    },
+    "right/normal": {
+      "rect": [
+        186,
+        333,
+        30,
+        22
+      ],
+      "pivot": [
+        15,
+        22
+      ]
+    },
+    "right/hover": {
+      "rect": [
+        217,
+        333,
+        30,
+        22
+      ],
+      "pivot": [
+        15,
+        22
+      ]
+    },
+    "right/focus": {
+      "rect": [
+        248,
+        333,
+        30,
+        22
+      ],
+      "pivot": [
+        15,
+        22
+      ]
+    },
+    "right/pressed": {
+      "rect": [
+        279,
+        333,
+        30,
+        22
+      ],
+      "pivot": [
+        15,
+        22
+      ]
+    },
+    "right/disabled": {
+      "rect": [
+        310,
+        333,
+        30,
+        22
+      ],
+      "pivot": [
+        15,
+        22
+      ]
+    },
+    "right/selected": {
+      "rect": [
+        341,
+        333,
+        30,
+        22
+      ],
+      "pivot": [
+        15,
+        22
+      ]
+    },
+    "hotbar/selected-0": {
+      "rect": [
+        372,
+        333,
+        134,
+        26
+      ],
+      "pivot": [
+        67,
+        26
+      ]
+    },
+    "hotbar/selected-1": {
+      "rect": [
+        0,
+        360,
+        134,
+        26
+      ],
+      "pivot": [
+        67,
+        26
+      ]
+    },
+    "hotbar/selected-2": {
+      "rect": [
+        135,
+        360,
+        134,
+        26
+      ],
+      "pivot": [
+        67,
+        26
+      ]
+    },
+    "hotbar/selected-3": {
+      "rect": [
+        270,
+        360,
+        134,
+        26
+      ],
+      "pivot": [
+        67,
+        26
+      ]
+    },
+    "hotbar/selected-4": {
+      "rect": [
+        0,
+        387,
+        134,
+        26
+      ],
+      "pivot": [
+        67,
+        26
+      ]
+    },
+    "hotbar/selected-5": {
+      "rect": [
+        135,
+        387,
+        134,
+        26
+      ],
+      "pivot": [
+        67,
+        26
+      ]
+    },
+    "hotbar/normal": {
+      "rect": [
+        270,
+        387,
+        134,
+        26
+      ],
+      "pivot": [
+        67,
+        26
+      ]
+    },
+    "use/normal": {
+      "rect": [
+        405,
+        387,
+        28,
+        28
+      ],
+      "pivot": [
+        14,
+        28
+      ]
+    },
+    "use/hover": {
+      "rect": [
+        434,
+        387,
+        28,
+        28
+      ],
+      "pivot": [
+        14,
+        28
+      ]
+    },
+    "use/focus": {
+      "rect": [
+        463,
+        387,
+        28,
+        28
+      ],
+      "pivot": [
+        14,
+        28
+      ]
+    },
+    "use/pressed": {
+      "rect": [
+        0,
+        416,
+        28,
+        28
+      ],
+      "pivot": [
+        14,
+        28
+      ]
+    },
+    "use/disabled": {
+      "rect": [
+        29,
+        416,
+        28,
+        28
+      ],
+      "pivot": [
+        14,
+        28
+      ]
+    },
+    "use/selected": {
+      "rect": [
+        58,
+        416,
+        28,
+        28
+      ],
+      "pivot": [
+        14,
+        28
+      ]
+    },
+    "jump/normal": {
+      "rect": [
+        87,
+        416,
+        34,
+        34
+      ],
+      "pivot": [
+        17,
+        34
+      ]
+    },
+    "jump/hover": {
+      "rect": [
+        122,
+        416,
+        34,
+        34
+      ],
+      "pivot": [
+        17,
+        34
+      ]
+    },
+    "jump/focus": {
+      "rect": [
+        157,
+        416,
+        34,
+        34
+      ],
+      "pivot": [
+        17,
+        34
+      ]
+    },
+    "jump/pressed": {
+      "rect": [
+        192,
+        416,
+        34,
+        34
+      ],
+      "pivot": [
+        17,
+        34
+      ]
+    },
+    "jump/disabled": {
+      "rect": [
+        227,
+        416,
+        34,
+        34
+      ],
+      "pivot": [
+        17,
+        34
+      ]
+    },
+    "jump/selected": {
+      "rect": [
+        262,
+        416,
+        34,
+        34
+      ],
+      "pivot": [
+        17,
+        34
+      ]
+    },
+    "pickup/frame-0": {
+      "rect": [
+        297,
+        416,
+        50,
+        22
+      ],
+      "pivot": [
+        25,
+        22
+      ]
+    },
+    "pickup/frame-1": {
+      "rect": [
+        348,
+        416,
+        50,
+        22
+      ],
+      "pivot": [
+        25,
+        22
+      ]
+    },
+    "pickup/frame-2": {
+      "rect": [
+        399,
+        416,
+        50,
+        22
+      ],
+      "pivot": [
+        25,
+        22
+      ]
+    },
+    "pickup/frame-3": {
+      "rect": [
+        450,
+        416,
+        50,
+        22
+      ],
+      "pivot": [
+        25,
+        22
+      ]
+    },
+    "pickup/frame-4": {
+      "rect": [
+        0,
+        451,
+        50,
+        22
+      ],
+      "pivot": [
+        25,
+        22
+      ]
+    },
+    "pickup/frame-5": {
+      "rect": [
+        51,
+        451,
+        50,
+        22
+      ],
+      "pivot": [
+        25,
+        22
+      ]
+    },
+    "pickup/frame-6": {
+      "rect": [
+        102,
+        451,
+        50,
+        22
+      ],
+      "pivot": [
+        25,
+        22
+      ]
+    },
+    "pickup/frame-7": {
+      "rect": [
+        153,
+        451,
+        50,
+        22
+      ],
+      "pivot": [
+        25,
+        22
+      ]
+    },
+    "axe-tip/normal": {
+      "rect": [
+        204,
+        451,
+        92,
+        54
+      ],
+      "pivot": [
+        46,
+        54
+      ]
+    }
+  }
+}

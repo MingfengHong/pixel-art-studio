@@ -1,0 +1,112 @@
+{
+  "version": 1,
+  "name": "ui-components",
+  "canvas": [
+    16,
+    16
+  ],
+  "pivot": [
+    8,
+    16
+  ],
+  "palette": {
+    "a": "#647685ff",
+    "b": "#6d4b27ff",
+    "c": "#94afc6ff",
+    "d": "#a2c0d9ff",
+    "e": "#a3703aff",
+    "f": "#c58747ff",
+    "g": "#fff1d2ff",
+    "h": "#ffffffff"
+  },
+  "frames": [
+    {
+      "name": "round-empty",
+      "duration_ms": 100,
+      "rows": [
+        "................",
+        "................",
+        "......aaaa......",
+        "....aaddddaa....",
+        "...adddccddda...",
+        "...adccccccda...",
+        "..addccccccdda..",
+        "..adccccccccda..",
+        "..adccccccccda..",
+        "..addccccccdda..",
+        "...adccccccda...",
+        "...adddccddda...",
+        "....aaddddaa....",
+        "......aaaa......",
+        "................",
+        "................"
+      ]
+    },
+    {
+      "name": "round-plus",
+      "duration_ms": 100,
+      "rows": [
+        "................",
+        "................",
+        "......aaaa......",
+        "....aaddddaa....",
+        "...adddccddda...",
+        "...adccccccda...",
+        "..addcchhccdda..",
+        "..adcchhhhccda..",
+        "..adcchhhhccda..",
+        "..addcchhccdda..",
+        "...adccccccda...",
+        "...adddccddda...",
+        "....aaddddaa....",
+        "......aaaa......",
+        "................",
+        "................"
+      ]
+    },
+    {
+      "name": "round-star",
+      "duration_ms": 100,
+      "rows": [
+        "................",
+        "................",
+        "......aaaa......",
+        "....aaddddaa....",
+        "...adddccddda...",
+        "...adccccccda...",
+        "..addchcchcdda..",
+        "..adccchhcccda..",
+        "..adccchhcccda..",
+        "..addchcchcdda..",
+        "...adccccccda...",
+        "...adddccddda...",
+        "....aaddddaa....",
+        "......aaaa......",
+        "................",
+        "................"
+      ]
+    },
+    {
+      "name": "panel",
+      "duration_ms": 100,
+      "rows": [
+        ".bbbbb.bbbbbbbb.",
+        "beffffefffffffeb",
+        "bffffffffffffffb",
+        "bffeeeeeeeeeeffb",
+        "bffeggggggggeffb",
+        "bffeggggggggeffb",
+        "bffeggggggggeffb",
+        "bffeggggggggeffb",
+        "bffeggggggggeffb",
+        "bffeggggggggeffb",
+        ".efeggggggggeffb",
+        "bffeggggggggeffb",
+        "bffeeeeeeeeeeffb",
+        "bffffffffffffffb",
+        "beffefffffffffeb",
+        ".bbb.bbbbbbbbbb."
+      ]
+    }
+  ]
+}

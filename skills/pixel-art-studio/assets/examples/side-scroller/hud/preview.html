@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>meadow-hud - interface playground</title>
+<meta name="description" content="Interactive pixel UI components, states and screens.">
+<!-- Pixel font with Chinese glyphs (OFL); the page falls back to a system monospace font offline. -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/fusion-pixel-12px-proportional-sc@5.3.0/index.css">
+<style>
+:root{
+  --ink:#111a29;--border:#566783;--light:#91a3b8;--surface:#33445c;--inset:#202d40;--text:#f2eddc;
+  --muted:#91a0b4;--accent:#79ceb3;--health:#e57c85;--mana:#75a9ee;--xp:#e1bf79;--shadow:#0c1320;--p:3px;
+  --font:'Fusion Pixel 12px Proportional SC',ui-monospace,'Cascadia Mono',Consolas,'Microsoft YaHei','PingFang SC',monospace;
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html,body{height:100%}
+body{margin:0;color:var(--text);font:18px/1.5 var(--font);background-color:var(--shadow);
+  background-image:linear-gradient(var(--inset) 1px,transparent 1px),linear-gradient(90deg,var(--inset) 1px,transparent 1px);background-size:24px 24px}
+img{image-rendering:pixelated;display:block;user-select:none;pointer-events:none}
+a{color:var(--accent)}
+:focus-visible{outline:var(--p) dashed var(--xp);outline-offset:3px}
+
+/* Pixel frame: notched corners from four offset shadows, plus a bevel. */
+.frame{background:var(--surface);margin:var(--p);
+  box-shadow:0 calc(var(--p)*-1) var(--ink),0 var(--p) var(--ink),calc(var(--p)*-1) 0 var(--ink),var(--p) 0 var(--ink),
+    inset 0 var(--p) color-mix(in srgb,var(--light) 35%,transparent),inset 0 calc(var(--p)*-1) color-mix(in srgb,var(--ink) 55%,transparent)}
+.sunken{background:var(--inset);
+  box-shadow:0 calc(var(--p)*-1) var(--ink),0 var(--p) var(--ink),calc(var(--p)*-1) 0 var(--ink),var(--p) 0 var(--ink),inset 0 var(--p) color-mix(in srgb,var(--ink) 70%,transparent)}
+.btn{font:12px/1 var(--font);text-transform:uppercase;color:var(--text);background:var(--surface);padding:10px 12px;border:0;cursor:pointer;margin:var(--p);
+  box-shadow:0 calc(var(--p)*-1) var(--ink),0 var(--p) var(--ink),calc(var(--p)*-1) 0 var(--ink),var(--p) 0 var(--ink),
+    inset 0 var(--p) color-mix(in srgb,#fff 22%,transparent),inset 0 calc(var(--p)*-2) color-mix(in srgb,var(--ink) 45%,transparent)}
+.btn:hover{background:color-mix(in srgb,var(--surface) 85%,#fff)}
+.btn:active,.btn[aria-selected=true],.btn[aria-pressed=true]{transform:translateY(var(--p));background:var(--accent);color:var(--ink);
+  box-shadow:0 calc(var(--p)*-1) var(--ink),0 var(--p) var(--ink),calc(var(--p)*-1) 0 var(--ink),var(--p) 0 var(--ink),inset 0 var(--p) color-mix(in srgb,var(--ink) 45%,transparent)}
+
+/* The playground fills the viewport: header, then a window whose stage takes the remaining height. */
+.app{height:100%;min-height:420px;display:flex;flex-direction:column;gap:14px;padding:18px 24px;max-width:1280px;margin:0 auto}
+header{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+header h1{font-size:24px;margin:0;font-weight:400;display:flex;align-items:center;gap:12px}
+header h1::before{content:'';width:12px;height:12px;background:var(--accent);box-shadow:var(--p) var(--p) 0 var(--ink)}
+header p{margin:0;color:var(--muted);flex:1 1 360px;font-size:12px}
+.lang{display:flex;gap:2px;margin-left:auto}
+.window{flex:1;min-height:0;display:flex;flex-direction:column}
+.bar{display:flex;align-items:center;gap:8px;background:var(--inset);padding:9px 14px;border-bottom:var(--p) solid var(--ink)}
+.bar i{width:9px;height:9px;background:var(--health)}.bar i:nth-child(2){background:var(--xp)}.bar i:nth-child(3){background:var(--accent)}
+.bar span{margin-left:8px;font-size:12px;color:var(--muted);text-transform:uppercase}
+.content{flex:1;min-height:0;display:flex;flex-direction:column;gap:12px;padding:14px}
+#tabs{display:flex;flex-wrap:wrap;gap:4px}
+#screen{flex:1;min-height:120px;padding:10px;display:flex;justify-content:center;align-items:center;overflow:hidden}
+#holder{position:relative;flex:none}
+#stage{position:absolute;left:0;top:0;transform-origin:top left;image-rendering:pixelated}
+.piece{position:absolute;background:none;border:0;padding:0;outline:0;color:inherit}
+.piece:focus-visible{outline:1px solid var(--xp);outline-offset:1px}
+.piece img{position:absolute;left:0;top:0}
+.piece input{position:absolute;inset:0;margin:0;width:100%;height:100%;opacity:0;cursor:ew-resize}
+.viewport{position:absolute;overflow-y:auto;scrollbar-width:none}.viewport::-webkit-scrollbar{display:none}
+.tooltip{position:absolute;pointer-events:none;z-index:100}
+.overlay{position:absolute;inset:0;background:color-mix(in srgb,var(--shadow) 72%,transparent);z-index:90}
+#status{padding:10px 16px;min-height:44px;display:flex;align-items:center;gap:10px}
+#status::before{content:'\25B6';color:var(--accent);font-size:11px}
+#status::after{content:'';width:9px;height:16px;background:var(--accent);animation:blink 1s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+.files{display:flex;flex-wrap:wrap;gap:6px 18px;font-size:12px;color:var(--muted)}
+/* Embedded mode (?embed=1): only the window, edge to edge. */
+.embed .app{padding:6px;gap:0;min-height:0;max-width:none}.embed header,.embed .files{display:none}
+@media (max-width:600px){.app{padding:12px}.content{padding:10px}.btn{padding:8px 9px}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important}}
+</style>
+</head>
+<body>
+<div class="app">
+  <header><h1 id="name"></h1><p id="intro" data-t="intro"></p><div class="lang" id="lang" role="group" aria-label="Language" hidden></div></header>
+  <div class="frame window">
+    <div class="bar"><i></i><i></i><i></i><span id="caption">preview.html</span></div>
+    <div class="content">
+      <div id="tabs" role="tablist"></div>
+      <div class="sunken" id="screen"><div id="holder"><div id="stage"></div></div></div>
+      <div class="sunken" id="status" aria-live="polite"></div>
+    </div>
+  </div>
+  <div class="files"><span data-t="files"></span><a href="source.json" data-t="f_recipe"></a><a href="ui.json" data-t="f_meta"></a><a href="atlas.png" data-t="f_atlas"></a><a href="catalog.png" data-t="f_catalog"></a><a href="preview.png" data-t="f_sheet"></a></div>
+</div>
+<script>
+const DATA={"name": "meadow-hud", "theme": {"ink": "#151515", "border": "#6d7a8a", "light": "#c9d2dc", "surface": "#3a4656", "inset": "#252d38", "text": "#ffffff", "muted": "#9aa6b3", "accent": "#f4c542", "health": "#e84a3f", "mana": "#4aa3e8", "xp": "#f4c542", "shadow": "#151515", "frame": "#e9e2cf", "frame_light": "#ffffff", "frame_dark": "#9f9786", "button": "#56657a", "title": "#f4c542", "select": "#f4c542", "bar_bg": "#252d38", "corner": 1, "rim": 2, "style": "arcade"}, "components": {"world": {"type": "image", "size": [320, 180], "label": "", "source": "inputs/world.png", "default": "normal", "states": {"normal": "components/world/normal.png"}, "layers": {}}, "portrait": {"type": "image", "size": [34, 34], "label": "", "source": "inputs/portrait.png", "default": "normal", "states": {"normal": "components/portrait/normal.png"}, "layers": {}}, "stats": {"type": "panel", "size": [116, 34], "label": "", "nine_slice": [4, 4, 4, 4], "slice_source": "skin", "minimum_skin_size": [9, 9], "default": "normal", "states": {"normal": "components/stats/normal.png"}, "layers": {"skin": "components/stats/layer-skin.png"}}, "level": {"type": "xp-bar", "size": [108, 9], "label": "Lv 4", "fill_rect": [2, 2, 104, 5], "value": 0.35, "default": "normal", "states": {"empty": "components/level/empty.png", "half": "components/level/half.png", "full": "components/level/full.png", "normal": "components/level/normal.png"}, "layers": {"track": "components/level/layer-track.png", "fill": "components/level/layer-fill.png", "text": "components/level/layer-text.png"}}, "health": {"type": "health-bar", "size": [108, 10], "label": "HP", "fill_rect": [2, 2, 104, 6], "value_text": "45/60", "value": 0.75, "default": "normal", "states": {"empty": "components/health/empty.png", "half": "components/health/half.png", "full": "components/health/full.png", "normal": "components/health/normal.png"}, "layers": {"track": "components/health/layer-track.png", "fill": "components/health/layer-fill.png", "text": "components/health/layer-text.png"}}, "stamina": {"type": "stamina-bar", "size": [53, 8], "label": "", "fill_rect": [2, 2, 49, 4], "value": 0.8, "default": "normal", "states": {"empty": "components/stamina/empty.png", "half": "components/stamina/half.png", "full": "components/stamina/full.png", "normal": "components/stamina/normal.png"}, "layers": {"track": "components/stamina/layer-track.png", "fill": "components/stamina/layer-fill.png"}}, "hunger": {"type": "bar", "size": [53, 8], "label": "", "fill_rect": [2, 2, 49, 4], "value": 0.45, "default": "normal", "states": {"empty": "components/hunger/empty.png", "half": "components/hunger/half.png", "full": "components/hunger/full.png", "normal": "components/hunger/normal.png"}, "layers": {"track": "components/hunger/layer-track.png", "fill": "components/hunger/layer-fill.png"}}, "coin": {"type": "image", "size": [12, 12], "label": "", "source": "inputs/coin.png", "default": "normal", "states": {"normal": "components/coin/normal.png"}, "layers": {}}, "coins": {"type": "label", "size": [30, 9], "label": "537", "text": "537", "duration_ms": 90, "editable_text": true, "default": "normal", "states": {"normal": "components/coins/normal.png"}, "layers": {}}, "gem": {"type": "image", "size": [12, 12], "label": "", "source": "inputs/gem.png", "default": "normal", "states": {"normal": "components/gem/normal.png"}, "layers": {}}, "gems": {"type": "label", "size": [30, 9], "label": "26", "text": "26", "duration_ms": 90, "editable_text": true, "default": "normal", "states": {"normal": "components/gems/normal.png"}, "layers": {}}, "craft": {"type": "button", "size": [40, 36], "label": "Craft", "nine_slice": [4, 4, 4, 4], "slice_source": "skin", "minimum_skin_size": [9, 9], "default": "normal", "states": {"normal": "components/craft/normal.png", "hover": "components/craft/hover.png", "focus": "components/craft/focus.png", "pressed": "components/craft/pressed.png", "disabled": "components/craft/disabled.png", "selected": "components/craft/selected.png"}, "layers": {"skin": "components/craft/layer-skin.png", "skin-normal": "components/craft/layer-skin-normal.png", "skin-hover": "components/craft/layer-skin-hover.png", "skin-focus": "components/craft/layer-skin-focus.png", "skin-pressed": "components/craft/layer-skin-pressed.png", "skin-disabled": "components/craft/layer-skin-disabled.png", "skin-selected": "components/craft/layer-skin-selected.png"}, "source": "inputs/craft.png"}, "quests": {"type": "button", "size": [40, 36], "label": "Quests", "nine_slice": [4, 4, 4, 4], "slice_source": "skin", "minimum_skin_size": [9, 9], "default": "normal", "states": {"normal": "components/quests/normal.png", "hover": "components/quests/hover.png", "focus": "components/quests/focus.png", "pressed": "components/quests/pressed.png", "disabled": "components/quests/disabled.png", "selected": "components/quests/selected.png"}, "layers": {"skin": "components/quests/layer-skin.png", "skin-normal": "components/quests/layer-skin-normal.png", "skin-hover": "components/quests/layer-skin-hover.png", "skin-focus": "components/quests/layer-skin-focus.png", "skin-pressed": "components/quests/layer-skin-pressed.png", "skin-disabled": "components/quests/layer-skin-disabled.png", "skin-selected": "components/quests/layer-skin-selected.png"}, "source": "inputs/quests.png"}, "clock": {"type": "dial", "size": [40, 46], "label": "Day 3", "time": 0.62, "face_rect": [3, 0, 34, 34], "default": "normal", "states": {"normal": "components/clock/normal.png", "quarter-0": "components/clock/quarter-0.png", "quarter-1": "components/clock/quarter-1.png", "quarter-2": "components/clock/quarter-2.png", "quarter-3": "components/clock/quarter-3.png"}, "layers": {"face": "components/clock/layer-face.png"}}, "bag-button": {"type": "button", "size": [28, 28], "label": "", "nine_slice": [4, 4, 4, 4], "slice_source": "skin", "minimum_skin_size": [9, 9], "default": "normal", "states": {"normal": "components/bag-button/normal.png", "hover": "components/bag-button/hover.png", "focus": "components/bag-button/focus.png", "pressed": "components/bag-button/pressed.png", "disabled": "components/bag-button/disabled.png", "selected": "components/bag-button/selected.png"}, "layers": {"skin": "components/bag-button/layer-skin.png", "skin-normal": "components/bag-button/layer-skin-normal.png", "skin-hover": "components/bag-button/layer-skin-hover.png", "skin-focus": "components/bag-button/layer-skin-focus.png", "skin-pressed": "components/bag-button/layer-skin-pressed.png", "skin-disabled": "components/bag-button/layer-skin-disabled.png", "skin-selected": "components/bag-button/layer-skin-selected.png"}, "source": "inputs/bag-button.png"}, "tool-button": {"type": "button", "size": [28, 28], "label": "", "nine_slice": [4, 4, 4, 4], "slice_source": "skin", "minimum_skin_size": [9, 9], "default": "normal", "states": {"normal": "components/tool-button/normal.png", "hover": "components/tool-button/hover.png", "focus": "components/tool-button/focus.png", "pressed": "components/tool-button/pressed.png", "disabled": "components/tool-button/disabled.png", "selected": "components/tool-button/selected.png"}, "layers": {"skin": "components/tool-button/layer-skin.png", "skin-normal": "components/tool-button/layer-skin-normal.png", "skin-hover": "components/tool-button/layer-skin-hover.png", "skin-focus": "components/tool-button/layer-skin-focus.png", "skin-pressed": "components/tool-button/layer-skin-pressed.png", "skin-disabled": "components/tool-button/layer-skin-disabled.png", "skin-selected": "components/tool-button/layer-skin-selected.png"}, "source": "inputs/tool-button.png"}, "left": {"type": "button", "size": [30, 22], "label": "\u003c", "nine_slice": [4, 4, 4, 4], "slice_source": "skin", "minimum_skin_size": [9, 9], "default": "normal", "states": {"normal": "components/left/normal.png", "hover": "components/left/hover.png", "focus": "components/left/focus.png", "pressed": "components/left/pressed.png", "disabled": "components/left/disabled.png", "selected": "components/left/selected.png"}, "layers": {"skin": "components/left/layer-skin.png", "skin-normal": "components/left/layer-skin-normal.png", "skin-hover": "components/left/layer-skin-hover.png", "skin-focus": "components/left/layer-skin-focus.png", "skin-pressed": "components/left/layer-skin-pressed.png", "skin-disabled": "components/left/layer-skin-disabled.png", "skin-selected": "components/left/layer-skin-selected.png"}}, "right": {"type": "button", "size": [30, 22], "label": ">", "nine_slice": [4, 4, 4, 4], "slice_source": "skin", "minimum_skin_size": [9, 9], "default": "normal", "states": {"normal": "components/right/normal.png", "hover": "components/right/hover.png", "focus": "components/right/focus.png", "pressed": "components/right/pressed.png", "disabled": "components/right/disabled.png", "selected": "components/right/selected.png"}, "layers": {"skin": "components/right/layer-skin.png", "skin-normal": "components/right/layer-skin-normal.png", "skin-hover": "components/right/layer-skin-hover.png", "skin-focus": "components/right/layer-skin-focus.png", "skin-pressed": "components/right/layer-skin-pressed.png", "skin-disabled": "components/right/layer-skin-disabled.png", "skin-selected": "components/right/layer-skin-selected.png"}}, "hotbar": {"type": "hotbar", "size": [134, 26], "label": "", "slot_rects": [[8, 4, 18, 18], [28, 4, 18, 18], [48, 4, 18, 18], [68, 4, 18, 18], [88, 4, 18, 18], [108, 4, 18, 18]], "selected": 0, "items": [{"source": "inputs/hotbar-item-0.png"}, {"source": "inputs/hotbar-item-1.png", "count": 12}, {"source": "inputs/hotbar-item-2.png", "count": 7}, {"source": "inputs/hotbar-item-3.png", "count": 5}, {"source": "inputs/hotbar-item-4.png", "count": 2}, {"source": "inputs/hotbar-item-5.png", "count": 1}], "default": "normal", "states": {"selected-0": "components/hotbar/selected-0.png", "selected-1": "components/hotbar/selected-1.png", "selected-2": "components/hotbar/selected-2.png", "selected-3": "components/hotbar/selected-3.png", "selected-4": "components/hotbar/selected-4.png", "selected-5": "components/hotbar/selected-5.png", "normal": "components/hotbar/normal.png"}, "layers": {"skin": "components/hotbar/layer-skin.png"}}, "use": {"type": "button", "size": [28, 28], "label": "", "nine_slice": [4, 4, 4, 4], "slice_source": "skin", "minimum_skin_size": [9, 9], "default": "normal", "states": {"normal": "components/use/normal.png", "hover": "components/use/hover.png", "focus": "components/use/focus.png", "pressed": "components/use/pressed.png", "disabled": "components/use/disabled.png", "selected": "components/use/selected.png"}, "layers": {"skin": "components/use/layer-skin.png", "skin-normal": "components/use/layer-skin-normal.png", "skin-hover": "components/use/layer-skin-hover.png", "skin-focus": "components/use/layer-skin-focus.png", "skin-pressed": "components/use/layer-skin-pressed.png", "skin-disabled": "components/use/layer-skin-disabled.png", "skin-selected": "components/use/layer-skin-selected.png"}, "source": "inputs/use.png"}, "jump": {"type": "button", "size": [34, 34], "label": "Jump", "nine_slice": [4, 4, 4, 4], "slice_source": "skin", "minimum_skin_size": [9, 9], "default": "normal", "states": {"normal": "components/jump/normal.png", "hover": "components/jump/hover.png", "focus": "components/jump/focus.png", "pressed": "components/jump/pressed.png", "disabled": "components/jump/disabled.png", "selected": "components/jump/selected.png"}, "layers": {"skin": "components/jump/layer-skin.png", "skin-normal": "components/jump/layer-skin-normal.png", "skin-hover": "components/jump/layer-skin-hover.png", "skin-focus": "components/jump/layer-skin-focus.png", "skin-pressed": "components/jump/layer-skin-pressed.png", "skin-disabled": "components/jump/layer-skin-disabled.png", "skin-selected": "components/jump/layer-skin-selected.png"}}, "pickup": {"type": "floating-text", "size": [50, 22], "label": "+1 Log", "text": "+1 Log", "duration_ms": 90, "editable_text": true, "default": "frame-0", "states": {"frame-0": "components/pickup/frame-0.png", "frame-1": "components/pickup/frame-1.png", "frame-2": "components/pickup/frame-2.png", "frame-3": "components/pickup/frame-3.png", "frame-4": "components/pickup/frame-4.png", "frame-5": "components/pickup/frame-5.png", "frame-6": "components/pickup/frame-6.png", "frame-7": "components/pickup/frame-7.png"}, "layers": {}}, "axe-tip": {"type": "tooltip", "size": [92, 54], "label": "Stone Axe", "nine_slice": [4, 4, 4, 4], "slice_source": "skin", "minimum_skin_size": [9, 9], "pointer": [15, 53], "default": "normal", "states": {"normal": "components/axe-tip/normal.png"}, "layers": {"skin": "components/axe-tip/layer-skin.png"}}}, "screens": [{"id": "hud", "title": "Adventure HUD", "size": [320, 180], "description": "Hover the hotbar for a tool tip.", "children": [{"component": "world", "at": [0, 0]}, {"component": "portrait", "at": [4, 4]}, {"component": "stats", "at": [40, 4]}, {"component": "level", "at": [44, 8]}, {"component": "health", "at": [44, 18]}, {"component": "stamina", "at": [44, 29]}, {"component": "hunger", "at": [99, 29]}, {"component": "coin", "at": [160, 5]}, {"component": "coins", "at": [174, 8]}, {"component": "gem", "at": [160, 19]}, {"component": "gems", "at": [174, 22]}, {"component": "craft", "at": [194, 4], "action": "float:pickup"}, {"component": "quests", "at": [236, 4]}, {"component": "clock", "at": [278, 4]}, {"component": "bag-button", "at": [4, 44]}, {"component": "tool-button", "at": [4, 76]}, {"component": "left", "at": [6, 152]}, {"component": "right", "at": [40, 152]}, {"component": "hotbar", "at": [93, 151], "tooltip": "axe-tip", "label": "Hotbar"}, {"component": "use", "at": [244, 148], "action": "float:pickup"}, {"component": "jump", "at": [278, 142]}]}]};
+const $=id=>document.getElementById(id),stage=$('stage'),status=$('status');
+const params=new URLSearchParams(location.search);
+let floating=[],bindings={},current,openMenu=null;
+for(const [k,v] of Object.entries(DATA.theme))if(typeof v==='string')document.documentElement.style.setProperty('--'+k,v);
+if(params.get('embed'))document.documentElement.classList.add('embed');
+
+// ---- Language: built-in strings plus optional recipe "locales" for screen titles and descriptions ----
+const STRINGS={
+  en:{intro:'Drag the sliders, toggle options, open a dropdown, scroll the inventory, and hover an item. Buttons open a dialog or trigger floating text.',
+    screens:'Example screens',files:'Generated files:',f_recipe:'Editable recipe',f_meta:'Component metadata',f_atlas:'PNG atlas',f_catalog:'Component catalog',f_sheet:'Screen sheet',
+    selected:'Selected: {x}',picked:'{x} selected',toggled:'{x}: {v}',on:'on',off:'off',slider:'{x}: {v}%',scroll:'Inventory scroll: {v} px',explore:'Explore {x}',inventory:'Scrollable inventory'},
+  zh:{intro:'拖动滑块、切换开关、打开下拉菜单、滚动背包并悬停物品；按钮可以打开弹窗或触发飘字。',
+    screens:'示例界面',files:'生成的文件：',f_recipe:'可编辑配方',f_meta:'组件元数据',f_atlas:'PNG 图集',f_catalog:'组件总览',f_sheet:'界面拼图',
+    selected:'已选择：{x}',picked:'已选择 {x}',toggled:'{x}：{v}',on:'开',off:'关',slider:'{x}：{v}%',scroll:'背包滚动：{v} px',explore:'浏览 {x}',inventory:'可滚动背包'}
+};
+const LOCALES=DATA.locales||{},LANGS=['en',...Object.keys(LOCALES).filter(l=>l!=='en')];
+let S=STRINGS.en,L={};
+function T(key,x,v){return (S[key]||STRINGS.en[key]||key).replace('{x}',x??'').replace('{v}',v??'')}
+function pickLang(){
+  const wanted=[params.get('lang'),...(navigator.languages||[navigator.language])];
+  for(const c of wanted){if(!c)continue;const low=c.toLowerCase();
+    const hit=LANGS.find(l=>l.toLowerCase()===low)||LANGS.find(l=>l.split('-')[0]===low.split('-')[0]);if(hit)return hit}
+  return 'en';
+}
+function screenText(s){const o=(L.screens||{})[s.id]||{};return {title:o.title||s.title||s.id,description:o.description||s.description}}
+function setLang(lang){
+  document.documentElement.lang=lang;S=STRINGS[lang.split('-')[0]]||STRINGS.en;L=LOCALES[lang]||{};
+  for(const node of document.querySelectorAll('[data-t]'))node.textContent=T(node.dataset.t);
+  $('name').textContent=L.name||DATA.name;$('tabs').setAttribute('aria-label',T('screens'));
+  tabs.forEach((b,i)=>{b.textContent=screenText(DATA.screens[i]).title});
+  for(const b of $('lang').children)b.setAttribute('aria-pressed',b.dataset.lang===lang);
+  if(current){const t=screenText(current);message(t.description||T('explore',t.title))}
+}
+
+// ---- Interactive components ----
+function el(tag,cls,text){const e=document.createElement(tag);if(cls)e.className=cls;if(text!=null)e.textContent=text;return e}
+function img(src){const im=new Image();im.src=src;return im}
+function place(node,xy,size){node.style.left=xy[0]+'px';node.style.top=xy[1]+'px';if(size){node.style.width=size[0]+'px';node.style.height=size[1]+'px'}}
+function message(text){status.textContent=text}
+function pop(name){
+  const c=DATA.components[name],layer=el('div','overlay');stage.append(layer);
+  const node=component({component:name,at:[(current.size[0]-c.size[0])/2,(current.size[1]-c.size[1])/2]},layer);
+  node.tabIndex=0;node.setAttribute('role','dialog');node.focus();
+  node.onclick=e=>{const rect=node.getBoundingClientRect(),s=rect.width/c.size[0],y=(e.clientY-rect.top)/s;
+    if(y>=c.size[1]-26&&y<c.size[1]-8){const x=(e.clientX-rect.left)/s,index=x<c.size[0]/2?0:1;layer.remove();message(T('picked',c.buttons[index]))}};
+  layer.onclick=e=>{if(e.target===layer)layer.remove()};
+  layer.onkeydown=e=>{if(e.key==='Escape')layer.remove()};
+}
+function burst(name){
+  const c=DATA.components[name],node=component({component:name,at:[current.size[0]/2-c.size[0]/2,70]},stage);
+  floating.find(f=>f.el===node).once=true;message(c.text);
+}
+function component(p,parent){
+  const c=DATA.components[p.component],node=el('div','piece');
+  place(node,p.at,c.size);parent.append(node);
+  const picture=img(c.states[p.state||c.default]);node.append(picture);
+  const set=s=>{picture.src=c.states[s]};node.setAttribute('aria-label',p.label||c.label||p.component);
+  if(c.type==='canvas'||c.type==='hud'){for(const child of c.children||[])component(child,node)}
+  if(c.type.endsWith('-bar')||c.type==='bar'){
+    picture.src=c.layers.track;
+    const fill=el('div'),r=c.fill_rect;place(fill,r.slice(0,2),[r[2],r[3]]);
+    fill.style.position='absolute';fill.style.overflow='hidden';fill.append(img(c.layers.fill));node.append(fill);
+    const update=v=>{fill.style.width=Math.round(r[2]*v)+'px'};update(c.value);bindings[p.component]=update;
+  }
+  if(c.type==='slider'){
+    picture.src=c.layers.track;const thumb=img(c.layers.thumb),input=document.createElement('input');
+    input.type='range';input.min=0;input.max=100;input.value=Math.round(c.value*100);input.disabled=p.state==='disabled';
+    if(input.disabled)node.style.opacity='.5';
+    input.setAttribute('aria-label',p.label||p.component);node.append(thumb,input);
+    const update=()=>{thumb.style.left=Math.round((c.size[0]-c.thumb_size[0])*input.value/100)+'px';
+      if(p.bind&&bindings[p.bind])bindings[p.bind](input.value/100);
+      message(T('slider',p.label||p.component,input.value))};
+    thumb.style.left=Math.round((c.size[0]-8)*c.value)+'px';input.oninput=update;
+  }
+  if((c.type==='toggle'||c.type==='switch')&&p.state!=='disabled'){
+    let value=c.value;node.tabIndex=0;node.setAttribute('role','switch');node.setAttribute('aria-checked',value);node.style.cursor='pointer';
+    const toggle=()=>{value=!value;set(value?'on':'off');node.setAttribute('aria-checked',value);message(T('toggled',p.label||p.component,T(value?'on':'off')))};
+    node.onclick=toggle;node.onkeydown=e=>{if(e.key===' '||e.key==='Enter'){e.preventDefault();toggle()}};
+  }
+  if(c.type==='button'){
+    const disabled=p.state==='disabled';node.tabIndex=disabled?-1:0;node.setAttribute('role','button');node.style.cursor=disabled?'default':'pointer';
+    if(!disabled){
+      node.onpointerenter=()=>set('hover');node.onpointerleave=()=>set('normal');
+      node.onpointerdown=()=>set('pressed');node.onpointerup=()=>set('hover');
+      const act=()=>{if(p.action){const [action,id]=p.action.split(':');if(action==='open')pop(id);if(action==='float')burst(id)}else message(T('picked',c.label))};
+      node.onclick=act;node.onkeydown=e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();act()}};
+    }
+  }
+  if(c.type==='dropdown'&&p.state!=='disabled'){
+    let opened=false,selected=c.selected;node.tabIndex=0;node.setAttribute('role','combobox');node.setAttribute('aria-expanded',false);node.style.cursor='pointer';
+    const close=()=>{opened=false;set('selected-'+selected);node.style.zIndex=0;node.style.height=c.size[1]+'px';node.setAttribute('aria-expanded',false)};
+    node.onclick=e=>{
+      if(!opened){if(openMenu)openMenu();opened=true;set('open-'+selected);node.style.zIndex=50;node.style.height=(c.size[1]+c.options.length*14+4)+'px';node.setAttribute('aria-expanded',true);openMenu=close}
+      else{const rect=node.getBoundingClientRect(),y=(e.clientY-rect.top)/(rect.width/c.size[0]);if(y>=c.size[1])selected=Math.min(c.options.length-1,Math.max(0,Math.floor((y-c.size[1]-2)/14)));close();message(T('selected',c.options[selected]))}
+    };
+    node.onkeydown=e=>{if(e.key==='Escape'){close()}if(e.key==='ArrowDown'||e.key==='ArrowUp'){e.preventDefault();selected=(selected+(e.key==='ArrowDown'?1:-1)+c.options.length)%c.options.length;close();message(T('selected',c.options[selected]))}};
+  }
+  if(c.type==='scroll-view'){
+    picture.src=c.layers.skin;
+    const v=el('div','viewport');place(v,c.viewport.slice(0,2),c.viewport.slice(2));v.append(img(c.layers.content));
+    v.firstChild.style.position='relative';v.tabIndex=0;v.setAttribute('aria-label',T('inventory'));node.append(v);
+    const thumb=el('div');thumb.style.position='absolute';thumb.style.background=DATA.theme.light;
+    const hh=Math.max(6,Math.round((c.size[1]-8)*c.viewport[3]/c.content_size[1]));place(thumb,[c.size[0]-8,4],[4,hh]);node.append(thumb);
+    v.onscroll=()=>{thumb.style.top=4+Math.round((c.size[1]-8-hh)*v.scrollTop/Math.max(1,c.content_size[1]-c.viewport[3]))+'px';message(T('scroll','',v.scrollTop))};
+  }
+  if((c.type.endsWith('-bar')||c.type==='bar')&&c.layers.text){const tx=img(c.layers.text);tx.style.zIndex=2;node.append(tx)}
+  if(c.type==='hotbar'||c.type==='list'){
+    const rects=c.slot_rects||c.row_rects,names=(c.items||c.rows||[]);node.style.cursor='pointer';node.tabIndex=0;node.setAttribute('role','listbox');
+    let sel=c.selected||0;
+    const pick=i=>{sel=i;set('selected-'+i);const it=names[i]||{};message(T('selected',it.label||((c.type==='hotbar'?'#':'')+(i+1))))};
+    node.onclick=e=>{const r=node.getBoundingClientRect(),s=r.width/c.size[0],x=(e.clientX-r.left)/s,y=(e.clientY-r.top)/s;
+      rects.forEach((q,i)=>{if(x>=q[0]-2&&x<q[0]+q[2]+2&&y>=q[1]-2&&y<q[1]+q[3]+2)pick(i)})};
+    node.onkeydown=e=>{const k={ArrowRight:1,ArrowDown:1,ArrowLeft:-1,ArrowUp:-1}[e.key];if(k){e.preventDefault();pick((sel+k+rects.length)%rects.length)}
+      if(c.type==='hotbar'&&/^[1-9]$/.test(e.key)&&+e.key<=rects.length)pick(+e.key-1)};
+  }
+  if(c.type==='dialogue'){
+    let timer,typing=true,blink=false;node.style.cursor='pointer';node.tabIndex=0;
+    const finish=()=>{clearInterval(timer);typing=false;set(c.choices.length?'choice-0':'normal');
+      if(!c.choices.length)timer=setInterval(()=>{blink=!blink;set(blink?'waiting':'normal')},450)};
+    const play=()=>{clearInterval(timer);typing=true;let i=0;set('typing-0');
+      timer=setInterval(()=>{i++;if(i>=c.typing_frames){finish();return}set('typing-'+i)},c.duration_ms)};
+    node.onclick=e=>{if(typing){finish();return}
+      if(c.choices.length){const r=node.getBoundingClientRect(),s=r.width/c.size[0],y=(e.clientY-r.top)/s;
+        c.choice_rects.forEach((q,i)=>{if(y>=q[1]&&y<q[1]+q[3]){set('choice-'+i);message(T('picked',c.choices[i]))}})}
+      else play()};
+    node.onkeydown=e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();node.onclick({clientY:-1e9})}};
+    play();
+  }
+  if(c.type==='floating-text')floating.push({el:node,picture,frames:Object.values(c.states),duration:c.duration_ms,start:performance.now(),once:false});
+  if(p.tooltip){
+    let tip;
+    node.addEventListener('pointerenter',()=>{const tc=DATA.components[p.tooltip];tip=img(tc.states[tc.default]);tip.className='tooltip';
+      const stageRect=stage.getBoundingClientRect(),rect=node.getBoundingClientRect(),s=stageRect.width/current.size[0];
+      // Above the target (the pointer points down); below it only when there is no room above.
+      const top=(rect.top-stageRect.top)/s,bottom=(rect.bottom-stageRect.top)/s,th=tc.size[1];
+      const y=top-th-2>=0?top-th-2:Math.min(current.size[1]-th,bottom+4);
+      place(tip,[Math.max(0,Math.min(current.size[0]-tc.size[0],(rect.left-stageRect.left)/s)),Math.max(0,y)]);stage.append(tip)});
+    node.addEventListener('pointerleave',()=>{if(tip)tip.remove()});
+  }
+  return node;
+}
+// Fit the screen into the space left in the window: integer zoom when it fits, a fractional fit otherwise.
+function fit(){
+  if(!current)return;const box=$('screen'),w=current.size[0],h=current.size[1];
+  $('holder').style.width=$('holder').style.height='0px';
+  const s0=Math.min((box.clientWidth-20)/w,(box.clientHeight-20)/h),s=s0>=1?Math.min(8,Math.floor(s0)):Math.max(.25,s0);
+  stage.style.transform='scale('+s+')';$('holder').style.width=w*s+'px';$('holder').style.height=h*s+'px';
+}
+function show(screen){
+  current=screen;stage.replaceChildren();bindings={};floating=[];openMenu=null;
+  stage.style.width=screen.size[0]+'px';stage.style.height=screen.size[1]+'px';stage.style.background=screen.background||DATA.theme.ink;
+  for(const child of screen.children)component(child,stage);
+  fit();
+  for(const b of tabs){const on=b.dataset.id===screen.id;b.setAttribute('aria-selected',on);b.tabIndex=on?0:-1}
+  const t=screenText(screen);message(t.description||T('explore',t.title));
+}
+const tabs=[];
+DATA.screens.forEach((screen,i)=>{const b=el('button','btn',screen.title||screen.id);b.type='button';b.dataset.id=screen.id;b.setAttribute('role','tab');
+  b.onclick=()=>show(screen);
+  b.onkeydown=e=>{if(e.key==='ArrowRight'||e.key==='ArrowLeft'){e.preventDefault();const n=(i+(e.key==='ArrowRight'?1:-1)+tabs.length)%tabs.length;show(DATA.screens[n]);tabs[n].focus()}};
+  tabs.push(b);$('tabs').append(b)});
+if(LANGS.length>1&&!params.get('embed')){$('lang').hidden=false;
+  for(const lang of LANGS){const b=el('button','btn',lang==='en'?'EN':(LOCALES[lang].label||lang));b.type='button';b.dataset.lang=lang;b.onclick=()=>setLang(lang);$('lang').append(b)}}
+function tick(now){floating=floating.filter(f=>f.el.isConnected);for(const f of floating){const n=Math.floor((now-f.start)/f.duration);if(f.once&&n>=f.frames.length){f.el.remove();continue}const index=n%f.frames.length;if(index!==f.last){f.picture.src=f.frames[index];f.last=index}}requestAnimationFrame(tick)}
+$('caption').textContent=DATA.name+' / preview.html';
+setLang(pickLang());
+if(DATA.screens.length)show(DATA.screens[0]);requestAnimationFrame(tick);
+addEventListener('resize',fit);
+// Follow language changes from an embedding page.
+addEventListener('message',e=>{if(e.origin===location.origin&&e.data&&e.data.lang&&LANGS.includes(e.data.lang))setLang(e.data.lang)});
+</script>
+</body>
+</html>

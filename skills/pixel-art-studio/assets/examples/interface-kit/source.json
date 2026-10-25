@@ -1,0 +1,1773 @@
+{
+  "name": "rpg-interface-kit",
+  "theme": {
+    "style": "arcade",
+    "ink": "#1a1426",
+    "frame": "#d9a94a",
+    "frame_light": "#ffe29a",
+    "frame_dark": "#8a5a1e",
+    "surface": "#2e2547",
+    "inset": "#1f1933",
+    "button": "#3e3262",
+    "text": "#f6efe2",
+    "muted": "#a99fc4",
+    "accent": "#7fd1c8",
+    "title": "#ffd257",
+    "select": "#7fd1c8",
+    "bar_bg": "#1f1933",
+    "border": "#5a4d80",
+    "light": "#cfc6ea",
+    "health": "#e8505a",
+    "mana": "#4aa3e8",
+    "xp": "#ffd257",
+    "shadow": "#120e1c"
+  },
+  "locales": {
+    "zh-CN": {
+      "label": "中文",
+      "name": "RPG 界面套件",
+      "screens": {
+        "hud": {
+          "title": "小镇 HUD",
+          "description": "点击腰带格子或按 1-6 切换；悬停查看物品说明。"
+        },
+        "dialogue": {
+          "title": "对话",
+          "description": "点击显示完整台词，再选择回答。"
+        },
+        "inventory": {
+          "title": "背包与装备",
+          "description": "滚动背包，悬停武器栏查看说明。"
+        },
+        "battle": {
+          "title": "战斗",
+          "description": "选择指令或队员；选“攻击”会显示伤害数字。"
+        },
+        "shop": {
+          "title": "商店",
+          "description": "选择商品；购买会显示花费，离开会弹出确认。"
+        },
+        "select": {
+          "title": "角色选择",
+          "description": "用箭头浏览角色；五官保持极简，用表情气泡表达情绪。"
+        }
+      }
+    }
+  },
+  "components": [
+    {
+      "id": "world",
+      "type": "image",
+      "size": [
+        320,
+        180
+      ],
+      "source": "inputs/world.png"
+    },
+    {
+      "id": "dim",
+      "type": "canvas",
+      "size": [
+        320,
+        180
+      ],
+      "background": "#120e1cb0",
+      "children": []
+    },
+    {
+      "id": "portrait",
+      "type": "image",
+      "size": [
+        46,
+        46
+      ],
+      "frame": true,
+      "source": "inputs/portrait.png",
+      "crop": [
+        2,
+        2,
+        12,
+        11
+      ]
+    },
+    {
+      "id": "vitals",
+      "type": "panel",
+      "size": [
+        104,
+        46
+      ]
+    },
+    {
+      "id": "name",
+      "type": "label",
+      "size": [
+        60,
+        9
+      ],
+      "label": "Mira  Lv 7",
+      "align": "left",
+      "color": "#ffd257"
+    },
+    {
+      "id": "hp",
+      "type": "health-bar",
+      "size": [
+        94,
+        10
+      ],
+      "value": 0.8,
+      "label": "HP",
+      "max": 80
+    },
+    {
+      "id": "mp",
+      "type": "mana-bar",
+      "size": [
+        94,
+        10
+      ],
+      "value": 0.6,
+      "label": "MP",
+      "max": 40
+    },
+    {
+      "id": "exp",
+      "type": "xp-bar",
+      "size": [
+        94,
+        5
+      ],
+      "value": 0.45
+    },
+    {
+      "id": "purse",
+      "type": "panel",
+      "size": [
+        64,
+        20
+      ]
+    },
+    {
+      "id": "coin",
+      "type": "image",
+      "size": [
+        12,
+        12
+      ],
+      "source": "inputs/coin.png"
+    },
+    {
+      "id": "gold",
+      "type": "label",
+      "size": [
+        40,
+        9
+      ],
+      "label": "1,250",
+      "align": "right"
+    },
+    {
+      "id": "map",
+      "type": "minimap",
+      "size": [
+        64,
+        42
+      ],
+      "tiles": [
+        "gggggggggggggggggggg",
+        "gggggggggggggggggggg",
+        "gggggggggggggggggggg",
+        "gggggggggggggggggggg",
+        "ggggggggggggpggggggg",
+        "pppppppppppppppppppp",
+        "gggggggggpgggggggggg",
+        "gfffgggggpgggggggggg",
+        "gfffgggggpgggggwwwwg",
+        "gfffgggggpggggwwwwww",
+        "gfffggpggpggggwwwwww",
+        "ggggggpggpgggggwwwwg"
+      ],
+      "colors": {
+        "g": "#4f9a4f",
+        "w": "#3f8fc0",
+        "p": "#c8a06a",
+        "f": "#7a4f2e"
+      },
+      "markers": [
+        {
+          "at": [
+            0.47,
+            0.62
+          ],
+          "color": "#ffd257"
+        },
+        {
+          "at": [
+            0.3,
+            0.45
+          ],
+          "color": "#7fd1c8"
+        }
+      ]
+    },
+    {
+      "id": "quest",
+      "type": "panel",
+      "size": [
+        108,
+        20
+      ]
+    },
+    {
+      "id": "quest-icon",
+      "type": "image",
+      "size": [
+        12,
+        12
+      ],
+      "source": "inputs/quest-icon.png"
+    },
+    {
+      "id": "quest-label",
+      "type": "label",
+      "size": [
+        86,
+        9
+      ],
+      "label": "Find the mine key",
+      "align": "left"
+    },
+    {
+      "id": "belt",
+      "type": "hotbar",
+      "size": [
+        134,
+        26
+      ],
+      "cell": 18,
+      "gap": 2,
+      "slots": 6,
+      "selected": 0,
+      "items": [
+        {
+          "source": "inputs/belt-item-0.png"
+        },
+        {
+          "source": "inputs/belt-item-1.png",
+          "count": 5
+        },
+        {
+          "source": "inputs/belt-item-2.png",
+          "count": 3
+        },
+        {
+          "source": "inputs/belt-item-3.png",
+          "count": 12
+        },
+        {
+          "source": "inputs/belt-item-4.png",
+          "count": 4
+        },
+        {
+          "source": "inputs/belt-item-5.png",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": "menu",
+      "type": "button",
+      "size": [
+        52,
+        20
+      ],
+      "label": "Menu",
+      "source": "inputs/menu.png",
+      "icon_size": [
+        12,
+        12
+      ]
+    },
+    {
+      "id": "potion-tip",
+      "type": "tooltip",
+      "size": [
+        100,
+        46
+      ],
+      "label": "Red Potion",
+      "lines": [
+        "Restores 40 HP.",
+        "Heavy  0.2"
+      ]
+    },
+    {
+      "id": "talk",
+      "type": "dialogue",
+      "layout": "inset",
+      "size": [
+        312,
+        76
+      ],
+      "speaker": "Bram the Trader",
+      "portrait": "inputs/talk-portrait.png",
+      "text": "Welcome, traveler! Fresh bread, sturdy boots and a map of the old mines. Care to take a look?",
+      "choices": [
+        "Show me your wares.",
+        "Just passing through."
+      ],
+      "portrait_crop": [
+        0,
+        0,
+        16,
+        13
+      ]
+    },
+    {
+      "id": "bag-panel",
+      "type": "panel",
+      "size": [
+        312,
+        172
+      ],
+      "label": "Inventory"
+    },
+    {
+      "id": "hero-figure",
+      "type": "image",
+      "size": [
+        56,
+        64
+      ],
+      "frame": true,
+      "source": "inputs/hero-figure.png"
+    },
+    {
+      "id": "helmet-slot",
+      "type": "image",
+      "size": [
+        22,
+        22
+      ],
+      "slot": true,
+      "source": "inputs/helmet-slot.png"
+    },
+    {
+      "id": "armor-slot",
+      "type": "image",
+      "size": [
+        22,
+        22
+      ],
+      "slot": true,
+      "source": "inputs/armor-slot.png"
+    },
+    {
+      "id": "weapon-slot",
+      "type": "image",
+      "size": [
+        22,
+        22
+      ],
+      "slot": true,
+      "source": "inputs/weapon-slot.png"
+    },
+    {
+      "id": "shield-slot",
+      "type": "image",
+      "size": [
+        22,
+        22
+      ],
+      "slot": true,
+      "source": "inputs/shield-slot.png"
+    },
+    {
+      "id": "boots-slot",
+      "type": "image",
+      "size": [
+        22,
+        22
+      ],
+      "slot": true,
+      "source": "inputs/boots-slot.png"
+    },
+    {
+      "id": "ring-slot",
+      "type": "image",
+      "size": [
+        22,
+        22
+      ],
+      "slot": true,
+      "source": "inputs/ring-slot.png"
+    },
+    {
+      "id": "stats",
+      "type": "list",
+      "size": [
+        120,
+        50
+      ],
+      "row_height": 14,
+      "selected": 0,
+      "rows": [
+        {
+          "label": "Attack",
+          "value": 24
+        },
+        {
+          "label": "Defense",
+          "value": 18
+        },
+        {
+          "label": "Speed",
+          "value": 12
+        }
+      ]
+    },
+    {
+      "id": "bag",
+      "type": "scroll-view",
+      "size": [
+        162,
+        116
+      ],
+      "columns": 7,
+      "cell": 20,
+      "slots": 42,
+      "items": [
+        {
+          "source": "inputs/bag-item-0.png"
+        },
+        {
+          "source": "inputs/bag-item-1.png"
+        },
+        {
+          "source": "inputs/bag-item-2.png",
+          "count": 5
+        },
+        {
+          "source": "inputs/bag-item-3.png",
+          "count": 3
+        },
+        {
+          "source": "inputs/bag-item-4.png",
+          "count": 12
+        },
+        {
+          "source": "inputs/bag-item-5.png",
+          "count": 4
+        },
+        {
+          "source": "inputs/bag-item-6.png",
+          "count": 1
+        },
+        {
+          "source": "inputs/bag-item-7.png",
+          "count": 1
+        },
+        {
+          "source": "inputs/bag-item-8.png",
+          "count": 9
+        },
+        {
+          "source": "inputs/bag-item-9.png",
+          "count": 2
+        },
+        {
+          "source": "inputs/bag-item-10.png",
+          "count": 3
+        },
+        {
+          "source": "inputs/bag-item-11.png",
+          "count": 20
+        },
+        {
+          "source": "inputs/bag-item-12.png",
+          "count": 14
+        },
+        {
+          "source": "inputs/bag-item-13.png",
+          "count": 2
+        },
+        {
+          "source": "inputs/bag-item-14.png"
+        },
+        {
+          "source": "inputs/bag-item-15.png"
+        },
+        {
+          "source": "inputs/bag-item-16.png"
+        },
+        {
+          "source": "inputs/bag-item-17.png"
+        },
+        {
+          "source": "inputs/bag-item-18.png"
+        },
+        {
+          "source": "inputs/bag-item-19.png"
+        }
+      ]
+    },
+    {
+      "id": "use",
+      "type": "button",
+      "size": [
+        52,
+        18
+      ],
+      "label": "Use"
+    },
+    {
+      "id": "drop",
+      "type": "button",
+      "size": [
+        52,
+        18
+      ],
+      "label": "Drop"
+    },
+    {
+      "id": "weapon-tip",
+      "type": "tooltip",
+      "size": [
+        104,
+        46
+      ],
+      "label": "Oak Staff",
+      "lines": [
+        "Magic +8",
+        "Channels fire."
+      ]
+    },
+    {
+      "id": "shop-panel",
+      "type": "panel",
+      "size": [
+        312,
+        172
+      ],
+      "label": "Bram's Goods"
+    },
+    {
+      "id": "shopkeeper",
+      "type": "image",
+      "size": [
+        52,
+        52
+      ],
+      "frame": true,
+      "source": "inputs/shopkeeper.png",
+      "crop": [
+        0,
+        0,
+        16,
+        16
+      ]
+    },
+    {
+      "id": "greeting",
+      "type": "label",
+      "size": [
+        90,
+        9
+      ],
+      "label": "Best prices",
+      "align": "left",
+      "color": "#a99fc4"
+    },
+    {
+      "id": "greeting2",
+      "type": "label",
+      "size": [
+        90,
+        9
+      ],
+      "label": "in the valley!",
+      "align": "left",
+      "color": "#a99fc4"
+    },
+    {
+      "id": "wares",
+      "type": "list",
+      "size": [
+        196,
+        132
+      ],
+      "row_height": 20,
+      "selected": 2,
+      "rows": [
+        {
+          "source": "inputs/wares-row-0.png",
+          "label": "Bread",
+          "value": 12,
+          "value_icon": "inputs/wares-row-0-icon.png"
+        },
+        {
+          "source": "inputs/wares-row-1.png",
+          "label": "Healing Herb",
+          "value": 8,
+          "value_icon": "inputs/wares-row-1-icon.png"
+        },
+        {
+          "source": "inputs/wares-row-2.png",
+          "label": "Red Potion",
+          "value": 30,
+          "value_icon": "inputs/wares-row-2-icon.png"
+        },
+        {
+          "source": "inputs/wares-row-3.png",
+          "label": "Blue Potion",
+          "value": 35,
+          "value_icon": "inputs/wares-row-3-icon.png"
+        },
+        {
+          "source": "inputs/wares-row-4.png",
+          "label": "Leather Boots",
+          "value": 120,
+          "value_icon": "inputs/wares-row-4-icon.png"
+        },
+        {
+          "source": "inputs/wares-row-5.png",
+          "label": "Mine Map",
+          "value": 60,
+          "value_icon": "inputs/wares-row-5-icon.png",
+          "disabled": true
+        }
+      ]
+    },
+    {
+      "id": "wallet",
+      "type": "label",
+      "size": [
+        90,
+        9
+      ],
+      "label": "Your gold 1,250",
+      "align": "left"
+    },
+    {
+      "id": "buy",
+      "type": "button",
+      "size": [
+        56,
+        18
+      ],
+      "label": "Buy"
+    },
+    {
+      "id": "leave",
+      "type": "button",
+      "size": [
+        56,
+        18
+      ],
+      "label": "Leave"
+    },
+    {
+      "id": "thanks",
+      "type": "floating-text",
+      "size": [
+        80,
+        24
+      ],
+      "label": "-30 gold",
+      "color": "#ffd257",
+      "outline": "#1a1426",
+      "frames": 8,
+      "rise": 2
+    },
+    {
+      "id": "field",
+      "type": "image",
+      "size": [
+        320,
+        180
+      ],
+      "source": "inputs/field.png"
+    },
+    {
+      "id": "fighter",
+      "type": "image",
+      "size": [
+        48,
+        32
+      ],
+      "source": "inputs/fighter.png"
+    },
+    {
+      "id": "ally",
+      "type": "image",
+      "size": [
+        32,
+        32
+      ],
+      "source": "inputs/ally.png"
+    },
+    {
+      "id": "goblin",
+      "type": "image",
+      "size": [
+        48,
+        48
+      ],
+      "source": "inputs/goblin.png"
+    },
+    {
+      "id": "slime",
+      "type": "image",
+      "size": [
+        32,
+        32
+      ],
+      "source": "inputs/slime.png"
+    },
+    {
+      "id": "bat",
+      "type": "image",
+      "size": [
+        32,
+        32
+      ],
+      "source": "inputs/bat.png"
+    },
+    {
+      "id": "slash-fx",
+      "type": "image",
+      "size": [
+        32,
+        32
+      ],
+      "source": "inputs/slash-fx.png"
+    },
+    {
+      "id": "spark-fx",
+      "type": "image",
+      "size": [
+        32,
+        32
+      ],
+      "source": "inputs/spark-fx.png"
+    },
+    {
+      "id": "hit",
+      "type": "floating-text",
+      "size": [
+        44,
+        28
+      ],
+      "label": "-24",
+      "scale": 2,
+      "color": "#ffffff",
+      "outline": "#1a1426",
+      "frames": 8,
+      "rise": 2
+    },
+    {
+      "id": "turn",
+      "type": "text",
+      "size": [
+        160,
+        14
+      ],
+      "label": "Mira casts Fireball!",
+      "color": "#ffd257",
+      "outline": "#1a1426"
+    },
+    {
+      "id": "commands",
+      "type": "list",
+      "size": [
+        92,
+        56
+      ],
+      "row_height": 11,
+      "selected": 1,
+      "rows": [
+        {
+          "label": "Attack"
+        },
+        {
+          "label": "Skills"
+        },
+        {
+          "label": "Items"
+        },
+        {
+          "label": "Run"
+        }
+      ]
+    },
+    {
+      "id": "party",
+      "type": "list",
+      "size": [
+        218,
+        56
+      ],
+      "row_height": 22,
+      "selected": 0,
+      "rows": [
+        {
+          "source": "inputs/party-row-0.png",
+          "label": "Mira",
+          "value": "64/80",
+          "crop": [
+            2,
+            2,
+            12,
+            11
+          ]
+        },
+        {
+          "source": "inputs/party-row-1.png",
+          "label": "Brann",
+          "value": "96/120",
+          "crop": [
+            2,
+            2,
+            12,
+            11
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lead-hp",
+      "type": "health-bar",
+      "size": [
+        72,
+        7
+      ],
+      "value": 0.8,
+      "color": "#6fd88a"
+    },
+    {
+      "id": "ally-hp",
+      "type": "health-bar",
+      "size": [
+        72,
+        7
+      ],
+      "value": 0.8
+    },
+    {
+      "id": "confirm",
+      "type": "modal",
+      "size": [
+        150,
+        74
+      ],
+      "label": "Leave the shop?",
+      "lines": [
+        "Bram will miss you."
+      ],
+      "buttons": [
+        "Stay",
+        "Leave"
+      ]
+    },
+    {
+      "id": "showcase",
+      "type": "image",
+      "size": [
+        96,
+        112
+      ],
+      "frame": true,
+      "source": "inputs/showcase.png"
+    },
+    {
+      "id": "pick-name",
+      "type": "text",
+      "size": [
+        96,
+        12
+      ],
+      "label": "Mira",
+      "color": "#ffd257",
+      "outline": "#1a1426"
+    },
+    {
+      "id": "pick-level",
+      "type": "label",
+      "size": [
+        30,
+        9
+      ],
+      "label": "Lv 7",
+      "align": "right",
+      "color": "#7fd1c8"
+    },
+    {
+      "id": "pick-stats",
+      "type": "list",
+      "size": [
+        96,
+        40
+      ],
+      "row_height": 12,
+      "rows": [
+        {
+          "label": "HP",
+          "value": "120 > 132"
+        },
+        {
+          "label": "ATK",
+          "value": "24 > 27"
+        }
+      ]
+    },
+    {
+      "id": "pick-info",
+      "type": "panel",
+      "size": [
+        176,
+        34
+      ]
+    },
+    {
+      "id": "pick-title",
+      "type": "text",
+      "size": [
+        196,
+        12
+      ],
+      "label": "Choose your hero",
+      "color": "#ffd257",
+      "outline": "#1a1426",
+      "align": "left"
+    },
+    {
+      "id": "pick-line1",
+      "type": "label",
+      "size": [
+        190,
+        9
+      ],
+      "label": "Mira the Mage, pointed hat",
+      "align": "left"
+    },
+    {
+      "id": "pick-line2",
+      "type": "label",
+      "size": [
+        190,
+        9
+      ],
+      "label": "Skill: Fireball - burns one foe",
+      "align": "left",
+      "color": "#a99fc4"
+    },
+    {
+      "id": "pick-skill",
+      "type": "image",
+      "size": [
+        22,
+        22
+      ],
+      "slot": true,
+      "source": "inputs/pick-skill.png"
+    },
+    {
+      "id": "cast-warrior",
+      "type": "image",
+      "size": [
+        32,
+        32
+      ],
+      "source": "inputs/cast-warrior.png"
+    },
+    {
+      "id": "cast-mage",
+      "type": "image",
+      "size": [
+        32,
+        32
+      ],
+      "source": "inputs/cast-mage.png"
+    },
+    {
+      "id": "cast-summoner",
+      "type": "image",
+      "size": [
+        32,
+        32
+      ],
+      "source": "inputs/cast-summoner.png"
+    },
+    {
+      "id": "cast-archer",
+      "type": "image",
+      "size": [
+        32,
+        32
+      ],
+      "source": "inputs/cast-archer.png"
+    },
+    {
+      "id": "emote-heart",
+      "type": "image",
+      "size": [
+        24,
+        24
+      ],
+      "source": "inputs/emote-heart.png"
+    },
+    {
+      "id": "emote-dots",
+      "type": "image",
+      "size": [
+        24,
+        24
+      ],
+      "source": "inputs/emote-dots.png"
+    },
+    {
+      "id": "emote-angry",
+      "type": "image",
+      "size": [
+        24,
+        24
+      ],
+      "source": "inputs/emote-angry.png"
+    },
+    {
+      "id": "prev",
+      "type": "button",
+      "size": [
+        26,
+        20
+      ],
+      "label": "<"
+    },
+    {
+      "id": "choose",
+      "type": "button",
+      "size": [
+        70,
+        20
+      ],
+      "label": "Select"
+    },
+    {
+      "id": "next",
+      "type": "button",
+      "size": [
+        26,
+        20
+      ],
+      "label": ">"
+    },
+    {
+      "id": "fireball",
+      "type": "image",
+      "size": [
+        32,
+        32
+      ],
+      "source": "inputs/fireball.png"
+    }
+  ],
+  "screens": [
+    {
+      "id": "hud",
+      "title": "Town HUD",
+      "size": [
+        320,
+        180
+      ],
+      "description": "Click a belt slot or press 1-6. Hover the belt for item details.",
+      "children": [
+        {
+          "component": "world",
+          "at": [
+            0,
+            0
+          ]
+        },
+        {
+          "component": "portrait",
+          "at": [
+            4,
+            4
+          ]
+        },
+        {
+          "component": "vitals",
+          "at": [
+            52,
+            4
+          ]
+        },
+        {
+          "component": "name",
+          "at": [
+            57,
+            9
+          ]
+        },
+        {
+          "component": "hp",
+          "at": [
+            57,
+            19
+          ]
+        },
+        {
+          "component": "mp",
+          "at": [
+            57,
+            31
+          ]
+        },
+        {
+          "component": "exp",
+          "at": [
+            57,
+            43
+          ]
+        },
+        {
+          "component": "purse",
+          "at": [
+            252,
+            4
+          ]
+        },
+        {
+          "component": "coin",
+          "at": [
+            257,
+            8
+          ]
+        },
+        {
+          "component": "gold",
+          "at": [
+            272,
+            10
+          ]
+        },
+        {
+          "component": "map",
+          "at": [
+            252,
+            28
+          ]
+        },
+        {
+          "component": "quest",
+          "at": [
+            4,
+            54
+          ]
+        },
+        {
+          "component": "quest-icon",
+          "at": [
+            9,
+            58
+          ]
+        },
+        {
+          "component": "quest-label",
+          "at": [
+            24,
+            60
+          ]
+        },
+        {
+          "component": "belt",
+          "at": [
+            93,
+            151
+          ],
+          "tooltip": "potion-tip",
+          "label": "Item belt"
+        },
+        {
+          "component": "menu",
+          "at": [
+            264,
+            154
+          ]
+        }
+      ]
+    },
+    {
+      "id": "dialogue",
+      "title": "Dialogue",
+      "size": [
+        320,
+        180
+      ],
+      "description": "Click to finish the line, then pick an answer.",
+      "children": [
+        {
+          "component": "world",
+          "at": [
+            0,
+            0
+          ]
+        },
+        {
+          "component": "portrait",
+          "at": [
+            4,
+            4
+          ]
+        },
+        {
+          "component": "vitals",
+          "at": [
+            52,
+            4
+          ]
+        },
+        {
+          "component": "name",
+          "at": [
+            57,
+            9
+          ]
+        },
+        {
+          "component": "hp",
+          "at": [
+            57,
+            19
+          ]
+        },
+        {
+          "component": "mp",
+          "at": [
+            57,
+            31
+          ]
+        },
+        {
+          "component": "exp",
+          "at": [
+            57,
+            43
+          ]
+        },
+        {
+          "component": "purse",
+          "at": [
+            252,
+            4
+          ]
+        },
+        {
+          "component": "coin",
+          "at": [
+            257,
+            8
+          ]
+        },
+        {
+          "component": "gold",
+          "at": [
+            272,
+            10
+          ]
+        },
+        {
+          "component": "map",
+          "at": [
+            252,
+            28
+          ]
+        },
+        {
+          "component": "quest",
+          "at": [
+            4,
+            54
+          ]
+        },
+        {
+          "component": "quest-icon",
+          "at": [
+            9,
+            58
+          ]
+        },
+        {
+          "component": "quest-label",
+          "at": [
+            24,
+            60
+          ]
+        },
+        {
+          "component": "talk",
+          "at": [
+            4,
+            100
+          ]
+        }
+      ]
+    },
+    {
+      "id": "inventory",
+      "title": "Inventory & equipment",
+      "size": [
+        320,
+        180
+      ],
+      "description": "Scroll the bag; hover the weapon slot.",
+      "children": [
+        {
+          "component": "world",
+          "at": [
+            0,
+            0
+          ]
+        },
+        {
+          "component": "dim",
+          "at": [
+            0,
+            0
+          ]
+        },
+        {
+          "component": "bag-panel",
+          "at": [
+            4,
+            4
+          ]
+        },
+        {
+          "component": "hero-figure",
+          "at": [
+            40,
+            30
+          ]
+        },
+        {
+          "component": "helmet-slot",
+          "at": [
+            12,
+            30
+          ]
+        },
+        {
+          "component": "armor-slot",
+          "at": [
+            12,
+            56
+          ]
+        },
+        {
+          "component": "boots-slot",
+          "at": [
+            12,
+            82
+          ]
+        },
+        {
+          "component": "weapon-slot",
+          "at": [
+            100,
+            30
+          ],
+          "tooltip": "weapon-tip",
+          "label": "Weapon"
+        },
+        {
+          "component": "shield-slot",
+          "at": [
+            100,
+            56
+          ]
+        },
+        {
+          "component": "ring-slot",
+          "at": [
+            100,
+            82
+          ]
+        },
+        {
+          "component": "stats",
+          "at": [
+            10,
+            112
+          ]
+        },
+        {
+          "component": "bag",
+          "at": [
+            144,
+            28
+          ]
+        },
+        {
+          "component": "use",
+          "at": [
+            144,
+            150
+          ]
+        },
+        {
+          "component": "drop",
+          "at": [
+            200,
+            150
+          ]
+        }
+      ]
+    },
+    {
+      "id": "battle",
+      "title": "Battle",
+      "size": [
+        320,
+        180
+      ],
+      "description": "Pick a command or a party member; Attack shows the damage.",
+      "children": [
+        {
+          "component": "field",
+          "at": [
+            0,
+            0
+          ]
+        },
+        {
+          "component": "ally",
+          "at": [
+            8,
+            82
+          ]
+        },
+        {
+          "component": "fighter",
+          "at": [
+            44,
+            82
+          ]
+        },
+        {
+          "component": "bat",
+          "at": [
+            236,
+            26
+          ]
+        },
+        {
+          "component": "slime",
+          "at": [
+            258,
+            80
+          ]
+        },
+        {
+          "component": "goblin",
+          "at": [
+            196,
+            70
+          ]
+        },
+        {
+          "component": "fireball",
+          "at": [
+            128,
+            72
+          ]
+        },
+        {
+          "component": "slash-fx",
+          "at": [
+            204,
+            76
+          ]
+        },
+        {
+          "component": "spark-fx",
+          "at": [
+            212,
+            80
+          ]
+        },
+        {
+          "component": "turn",
+          "at": [
+            80,
+            6
+          ]
+        },
+        {
+          "component": "commands",
+          "at": [
+            4,
+            120
+          ],
+          "action": "float:hit"
+        },
+        {
+          "component": "party",
+          "at": [
+            98,
+            120
+          ]
+        },
+        {
+          "component": "lead-hp",
+          "at": [
+            176,
+            132
+          ]
+        },
+        {
+          "component": "ally-hp",
+          "at": [
+            176,
+            154
+          ]
+        }
+      ]
+    },
+    {
+      "id": "shop",
+      "title": "Shop",
+      "size": [
+        320,
+        180
+      ],
+      "description": "Pick an item; Buy shows the cost, Leave asks to confirm.",
+      "children": [
+        {
+          "component": "world",
+          "at": [
+            0,
+            0
+          ]
+        },
+        {
+          "component": "dim",
+          "at": [
+            0,
+            0
+          ]
+        },
+        {
+          "component": "shop-panel",
+          "at": [
+            4,
+            4
+          ]
+        },
+        {
+          "component": "shopkeeper",
+          "at": [
+            14,
+            30
+          ]
+        },
+        {
+          "component": "greeting",
+          "at": [
+            12,
+            90
+          ]
+        },
+        {
+          "component": "greeting2",
+          "at": [
+            12,
+            101
+          ]
+        },
+        {
+          "component": "wallet",
+          "at": [
+            12,
+            132
+          ]
+        },
+        {
+          "component": "wares",
+          "at": [
+            112,
+            26
+          ]
+        },
+        {
+          "component": "buy",
+          "at": [
+            12,
+            150
+          ],
+          "action": "float:thanks"
+        },
+        {
+          "component": "leave",
+          "at": [
+            72,
+            150
+          ],
+          "action": "open:confirm"
+        }
+      ]
+    },
+    {
+      "id": "select",
+      "title": "Character select",
+      "size": [
+        320,
+        180
+      ],
+      "description": "Browse the cast with the arrows; faces stay minimal and emotes carry the mood.",
+      "children": [
+        {
+          "component": "field",
+          "at": [
+            0,
+            0
+          ]
+        },
+        {
+          "component": "showcase",
+          "at": [
+            6,
+            6
+          ]
+        },
+        {
+          "component": "pick-level",
+          "at": [
+            64,
+            10
+          ]
+        },
+        {
+          "component": "pick-name",
+          "at": [
+            8,
+            120
+          ]
+        },
+        {
+          "component": "pick-stats",
+          "at": [
+            6,
+            134
+          ]
+        },
+        {
+          "component": "pick-info",
+          "at": [
+            108,
+            116
+          ]
+        },
+        {
+          "component": "pick-title",
+          "at": [
+            110,
+            8
+          ]
+        },
+        {
+          "component": "pick-line1",
+          "at": [
+            114,
+            122
+          ]
+        },
+        {
+          "component": "pick-line2",
+          "at": [
+            114,
+            134
+          ]
+        },
+        {
+          "component": "cast-mage",
+          "at": [
+            128,
+            80
+          ]
+        },
+        {
+          "component": "cast-warrior",
+          "at": [
+            170,
+            80
+          ]
+        },
+        {
+          "component": "cast-summoner",
+          "at": [
+            212,
+            80
+          ]
+        },
+        {
+          "component": "cast-archer",
+          "at": [
+            254,
+            80
+          ]
+        },
+        {
+          "component": "emote-heart",
+          "at": [
+            132,
+            52
+          ]
+        },
+        {
+          "component": "emote-dots",
+          "at": [
+            174,
+            52
+          ]
+        },
+        {
+          "component": "emote-angry",
+          "at": [
+            258,
+            52
+          ]
+        },
+        {
+          "component": "pick-skill",
+          "at": [
+            288,
+            122
+          ]
+        },
+        {
+          "component": "prev",
+          "at": [
+            132,
+            154
+          ]
+        },
+        {
+          "component": "choose",
+          "at": [
+            162,
+            154
+          ]
+        },
+        {
+          "component": "next",
+          "at": [
+            236,
+            154
+          ]
+        }
+      ]
+    }
+  ]
+}

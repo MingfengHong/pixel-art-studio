@@ -1,0 +1,235 @@
+{
+ "version": 1,
+ "name": "merchant",
+ "canvas": [
+  16,
+  16
+ ],
+ "pivot": [
+  8,
+  15
+ ],
+ "palette": {
+  "a": "#3f2631",
+  "s": "#f7c282",
+  "S": "#e19a65",
+  "e": "#262b44",
+  "l": "#5a6988",
+  "h": "#3a4466",
+  "H": "#262b44",
+  "r": "#2ce8f5",
+  "R": "#0099db",
+  "t": "#feae34",
+  "T": "#c28569",
+  "p": "#733e39",
+  "k": "#3e2731",
+  "U": "#be4a2f",
+  "u": "#8a3324",
+  "V": "#feae34",
+  "W": "#ffffff",
+  "X": "#c0cbdc",
+  "Z": "#8b9bb4",
+  "w": "#ffffff",
+  "g": "#c0cbdc"
+ },
+ "frames": [
+  {
+   "name": "down-stand",
+   "duration_ms": 400,
+   "rows": [
+    "....aaaaaaaa....",
+    "...aaUUUUUUaa...",
+    "...aUUUUUUuua...",
+    "..aaVVVVVVVVaa..",
+    "aaUUUUUUUUUuuuaa",
+    ".aaaaaaaaaaaaaa.",
+    ".aahhHHsssHHhaa.",
+    ".aahsssssssshaa.",
+    ".aahsesssseshaa.",
+    ".aahsesssseshaa.",
+    ".aaaSsssssSSaaa.",
+    ".aaarrrrrrrRRaa.",
+    "aasattttttttRsaa",
+    "aasatttttttTTsaa",
+    ".aaappppppppaaa.",
+    "..aakkkaakkkaa.."
+   ]
+  },
+  {
+   "name": "down-walk-a",
+   "duration_ms": 160,
+   "rows": [
+    "....aaaaaaaa....",
+    "...aaUUUUUUaa...",
+    "...aUUUUUUuua...",
+    "..aaVVVVVVVVaa..",
+    "aaUUUUUUUUUuuuaa",
+    ".aaaaaaaaaaaaaa.",
+    ".aahhHHsssHHhaa.",
+    ".aahsssssssshaa.",
+    ".aahsesssseshaa.",
+    ".aahsesssseshaa.",
+    ".aaaSsssssSSaaa.",
+    ".aaarrrrrrrRRaa.",
+    "aasattttttttRsaa",
+    "aasatttttttTTsaa",
+    ".aaappppppppaaa.",
+    "..aakkkaa.aaaa.."
+   ]
+  },
+  {
+   "name": "down-walk-b",
+   "duration_ms": 160,
+   "rows": [
+    "....aaaaaaaa....",
+    "...aaUUUUUUaa...",
+    "...aUUUUUUuua...",
+    "..aaVVVVVVVVaa..",
+    "aaUUUUUUUUUuuuaa",
+    ".aaaaaaaaaaaaaa.",
+    ".aahhHHsssHHhaa.",
+    ".aahsssssssshaa.",
+    ".aahsesssseshaa.",
+    ".aahsesssseshaa.",
+    ".aaaSsssssSSaaa.",
+    ".aaarrrrrrrRRaa.",
+    "aasattttttttRsaa",
+    "aasatttttttTTsaa",
+    ".aaappppppppaaa.",
+    "..aaaa.aakkkaa.."
+   ]
+  },
+  {
+   "name": "up-stand",
+   "duration_ms": 400,
+   "rows": [
+    "....aaaaaaaa....",
+    "...aaUUUUUUaa...",
+    "...aUUUUUUuua...",
+    "..aaVVVVVVVVaa..",
+    "aaUUUUUUUUUuuuaa",
+    ".aaaaaaaaaaaaaa.",
+    ".aahhhhhhhhhhaa.",
+    ".aahhhhhhhhhhaa.",
+    ".aaHhhhhhhhhHaa.",
+    ".aaHHhhhhhhHHaa.",
+    ".aaaHHHHHHHHaaa.",
+    ".aaarrrrrrrraaa.",
+    "aasatttttttrasaa",
+    "aasatttttttRRsaa",
+    ".aaappppppppaaa.",
+    "..aakkkaakkkaa.."
+   ]
+  },
+  {
+   "name": "up-walk-a",
+   "duration_ms": 160,
+   "rows": [
+    "....aaaaaaaa....",
+    "...aaUUUUUUaa...",
+    "...aUUUUUUuua...",
+    "..aaVVVVVVVVaa..",
+    "aaUUUUUUUUUuuuaa",
+    ".aaaaaaaaaaaaaa.",
+    ".aahhhhhhhhhhaa.",
+    ".aahhhhhhhhhhaa.",
+    ".aaHhhhhhhhhHaa.",
+    ".aaHHhhhhhhHHaa.",
+    ".aaaHHHHHHHHaaa.",
+    ".aaarrrrrrrraaa.",
+    "aasatttttttrasaa",
+    "aasatttttttRRsaa",
+    ".aaappppppppaaa.",
+    "..aakkkaa.aaaa.."
+   ]
+  },
+  {
+   "name": "up-walk-b",
+   "duration_ms": 160,
+   "rows": [
+    "....aaaaaaaa....",
+    "...aaUUUUUUaa...",
+    "...aUUUUUUuua...",
+    "..aaVVVVVVVVaa..",
+    "aaUUUUUUUUUuuuaa",
+    ".aaaaaaaaaaaaaa.",
+    ".aahhhhhhhhhhaa.",
+    ".aahhhhhhhhhhaa.",
+    ".aaHhhhhhhhhHaa.",
+    ".aaHHhhhhhhHHaa.",
+    ".aaaHHHHHHHHaaa.",
+    ".aaarrrrrrrraaa.",
+    "aasatttttttrasaa",
+    "aasatttttttRRsaa",
+    ".aaappppppppaaa.",
+    "..aaaa.aakkkaa.."
+   ]
+  },
+  {
+   "name": "right-stand",
+   "duration_ms": 400,
+   "rows": [
+    "....aaaaaaaa....",
+    "...aaUUUUUUaa...",
+    "...aUUUUUUuua...",
+    "..aaVVVVVVVVaa..",
+    "aaUUUUUUUUUuuuaa",
+    ".aaaaaaaaaaaaaa.",
+    ".aaHhhhhhHHssaa.",
+    ".aaHHhhhsssssaa.",
+    ".aaHHhSssssesaa.",
+    ".aaaHHSssssesaa.",
+    "..aaaHHSsssssa..",
+    "..aRaarrrrrraa..",
+    "..aRRatttsaa....",
+    "...aaatttsa.....",
+    "....aapppppa....",
+    "....aakkakka...."
+   ]
+  },
+  {
+   "name": "right-walk-a",
+   "duration_ms": 160,
+   "rows": [
+    "....aaaaaaaa....",
+    "...aaUUUUUUaa...",
+    "...aUUUUUUuua...",
+    "..aaVVVVVVVVaa..",
+    "aaUUUUUUUUUuuuaa",
+    ".aaaaaaaaaaaaaa.",
+    ".aaHhhhhhHHssaa.",
+    ".aaHHhhhsssssaa.",
+    ".aaHHhSssssesaa.",
+    ".aaaHHSssssesaa.",
+    "..aaaHHSsssssa..",
+    "..aRaarrrrrraa..",
+    "..aRRatttsaa....",
+    "...aaatttsa.....",
+    "...aapppppppa...",
+    "...aakka.aakka.."
+   ]
+  },
+  {
+   "name": "right-walk-b",
+   "duration_ms": 160,
+   "rows": [
+    "....aaaaaaaa....",
+    "...aaUUUUUUaa...",
+    "...aUUUUUUuua...",
+    "..aaVVVVVVVVaa..",
+    "aaUUUUUUUUUuuuaa",
+    ".aaaaaaaaaaaaaa.",
+    ".aaHhhhhhHHssaa.",
+    ".aaHHhhhsssssaa.",
+    ".aaHHhSssssesaa.",
+    ".aaaHHSssssesaa.",
+    "..aaaHHSsssssa..",
+    "..aRaarrrrrraa..",
+    "..aRRatttsaa....",
+    "...aaatttsa.....",
+    "....aappppa.....",
+    ".....akkkka....."
+   ]
+  }
+ ]
+}

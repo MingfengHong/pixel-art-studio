@@ -1,0 +1,2762 @@
+{
+  "name": "rpg-interface-kit",
+  "theme": {
+    "ink": "#1a1426",
+    "border": "#5a4d80",
+    "light": "#cfc6ea",
+    "surface": "#2e2547",
+    "inset": "#1f1933",
+    "text": "#f6efe2",
+    "muted": "#a99fc4",
+    "accent": "#7fd1c8",
+    "health": "#e8505a",
+    "mana": "#4aa3e8",
+    "xp": "#ffd257",
+    "shadow": "#120e1c",
+    "frame": "#d9a94a",
+    "frame_light": "#ffe29a",
+    "frame_dark": "#8a5a1e",
+    "button": "#3e3262",
+    "title": "#ffd257",
+    "select": "#7fd1c8",
+    "bar_bg": "#1f1933",
+    "corner": 1,
+    "rim": 2,
+    "style": "arcade"
+  },
+  "components": {
+    "world": {
+      "type": "image",
+      "size": [
+        320,
+        180
+      ],
+      "label": "",
+      "source": "inputs/world.png",
+      "default": "normal",
+      "states": {
+        "normal": "components/world/normal.png"
+      },
+      "layers": {}
+    },
+    "dim": {
+      "type": "canvas",
+      "size": [
+        320,
+        180
+      ],
+      "label": "",
+      "children": [],
+      "default": "normal",
+      "states": {
+        "normal": "components/dim/normal.png"
+      },
+      "layers": {}
+    },
+    "portrait": {
+      "type": "image",
+      "size": [
+        46,
+        46
+      ],
+      "label": "",
+      "source": "inputs/portrait.png",
+      "default": "normal",
+      "states": {
+        "normal": "components/portrait/normal.png"
+      },
+      "layers": {}
+    },
+    "vitals": {
+      "type": "panel",
+      "size": [
+        104,
+        46
+      ],
+      "label": "",
+      "nine_slice": [
+        4,
+        4,
+        4,
+        4
+      ],
+      "slice_source": "skin",
+      "minimum_skin_size": [
+        9,
+        9
+      ],
+      "default": "normal",
+      "states": {
+        "normal": "components/vitals/normal.png"
+      },
+      "layers": {
+        "skin": "components/vitals/layer-skin.png"
+      }
+    },
+    "name": {
+      "type": "label",
+      "size": [
+        60,
+        9
+      ],
+      "label": "Mira  Lv 7",
+      "text": "Mira  Lv 7",
+      "duration_ms": 90,
+      "editable_text": true,
+      "default": "normal",
+      "states": {
+        "normal": "components/name/normal.png"
+      },
+      "layers": {}
+    },
+    "hp": {
+      "type": "health-bar",
+      "size": [
+        94,
+        10
+      ],
+      "label": "HP",
+      "fill_rect": [
+        2,
+        2,
+        90,
+        6
+      ],
+      "value_text": "64/80",
+      "value": 0.8,
+      "default": "normal",
+      "states": {
+        "empty": "components/hp/empty.png",
+        "half": "components/hp/half.png",
+        "full": "components/hp/full.png",
+        "normal": "components/hp/normal.png"
+      },
+      "layers": {
+        "track": "components/hp/layer-track.png",
+        "fill": "components/hp/layer-fill.png",
+        "text": "components/hp/layer-text.png"
+      }
+    },
+    "mp": {
+      "type": "mana-bar",
+      "size": [
+        94,
+        10
+      ],
+      "label": "MP",
+      "fill_rect": [
+        2,
+        2,
+        90,
+        6
+      ],
+      "value_text": "24/40",
+      "value": 0.6,
+      "default": "normal",
+      "states": {
+        "empty": "components/mp/empty.png",
+        "half": "components/mp/half.png",
+        "full": "components/mp/full.png",
+        "normal": "components/mp/normal.png"
+      },
+      "layers": {
+        "track": "components/mp/layer-track.png",
+        "fill": "components/mp/layer-fill.png",
+        "text": "components/mp/layer-text.png"
+      }
+    },
+    "exp": {
+      "type": "xp-bar",
+      "size": [
+        94,
+        5
+      ],
+      "label": "",
+      "fill_rect": [
+        2,
+        2,
+        90,
+        1
+      ],
+      "value": 0.45,
+      "default": "normal",
+      "states": {
+        "empty": "components/exp/empty.png",
+        "half": "components/exp/half.png",
+        "full": "components/exp/full.png",
+        "normal": "components/exp/normal.png"
+      },
+      "layers": {
+        "track": "components/exp/layer-track.png",
+        "fill": "components/exp/layer-fill.png"
+      }
+    },
+    "purse": {
+      "type": "panel",
+      "size": [
+        64,
+        20
+      ],
+      "label": "",
+      "nine_slice": [
+        4,
+        4,
+        4,
+        4
+      ],
+      "slice_source": "skin",
+      "minimum_skin_size": [
+        9,
+        9
+      ],
+      "default": "normal",
+      "states": {
+        "normal": "components/purse/normal.png"
+      },
+      "layers": {
+        "skin": "components/purse/layer-skin.png"
+      }
+    },
+    "coin": {
+      "type": "image",
+      "size": [
+        12,
+        12
+      ],
+      "label": "",
+      "source": "inputs/coin.png",
+      "default": "normal",
+      "states": {
+        "normal": "components/coin/normal.png"
+      },
+      "layers": {}
+    },
+    "gold": {
+      "type": "label",
+      "size": [
+        40,
+        9
+      ],
+      "label": "1,250",
+      "text": "1,250",
+      "duration_ms": 90,
+      "editable_text": true,
+      "default": "normal",
+      "states": {
+        "normal": "components/gold/normal.png"
+      },
+      "layers": {}
+    },
+    "map": {
+      "type": "minimap",
+      "size": [
+        64,
+        42
+      ],
+      "label": "",
+      "viewport": [
+        4,
+        4,
+        56,
+        34
+      ],
+      "markers": [
+        {
+          "at": [
+            0.47,
+            0.62
+          ],
+          "color": "#ffd257"
+        },
+        {
+          "at": [
+            0.3,
+            0.45
+          ],
+          "color": "#7fd1c8"
+        }
+      ],
+      "default": "normal",
+      "states": {
+        "normal": "components/map/normal.png"
+      },
+      "layers": {
+        "map": "components/map/layer-map.png",
+        "frame": "components/map/layer-frame.png",
+        "markers": "components/map/layer-markers.png",
+        "mask": "components/map/layer-mask.png"
+      }
+    },
+    "quest": {
+      "type": "panel",
+      "size": [
+        108,
+        20
+      ],
+      "label": "",
+      "nine_slice": [
+        4,
+        4,
+        4,
+        4
+      ],
+      "slice_source": "skin",
+      "minimum_skin_size": [
+        9,
+        9
+      ],
+      "default": "normal",
+      "states": {
+        "normal": "components/quest/normal.png"
+      },
+      "layers": {
+        "skin": "components/quest/layer-skin.png"
+      }
+    },
+    "quest-icon": {
+      "type": "image",
+      "size": [
+        12,
+        12
+      ],
+      "label": "",
+      "source": "inputs/quest-icon.png",
+      "default": "normal",
+      "states": {
+        "normal": "components/quest-icon/normal.png"
+      },
+      "layers": {}
+    },
+    "quest-label": {
+      "type": "label",
+      "size": [
+        86,
+        9
+      ],
+      "label": "Find the mine key",
+      "text": "Find the mine key",
+      "duration_ms": 90,
+      "editable_text": true,
+      "default": "normal",
+      "states": {
+        "normal": "components/quest-label/normal.png"
+      },
+      "layers": {}
+    },
+    "belt": {
+      "type": "hotbar",
+      "size": [
+        134,
+        26
+      ],
+      "label": "",
+      "slot_rects": [
+        [
+          8,
+          4,
+          18,
+          18
+        ],
+        [
+          28,
+          4,
+          18,
+          18
+        ],
+        [
+          48,
+          4,
+          18,
+          18
+        ],
+        [
+          68,
+          4,
+          18,
+          18
+        ],
+        [
+          88,
+          4,
+          18,
+          18
+        ],
+        [
+          108,
+          4,
+          18,
+          18
+        ]
+      ],
+      "selected": 0,
+      "items": [
+        {
+          "source": "inputs/belt-item-0.png"
+        },
+        {
+          "source": "inputs/belt-item-1.png",
+          "count": 5
+        },
+        {
+          "source": "inputs/belt-item-2.png",
+          "count": 3
+        },
+        {
+          "source": "inputs/belt-item-3.png",
+          "count": 12
+        },
+        {
+          "source": "inputs/belt-item-4.png",
+          "count": 4
+        },
+        {
+          "source": "inputs/belt-item-5.png",
+          "count": 1
+        }
+      ],
+      "default": "normal",
+      "states": {
+        "selected-0": "components/belt/selected-0.png",
+        "selected-1": "components/belt/selected-1.png",
+        "selected-2": "components/belt/selected-2.png",
+        "selected-3": "components/belt/selected-3.png",
+        "selected-4": "components/belt/selected-4.png",
+        "selected-5": "components/belt/selected-5.png",
+        "normal": "components/belt/normal.png"
+      },
+      "layers": {
+        "skin": "components/belt/layer-skin.png"
+      }
+    },
+    "menu": {
+      "type": "button",
+      "size": [
+        52,
+        20
+      ],
+      "label": "Menu",
+      "nine_slice": [
+        4,
+        4,
+        4,
+        4
+      ],
+      "slice_source": "skin",
+      "minimum_skin_size": [
+        9,
+        9
+      ],
+      "default": "normal",
+      "states": {
+        "normal": "components/menu/normal.png",
+        "hover": "components/menu/hover.png",
+        "focus": "components/menu/focus.png",
+        "pressed": "components/menu/pressed.png",
+        "disabled": "components/menu/disabled.png",
+        "selected": "components/menu/selected.png"
+      },
+      "layers": {
+        "skin": "components/menu/layer-skin.png",
+        "skin-normal": "components/menu/layer-skin-normal.png",
+        "skin-hover": "components/menu/layer-skin-hover.png",
+        "skin-focus": "components/menu/layer-skin-focus.png",
+        "skin-pressed": "components/menu/layer-skin-pressed.png",
+        "skin-disabled": "components/menu/layer-skin-disabled.png",
+        "skin-selected": "components/menu/layer-skin-selected.png"
+      },
+      "source": "inputs/menu.png"
+    },
+    "potion-tip": {
+      "type": "tooltip",
+      "size": [
+        100,
+        54
+      ],
+      "label": "Red Potion",
+      "nine_slice": [
+        4,
+        4,
+        4,
+        4
+      ],
+      "slice_source": "skin",
+      "minimum_skin_size": [
+        9,
+        9
+      ],
+      "pointer": [
+        15,
+        53
+      ],
+      "default": "normal",
+      "states": {
+        "normal": "components/potion-tip/normal.png"
+      },
+      "layers": {
+        "skin": "components/potion-tip/layer-skin.png"
+      }
+    },
+    "talk": {
+      "type": "dialogue",
+      "size": [
+        312,
+        76
+      ],
+      "label": "",
+      "speaker": "Bram the Trader",
+      "lines": [
+        "Welcome, traveler! Fresh bread, sturdy boots",
+        "and a map of the old mines. Care to take a",
+        "look?"
+      ],
+      "choices": [
+        "Show me your wares.",
+        "Just passing through."
+      ],
+      "text_rect": [
+        60,
+        10,
+        252,
+        66
+      ],
+      "layout": "inset",
+      "portrait_rect": [
+        5,
+        15,
+        56,
+        56
+      ],
+      "name_rect": [
+        64,
+        0,
+        93,
+        16
+      ],
+      "line_height": 11,
+      "typing_frames": 8,
+      "duration_ms": 60,
+      "editable_text": true,
+      "choice_rects": [
+        [
+          68,
+          48,
+          236,
+          11
+        ],
+        [
+          68,
+          59,
+          236,
+          11
+        ]
+      ],
+      "nine_slice": [
+        6,
+        6,
+        6,
+        6
+      ],
+      "slice_source": "skin",
+      "default": "normal",
+      "states": {
+        "typing-0": "components/talk/typing-0.png",
+        "typing-1": "components/talk/typing-1.png",
+        "typing-2": "components/talk/typing-2.png",
+        "typing-3": "components/talk/typing-3.png",
+        "typing-4": "components/talk/typing-4.png",
+        "typing-5": "components/talk/typing-5.png",
+        "typing-6": "components/talk/typing-6.png",
+        "typing-7": "components/talk/typing-7.png",
+        "normal": "components/talk/normal.png",
+        "waiting": "components/talk/waiting.png",
+        "choice-0": "components/talk/choice-0.png",
+        "choice-1": "components/talk/choice-1.png"
+      },
+      "layers": {
+        "skin": "components/talk/layer-skin.png",
+        "portrait": "components/talk/layer-portrait.png"
+      }
+    },
+    "bag-panel": {
+      "type": "panel",
+      "size": [
+        312,
+        172
+      ],
+      "label": "Inventory",
+      "nine_slice": [
+        4,
+        4,
+        4,
+        4
+      ],
+      "slice_source": "skin",
+      "minimum_skin_size": [
+        9,
+        9
+      ],
+      "default": "normal",
+      "states": {
+        "normal": "components/bag-panel/normal.png"
+      },
+      "layers": {
+        "skin": "components/bag-panel/layer-skin.png"
+      }
+    },
+    "hero-figure": {
+      "type": "image",
+      "size": [
+        56,
+        64
+      ],
+      "label": "",
+      "source": "inputs/hero-figure.png",
+      "default": "normal",
+      "states": {
+        "normal": "components/hero-figure/normal.png"
+      },
+      "layers": {}
+    },
+    "helmet-slot": {
+      "type": "image",
+      "size": [
+        22,
+        22
+      ],
+      "label": "",
+      "source": "inputs/helmet-slot.png",
+      "default": "normal",
+      "states": {
+        "normal": "components/helmet-slot/normal.png"
+      },
+      "layers": {}
+    },
+    "armor-slot": {
+      "type": "image",
+      "size": [
+        22,
+        22
+      ],
+      "label": "",
+      "source": "inputs/armor-slot.png",
+      "default": "normal",
+      "states": {
+        "normal": "components/armor-slot/normal.png"
+      },
+      "layers": {}
+    },
+    "weapon-slot": {
+      "type": "image",
+      "size": [
+        22,
+        22
+      ],
+      "label": "",
+      "source": "inputs/weapon-slot.png",
+      "default": "normal",
+      "states": {
+        "normal": "components/weapon-slot/normal.png"
+      },
+      "layers": {}
+    },
+    "shield-slot": {
+      "type": "image",
+      "size": [
+        22,
+        22
+      ],
+      "label": "",
+      "source": "inputs/shield-slot.png",
+      "default": "normal",
+      "states": {
+        "normal": "components/shield-slot/normal.png"
+      },
+      "layers": {}
+    },
+    "boots-slot": {
+      "type": "image",
+      "size": [
+        22,
+        22
+      ],
+      "label": "",
+      "source": "inputs/boots-slot.png",
+      "default": "normal",
+      "states": {
+        "normal": "components/boots-slot/normal.png"
+      },
+      "layers": {}
+    },
+    "ring-slot": {
+      "type": "image",
+      "size": [
+        22,
+        22
+      ],
+      "label": "",
+      "source": "inputs/ring-slot.png",
+      "default": "normal",
+      "states": {
+        "normal": "components/ring-slot/normal.png"
+      },
+      "layers": {}
+    },
+    "stats": {
+      "type": "list",
+      "size": [
+        120,
+        50
+      ],
+      "label": "",
+      "row_rects": [
+        [
+          5,
+          5,
+          110,
+          13
+        ],
+        [
+          5,
+          19,
+          110,
+          13
+        ],
+        [
+          5,
+          33,
+          110,
+          13
+        ]
+      ],
+      "rows": [
+        {
+          "label": "Attack",
+          "value": 24
+        },
+        {
+          "label": "Defense",
+          "value": 18
+        },
+        {
+          "label": "Speed",
+          "value": 12
+        }
+      ],
+      "selected": 0,
+      "default": "normal",
+      "states": {
+        "selected-0": "components/stats/selected-0.png",
+        "selected-1": "components/stats/selected-1.png",
+        "selected-2": "components/stats/selected-2.png",
+        "normal": "components/stats/normal.png"
+      },
+      "layers": {
+        "skin": "components/stats/layer-skin.png",
+        "content": "components/stats/layer-content.png"
+      }
+    },
+    "bag": {
+      "type": "scroll-view",
+      "size": [
+        162,
+        116
+      ],
+      "label": "",
+      "nine_slice": [
+        4,
+        4,
+        4,
+        4
+      ],
+      "slice_source": "skin",
+      "minimum_skin_size": [
+        9,
+        9
+      ],
+      "viewport": [
+        4,
+        4,
+        147,
+        108
+      ],
+      "content_size": [
+        147,
+        120
+      ],
+      "items": [
+        {
+          "source": "inputs/bag-item-0.png"
+        },
+        {
+          "source": "inputs/bag-item-1.png"
+        },
+        {
+          "source": "inputs/bag-item-2.png",
+          "count": 5
+        },
+        {
+          "source": "inputs/bag-item-3.png",
+          "count": 3
+        },
+        {
+          "source": "inputs/bag-item-4.png",
+          "count": 12
+        },
+        {
+          "source": "inputs/bag-item-5.png",
+          "count": 4
+        },
+        {
+          "source": "inputs/bag-item-6.png",
+          "count": 1
+        },
+        {
+          "source": "inputs/bag-item-7.png",
+          "count": 1
+        },
+        {
+          "source": "inputs/bag-item-8.png",
+          "count": 9
+        },
+        {
+          "source": "inputs/bag-item-9.png",
+          "count": 2
+        },
+        {
+          "source": "inputs/bag-item-10.png",
+          "count": 3
+        },
+        {
+          "source": "inputs/bag-item-11.png",
+          "count": 20
+        },
+        {
+          "source": "inputs/bag-item-12.png",
+          "count": 14
+        },
+        {
+          "source": "inputs/bag-item-13.png",
+          "count": 2
+        },
+        {
+          "source": "inputs/bag-item-14.png"
+        },
+        {
+          "source": "inputs/bag-item-15.png"
+        },
+        {
+          "source": "inputs/bag-item-16.png"
+        },
+        {
+          "source": "inputs/bag-item-17.png"
+        },
+        {
+          "source": "inputs/bag-item-18.png"
+        },
+        {
+          "source": "inputs/bag-item-19.png"
+        }
+      ],
+      "scrollbar": [
+        154,
+        4,
+        4,
+        108
+      ],
+      "default": "top",
+      "states": {
+        "top": "components/bag/top.png",
+        "middle": "components/bag/middle.png",
+        "bottom": "components/bag/bottom.png"
+      },
+      "layers": {
+        "skin": "components/bag/layer-skin.png",
+        "content": "components/bag/layer-content.png"
+      }
+    },
+    "use": {
+      "type": "button",
+      "size": [
+        52,
+        18
+      ],
+      "label": "Use",
+      "nine_slice": [
+        4,
+        4,
+        4,
+        4
+      ],
+      "slice_source": "skin",
+      "minimum_skin_size": [
+        9,
+        9
+      ],
+      "default": "normal",
+      "states": {
+        "normal": "components/use/normal.png",
+        "hover": "components/use/hover.png",
+        "focus": "components/use/focus.png",
+        "pressed": "components/use/pressed.png",
+        "disabled": "components/use/disabled.png",
+        "selected": "components/use/selected.png"
+      },
+      "layers": {
+        "skin": "components/use/layer-skin.png",
+        "skin-normal": "components/use/layer-skin-normal.png",
+        "skin-hover": "components/use/layer-skin-hover.png",
+        "skin-focus": "components/use/layer-skin-focus.png",
+        "skin-pressed": "components/use/layer-skin-pressed.png",
+        "skin-disabled": "components/use/layer-skin-disabled.png",
+        "skin-selected": "components/use/layer-skin-selected.png"
+      }
+    },
+    "drop": {
+      "type": "button",
+      "size": [
+        52,
+        18
+      ],
+      "label": "Drop",
+      "nine_slice": [
+        4,
+        4,
+        4,
+        4
+      ],
+      "slice_source": "skin",
+      "minimum_skin_size": [
+        9,
+        9
+      ],
+      "default": "normal",
+      "states": {
+        "normal": "components/drop/normal.png",
+        "hover": "components/drop/hover.png",
+        "focus": "components/drop/focus.png",
+        "pressed": "components/drop/pressed.png",
+        "disabled": "components/drop/disabled.png",
+        "selected": "components/drop/selected.png"
+      },
+      "layers": {
+        "skin": "components/drop/layer-skin.png",
+        "skin-normal": "components/drop/layer-skin-normal.png",
+        "skin-hover": "components/drop/layer-skin-hover.png",
+        "skin-focus": "components/drop/layer-skin-focus.png",
+        "skin-pressed": "components/drop/layer-skin-pressed.png",
+        "skin-disabled": "components/drop/layer-skin-disabled.png",
+        "skin-selected": "components/drop/layer-skin-selected.png"
+      }
+    },
+    "weapon-tip": {
+      "type": "tooltip",
+      "size": [
+        104,
+        54
+      ],
+      "label": "Oak Staff",
+      "nine_slice": [
+        4,
+        4,
+        4,
+        4
+      ],
+      "slice_source": "skin",
+      "minimum_skin_size": [
+        9,
+        9
+      ],
+      "pointer": [
+        15,
+        53
+      ],
+      "default": "normal",
+      "states": {
+        "normal": "components/weapon-tip/normal.png"
+      },
+      "layers": {
+        "skin": "components/weapon-tip/layer-skin.png"
+      }
+    },
+    "shop-panel": {
+      "type": "panel",
+      "size": [
+        312,
+        172
+      ],
+      "label": "Bram's Goods",
+      "nine_slice": [
+        4,
+        4,
+        4,
+        4
+      ],
+      "slice_source": "skin",
+      "minimum_skin_size": [
+        9,
+        9
+      ],
+      "default": "normal",
+      "states": {
+        "normal": "components/shop-panel/normal.png"
+      },
+      "layers": {
+        "skin": "components/shop-panel/layer-skin.png"
+      }
+    },
+    "shopkeeper": {
+      "type": "image",
+      "size": [
+        52,
+        52
+      ],
+      "label": "",
+      "source": "inputs/shopkeeper.png",
+      "default": "normal",
+      "states": {
+        "normal": "components/shopkeeper/normal.png"
+      },
+      "layers": {}
+    },
+    "greeting": {
+      "type": "label",
+      "size": [
+        90,
+        9
+      ],
+      "label": "Best prices",
+      "text": "Best prices",
+      "duration_ms": 90,
+      "editable_text": true,
+      "default": "normal",
+      "states": {
+        "normal": "components/greeting/normal.png"
+      },
+      "layers": {}
+    },
+    "greeting2": {
+      "type": "label",
+      "size": [
+        90,
+        9
+      ],
+      "label": "in the valley!",
+      "text": "in the valley!",
+      "duration_ms": 90,
+      "editable_text": true,
+      "default": "normal",
+      "states": {
+        "normal": "components/greeting2/normal.png"
+      },
+      "layers": {}
+    },
+    "wares": {
+      "type": "list",
+      "size": [
+        196,
+        132
+      ],
+      "label": "",
+      "row_rects": [
+        [
+          5,
+          5,
+          186,
+          19
+        ],
+        [
+          5,
+          25,
+          186,
+          19
+        ],
+        [
+          5,
+          45,
+          186,
+          19
+        ],
+        [
+          5,
+          65,
+          186,
+          19
+        ],
+        [
+          5,
+          85,
+          186,
+          19
+        ],
+        [
+          5,
+          105,
+          186,
+          19
+        ]
+      ],
+      "rows": [
+        {
+          "source": "inputs/wares-row-0.png",
+          "label": "Bread",
+          "value": 12,
+          "value_icon": "inputs/wares-row-0-icon.png"
+        },
+        {
+          "source": "inputs/wares-row-1.png",
+          "label": "Healing Herb",
+          "value": 8,
+          "value_icon": "inputs/wares-row-1-icon.png"
+        },
+        {
+          "source": "inputs/wares-row-2.png",
+          "label": "Red Potion",
+          "value": 30,
+          "value_icon": "inputs/wares-row-2-icon.png"
+        },
+        {
+          "source": "inputs/wares-row-3.png",
+          "label": "Blue Potion",
+          "value": 35,
+          "value_icon": "inputs/wares-row-3-icon.png"
+        },
+        {
+          "source": "inputs/wares-row-4.png",
+          "label": "Leather Boots",
+          "value": 120,
+          "value_icon": "inputs/wares-row-4-icon.png"
+        },
+        {
+          "source": "inputs/wares-row-5.png",
+          "label": "Mine Map",
+          "value": 60,
+          "value_icon": "inputs/wares-row-5-icon.png",
+          "disabled": true
+        }
+      ],
+      "selected": 2,
+      "default": "normal",
+      "states": {
+        "selected-0": "components/wares/selected-0.png",
+        "selected-1": "components/wares/selected-1.png",
+        "selected-2": "components/wares/selected-2.png",
+        "selected-3": "components/wares/selected-3.png",
+        "selected-4": "components/wares/selected-4.png",
+        "selected-5": "components/wares/selected-5.png",
+        "normal": "components/wares/normal.png"
+      },
+      "layers": {
+        "skin": "components/wares/layer-skin.png",
+        "content": "components/wares/layer-content.png"
+      }
+    },
+    "wallet": {
+      "type": "label",
+      "size": [
+        90,
+        9
+      ],
+      "label": "Your gold 1,250",
+      "text": "Your gold 1,250",
+      "duration_ms": 90,
+      "editable_text": true,
+      "default": "normal",
+      "states": {
+        "normal": "components/wallet/normal.png"
+      },
+      "layers": {}
+    },
+    "buy": {
+      "type": "button",
+      "size": [
+        56,
+        18
+      ],
+      "label": "Buy",
+      "nine_slice": [
+        4,
+        4,
+        4,
+        4
+      ],
+      "slice_source": "skin",
+      "minimum_skin_size": [
+        9,
+        9
+      ],
+      "default": "normal",
+      "states": {
+        "normal": "components/buy/normal.png",
+        "hover": "components/buy/hover.png",
+        "focus": "components/buy/focus.png",
+        "pressed": "components/buy/pressed.png",
+        "disabled": "components/buy/disabled.png",
+        "selected": "components/buy/selected.png"
+      },
+      "layers": {
+        "skin": "components/buy/layer-skin.png",
+        "skin-normal": "components/buy/layer-skin-normal.png",
+        "skin-hover": "components/buy/layer-skin-hover.png",
+        "skin-focus": "components/buy/layer-skin-focus.png",
+        "skin-pressed": "components/buy/layer-skin-pressed.png",
+        "skin-disabled": "components/buy/layer-skin-disabled.png",
+        "skin-selected": "components/buy/layer-skin-selected.png"
+      }
+    },
+    "leave": {
+      "type": "button",
+      "size": [
+        56,
+        18
+      ],
+      "label": "Leave",
+      "nine_slice": [
+        4,
+        4,
+        4,
+        4
+      ],
+      "slice_source": "skin",
+      "minimum_skin_size": [
+        9,
+        9
+      ],
+      "default": "normal",
+      "states": {
+        "normal": "components/leave/normal.png",
+        "hover": "components/leave/hover.png",
+        "focus": "components/leave/focus.png",
+        "pressed": "components/leave/pressed.png",
+        "disabled": "components/leave/disabled.png",
+        "selected": "components/leave/selected.png"
+      },
+      "layers": {
+        "skin": "components/leave/layer-skin.png",
+        "skin-normal": "components/leave/layer-skin-normal.png",
+        "skin-hover": "components/leave/layer-skin-hover.png",
+        "skin-focus": "components/leave/layer-skin-focus.png",
+        "skin-pressed": "components/leave/layer-skin-pressed.png",
+        "skin-disabled": "components/leave/layer-skin-disabled.png",
+        "skin-selected": "components/leave/layer-skin-selected.png"
+      }
+    },
+    "thanks": {
+      "type": "floating-text",
+      "size": [
+        80,
+        24
+      ],
+      "label": "-30 gold",
+      "text": "-30 gold",
+      "duration_ms": 90,
+      "editable_text": true,
+      "default": "frame-0",
+      "states": {
+        "frame-0": "components/thanks/frame-0.png",
+        "frame-1": "components/thanks/frame-1.png",
+        "frame-2": "components/thanks/frame-2.png",
+        "frame-3": "components/thanks/frame-3.png",
+        "frame-4": "components/thanks/frame-4.png",
+        "frame-5": "components/thanks/frame-5.png",
+        "frame-6": "components/thanks/frame-6.png",
+        "frame-7": "components/thanks/frame-7.png"
+      },
+      "layers": {}
+    },
+    "field": {
+      "type": "image",
+      "size": [
+        320,
+        180
+      ],
+      "label": "",
+      "source": "inputs/field.png",
+      "default": "normal",
+      "states": {
+        "normal": "components/field/normal.png"
+      },
+      "layers": {}
+    },
+    "fighter": {
+      "type": "image",
+      "size": [
+        48,
+        32
+      ],
+      "label": "",
+      "source": "inputs/fighter.png",
+      "default": "normal",
+      "states": {
+        "normal": "components/fighter/normal.png"
+      },
+      "layers": {}
+    },
+    "ally": {
+      "type": "image",
+      "size": [
+        32,
+        32
+      ],
+      "label": "",
+      "source": "inputs/ally.png",
+      "default": "normal",
+      "states": {
+        "normal": "components/ally/normal.png"
+      },
+      "layers": {}
+    },
+    "goblin": {
+      "type": "image",
+      "size": [
+        48,
+        48
+      ],
+      "label": "",
+      "source": "inputs/goblin.png",
+      "default": "normal",
+      "states": {
+        "normal": "components/goblin/normal.png"
+      },
+      "layers": {}
+    },
+    "slime": {
+      "type": "image",
+      "size": [
+        32,
+        32
+      ],
+      "label": "",
+      "source": "inputs/slime.png",
+      "default": "normal",
+      "states": {
+        "normal": "components/slime/normal.png"
+      },
+      "layers": {}
+    },
+    "bat": {
+      "type": "image",
+      "size": [
+        32,
+        32
+      ],
+      "label": "",
+      "source": "inputs/bat.png",
+      "default": "normal",
+      "states": {
+        "normal": "components/bat/normal.png"
+      },
+      "layers": {}
+    },
+    "slash-fx": {
+      "type": "image",
+      "size": [
+        32,
+        32
+      ],
+      "label": "",
+      "source": "inputs/slash-fx.png",
+      "default": "normal",
+      "states": {
+        "normal": "components/slash-fx/normal.png"
+      },
+      "layers": {}
+    },
+    "spark-fx": {
+      "type": "image",
+      "size": [
+        32,
+        32
+      ],
+      "label": "",
+      "source": "inputs/spark-fx.png",
+      "default": "normal",
+      "states": {
+        "normal": "components/spark-fx/normal.png"
+      },
+      "layers": {}
+    },
+    "hit": {
+      "type": "floating-text",
+      "size": [
+        44,
+        28
+      ],
+      "label": "-24",
+      "text": "-24",
+      "duration_ms": 90,
+      "editable_text": true,
+      "default": "frame-0",
+      "states": {
+        "frame-0": "components/hit/frame-0.png",
+        "frame-1": "components/hit/frame-1.png",
+        "frame-2": "components/hit/frame-2.png",
+        "frame-3": "components/hit/frame-3.png",
+        "frame-4": "components/hit/frame-4.png",
+        "frame-5": "components/hit/frame-5.png",
+        "frame-6": "components/hit/frame-6.png",
+        "frame-7": "components/hit/frame-7.png"
+      },
+      "layers": {}
+    },
+    "turn": {
+      "type": "text",
+      "size": [
+        160,
+        14
+      ],
+      "label": "Mira casts Fireball!",
+      "text": "Mira casts Fireball!",
+      "duration_ms": 90,
+      "editable_text": true,
+      "default": "normal",
+      "states": {
+        "normal": "components/turn/normal.png"
+      },
+      "layers": {}
+    },
+    "commands": {
+      "type": "list",
+      "size": [
+        92,
+        56
+      ],
+      "label": "",
+      "row_rects": [
+        [
+          5,
+          5,
+          82,
+          10
+        ],
+        [
+          5,
+          16,
+          82,
+          10
+        ],
+        [
+          5,
+          27,
+          82,
+          10
+        ],
+        [
+          5,
+          38,
+          82,
+          10
+        ]
+      ],
+      "rows": [
+        {
+          "label": "Attack"
+        },
+        {
+          "label": "Skills"
+        },
+        {
+          "label": "Items"
+        },
+        {
+          "label": "Run"
+        }
+      ],
+      "selected": 1,
+      "default": "normal",
+      "states": {
+        "selected-0": "components/commands/selected-0.png",
+        "selected-1": "components/commands/selected-1.png",
+        "selected-2": "components/commands/selected-2.png",
+        "selected-3": "components/commands/selected-3.png",
+        "normal": "components/commands/normal.png"
+      },
+      "layers": {
+        "skin": "components/commands/layer-skin.png",
+        "content": "components/commands/layer-content.png"
+      }
+    },
+    "party": {
+      "type": "list",
+      "size": [
+        218,
+        56
+      ],
+      "label": "",
+      "row_rects": [
+        [
+          5,
+          5,
+          208,
+          21
+        ],
+        [
+          5,
+          27,
+          208,
+          21
+        ]
+      ],
+      "rows": [
+        {
+          "source": "inputs/party-row-0.png",
+          "label": "Mira",
+          "value": "64/80",
+          "crop": [
+            2,
+            2,
+            12,
+            11
+          ]
+        },
+        {
+          "source": "inputs/party-row-1.png",
+          "label": "Brann",
+          "value": "96/120",
+          "crop": [
+            2,
+            2,
+            12,
+            11
+          ]
+        }
+      ],
+      "selected": 0,
+      "default": "normal",
+      "states": {
+        "selected-0": "components/party/selected-0.png",
+        "selected-1": "components/party/selected-1.png",
+        "normal": "components/party/normal.png"
+      },
+      "layers": {
+        "skin": "components/party/layer-skin.png",
+        "content": "components/party/layer-content.png"
+      }
+    },
+    "lead-hp": {
+      "type": "health-bar",
+      "size": [
+        72,
+        7
+      ],
+      "label": "",
+      "fill_rect": [
+        2,
+        2,
+        68,
+        3
+      ],
+      "value": 0.8,
+      "default": "normal",
+      "states": {
+        "empty": "components/lead-hp/empty.png",
+        "half": "components/lead-hp/half.png",
+        "full": "components/lead-hp/full.png",
+        "normal": "components/lead-hp/normal.png"
+      },
+      "layers": {
+        "track": "components/lead-hp/layer-track.png",
+        "fill": "components/lead-hp/layer-fill.png"
+      }
+    },
+    "ally-hp": {
+      "type": "health-bar",
+      "size": [
+        72,
+        7
+      ],
+      "label": "",
+      "fill_rect": [
+        2,
+        2,
+        68,
+        3
+      ],
+      "value": 0.8,
+      "default": "normal",
+      "states": {
+        "empty": "components/ally-hp/empty.png",
+        "half": "components/ally-hp/half.png",
+        "full": "components/ally-hp/full.png",
+        "normal": "components/ally-hp/normal.png"
+      },
+      "layers": {
+        "track": "components/ally-hp/layer-track.png",
+        "fill": "components/ally-hp/layer-fill.png"
+      }
+    },
+    "confirm": {
+      "type": "modal",
+      "size": [
+        150,
+        74
+      ],
+      "label": "Leave the shop?",
+      "nine_slice": [
+        4,
+        4,
+        4,
+        4
+      ],
+      "slice_source": "skin",
+      "minimum_skin_size": [
+        9,
+        9
+      ],
+      "buttons": [
+        "Stay",
+        "Leave"
+      ],
+      "button_rects": [
+        [
+          7,
+          49,
+          64,
+          18
+        ],
+        [
+          79,
+          49,
+          64,
+          18
+        ]
+      ],
+      "default": "normal",
+      "states": {
+        "normal": "components/confirm/normal.png"
+      },
+      "layers": {
+        "skin": "components/confirm/layer-skin.png"
+      }
+    },
+    "showcase": {
+      "type": "image",
+      "size": [
+        96,
+        112
+      ],
+      "label": "",
+      "source": "inputs/showcase.png",
+      "default": "normal",
+      "states": {
+        "normal": "components/showcase/normal.png"
+      },
+      "layers": {}
+    },
+    "pick-name": {
+      "type": "text",
+      "size": [
+        96,
+        12
+      ],
+      "label": "Mira",
+      "text": "Mira",
+      "duration_ms": 90,
+      "editable_text": true,
+      "default": "normal",
+      "states": {
+        "normal": "components/pick-name/normal.png"
+      },
+      "layers": {}
+    },
+    "pick-level": {
+      "type": "label",
+      "size": [
+        30,
+        9
+      ],
+      "label": "Lv 7",
+      "text": "Lv 7",
+      "duration_ms": 90,
+      "editable_text": true,
+      "default": "normal",
+      "states": {
+        "normal": "components/pick-level/normal.png"
+      },
+      "layers": {}
+    },
+    "pick-stats": {
+      "type": "list",
+      "size": [
+        96,
+        40
+      ],
+      "label": "",
+      "row_rects": [
+        [
+          5,
+          5,
+          86,
+          11
+        ],
+        [
+          5,
+          17,
+          86,
+          11
+        ]
+      ],
+      "rows": [
+        {
+          "label": "HP",
+          "value": "120 > 132"
+        },
+        {
+          "label": "ATK",
+          "value": "24 > 27"
+        }
+      ],
+      "selected": 0,
+      "default": "normal",
+      "states": {
+        "selected-0": "components/pick-stats/selected-0.png",
+        "selected-1": "components/pick-stats/selected-1.png",
+        "normal": "components/pick-stats/normal.png"
+      },
+      "layers": {
+        "skin": "components/pick-stats/layer-skin.png",
+        "content": "components/pick-stats/layer-content.png"
+      }
+    },
+    "pick-info": {
+      "type": "panel",
+      "size": [
+        176,
+        34
+      ],
+      "label": "",
+      "nine_slice": [
+        4,
+        4,
+        4,
+        4
+      ],
+      "slice_source": "skin",
+      "minimum_skin_size": [
+        9,
+        9
+      ],
+      "default": "normal",
+      "states": {
+        "normal": "components/pick-info/normal.png"
+      },
+      "layers": {
+        "skin": "components/pick-info/layer-skin.png"
+      }
+    },
+    "pick-title": {
+      "type": "text",
+      "size": [
+        196,
+        12
+      ],
+      "label": "Choose your hero",
+      "text": "Choose your hero",
+      "duration_ms": 90,
+      "editable_text": true,
+      "default": "normal",
+      "states": {
+        "normal": "components/pick-title/normal.png"
+      },
+      "layers": {}
+    },
+    "pick-line1": {
+      "type": "label",
+      "size": [
+        190,
+        9
+      ],
+      "label": "Mira the Mage, pointed hat",
+      "text": "Mira the Mage, pointed hat",
+      "duration_ms": 90,
+      "editable_text": true,
+      "default": "normal",
+      "states": {
+        "normal": "components/pick-line1/normal.png"
+      },
+      "layers": {}
+    },
+    "pick-line2": {
+      "type": "label",
+      "size": [
+        190,
+        9
+      ],
+      "label": "Skill: Fireball - burns one foe",
+      "text": "Skill: Fireball - burns one foe",
+      "duration_ms": 90,
+      "editable_text": true,
+      "default": "normal",
+      "states": {
+        "normal": "components/pick-line2/normal.png"
+      },
+      "layers": {}
+    },
+    "pick-skill": {
+      "type": "image",
+      "size": [
+        22,
+        22
+      ],
+      "label": "",
+      "source": "inputs/pick-skill.png",
+      "default": "normal",
+      "states": {
+        "normal": "components/pick-skill/normal.png"
+      },
+      "layers": {}
+    },
+    "cast-warrior": {
+      "type": "image",
+      "size": [
+        32,
+        32
+      ],
+      "label": "",
+      "source": "inputs/cast-warrior.png",
+      "default": "normal",
+      "states": {
+        "normal": "components/cast-warrior/normal.png"
+      },
+      "layers": {}
+    },
+    "cast-mage": {
+      "type": "image",
+      "size": [
+        32,
+        32
+      ],
+      "label": "",
+      "source": "inputs/cast-mage.png",
+      "default": "normal",
+      "states": {
+        "normal": "components/cast-mage/normal.png"
+      },
+      "layers": {}
+    },
+    "cast-summoner": {
+      "type": "image",
+      "size": [
+        32,
+        32
+      ],
+      "label": "",
+      "source": "inputs/cast-summoner.png",
+      "default": "normal",
+      "states": {
+        "normal": "components/cast-summoner/normal.png"
+      },
+      "layers": {}
+    },
+    "cast-archer": {
+      "type": "image",
+      "size": [
+        32,
+        32
+      ],
+      "label": "",
+      "source": "inputs/cast-archer.png",
+      "default": "normal",
+      "states": {
+        "normal": "components/cast-archer/normal.png"
+      },
+      "layers": {}
+    },
+    "emote-heart": {
+      "type": "image",
+      "size": [
+        24,
+        24
+      ],
+      "label": "",
+      "source": "inputs/emote-heart.png",
+      "default": "normal",
+      "states": {
+        "normal": "components/emote-heart/normal.png"
+      },
+      "layers": {}
+    },
+    "emote-dots": {
+      "type": "image",
+      "size": [
+        24,
+        24
+      ],
+      "label": "",
+      "source": "inputs/emote-dots.png",
+      "default": "normal",
+      "states": {
+        "normal": "components/emote-dots/normal.png"
+      },
+      "layers": {}
+    },
+    "emote-angry": {
+      "type": "image",
+      "size": [
+        24,
+        24
+      ],
+      "label": "",
+      "source": "inputs/emote-angry.png",
+      "default": "normal",
+      "states": {
+        "normal": "components/emote-angry/normal.png"
+      },
+      "layers": {}
+    },
+    "prev": {
+      "type": "button",
+      "size": [
+        26,
+        20
+      ],
+      "label": "<",
+      "nine_slice": [
+        4,
+        4,
+        4,
+        4
+      ],
+      "slice_source": "skin",
+      "minimum_skin_size": [
+        9,
+        9
+      ],
+      "default": "normal",
+      "states": {
+        "normal": "components/prev/normal.png",
+        "hover": "components/prev/hover.png",
+        "focus": "components/prev/focus.png",
+        "pressed": "components/prev/pressed.png",
+        "disabled": "components/prev/disabled.png",
+        "selected": "components/prev/selected.png"
+      },
+      "layers": {
+        "skin": "components/prev/layer-skin.png",
+        "skin-normal": "components/prev/layer-skin-normal.png",
+        "skin-hover": "components/prev/layer-skin-hover.png",
+        "skin-focus": "components/prev/layer-skin-focus.png",
+        "skin-pressed": "components/prev/layer-skin-pressed.png",
+        "skin-disabled": "components/prev/layer-skin-disabled.png",
+        "skin-selected": "components/prev/layer-skin-selected.png"
+      }
+    },
+    "choose": {
+      "type": "button",
+      "size": [
+        70,
+        20
+      ],
+      "label": "Select",
+      "nine_slice": [
+        4,
+        4,
+        4,
+        4
+      ],
+      "slice_source": "skin",
+      "minimum_skin_size": [
+        9,
+        9
+      ],
+      "default": "normal",
+      "states": {
+        "normal": "components/choose/normal.png",
+        "hover": "components/choose/hover.png",
+        "focus": "components/choose/focus.png",
+        "pressed": "components/choose/pressed.png",
+        "disabled": "components/choose/disabled.png",
+        "selected": "components/choose/selected.png"
+      },
+      "layers": {
+        "skin": "components/choose/layer-skin.png",
+        "skin-normal": "components/choose/layer-skin-normal.png",
+        "skin-hover": "components/choose/layer-skin-hover.png",
+        "skin-focus": "components/choose/layer-skin-focus.png",
+        "skin-pressed": "components/choose/layer-skin-pressed.png",
+        "skin-disabled": "components/choose/layer-skin-disabled.png",
+        "skin-selected": "components/choose/layer-skin-selected.png"
+      }
+    },
+    "next": {
+      "type": "button",
+      "size": [
+        26,
+        20
+      ],
+      "label": ">",
+      "nine_slice": [
+        4,
+        4,
+        4,
+        4
+      ],
+      "slice_source": "skin",
+      "minimum_skin_size": [
+        9,
+        9
+      ],
+      "default": "normal",
+      "states": {
+        "normal": "components/next/normal.png",
+        "hover": "components/next/hover.png",
+        "focus": "components/next/focus.png",
+        "pressed": "components/next/pressed.png",
+        "disabled": "components/next/disabled.png",
+        "selected": "components/next/selected.png"
+      },
+      "layers": {
+        "skin": "components/next/layer-skin.png",
+        "skin-normal": "components/next/layer-skin-normal.png",
+        "skin-hover": "components/next/layer-skin-hover.png",
+        "skin-focus": "components/next/layer-skin-focus.png",
+        "skin-pressed": "components/next/layer-skin-pressed.png",
+        "skin-disabled": "components/next/layer-skin-disabled.png",
+        "skin-selected": "components/next/layer-skin-selected.png"
+      }
+    },
+    "fireball": {
+      "type": "image",
+      "size": [
+        32,
+        32
+      ],
+      "label": "",
+      "source": "inputs/fireball.png",
+      "default": "normal",
+      "states": {
+        "normal": "components/fireball/normal.png"
+      },
+      "layers": {}
+    }
+  },
+  "screens": [
+    {
+      "id": "hud",
+      "title": "Town HUD",
+      "size": [
+        320,
+        180
+      ],
+      "description": "Click a belt slot or press 1-6. Hover the belt for item details.",
+      "children": [
+        {
+          "component": "world",
+          "at": [
+            0,
+            0
+          ]
+        },
+        {
+          "component": "portrait",
+          "at": [
+            4,
+            4
+          ]
+        },
+        {
+          "component": "vitals",
+          "at": [
+            52,
+            4
+          ]
+        },
+        {
+          "component": "name",
+          "at": [
+            57,
+            9
+          ]
+        },
+        {
+          "component": "hp",
+          "at": [
+            57,
+            19
+          ]
+        },
+        {
+          "component": "mp",
+          "at": [
+            57,
+            31
+          ]
+        },
+        {
+          "component": "exp",
+          "at": [
+            57,
+            43
+          ]
+        },
+        {
+          "component": "purse",
+          "at": [
+            252,
+            4
+          ]
+        },
+        {
+          "component": "coin",
+          "at": [
+            257,
+            8
+          ]
+        },
+        {
+          "component": "gold",
+          "at": [
+            272,
+            10
+          ]
+        },
+        {
+          "component": "map",
+          "at": [
+            252,
+            28
+          ]
+        },
+        {
+          "component": "quest",
+          "at": [
+            4,
+            54
+          ]
+        },
+        {
+          "component": "quest-icon",
+          "at": [
+            9,
+            58
+          ]
+        },
+        {
+          "component": "quest-label",
+          "at": [
+            24,
+            60
+          ]
+        },
+        {
+          "component": "belt",
+          "at": [
+            93,
+            151
+          ],
+          "tooltip": "potion-tip",
+          "label": "Item belt"
+        },
+        {
+          "component": "menu",
+          "at": [
+            264,
+            154
+          ]
+        }
+      ]
+    },
+    {
+      "id": "dialogue",
+      "title": "Dialogue",
+      "size": [
+        320,
+        180
+      ],
+      "description": "Click to finish the line, then pick an answer.",
+      "children": [
+        {
+          "component": "world",
+          "at": [
+            0,
+            0
+          ]
+        },
+        {
+          "component": "portrait",
+          "at": [
+            4,
+            4
+          ]
+        },
+        {
+          "component": "vitals",
+          "at": [
+            52,
+            4
+          ]
+        },
+        {
+          "component": "name",
+          "at": [
+            57,
+            9
+          ]
+        },
+        {
+          "component": "hp",
+          "at": [
+            57,
+            19
+          ]
+        },
+        {
+          "component": "mp",
+          "at": [
+            57,
+            31
+          ]
+        },
+        {
+          "component": "exp",
+          "at": [
+            57,
+            43
+          ]
+        },
+        {
+          "component": "purse",
+          "at": [
+            252,
+            4
+          ]
+        },
+        {
+          "component": "coin",
+          "at": [
+            257,
+            8
+          ]
+        },
+        {
+          "component": "gold",
+          "at": [
+            272,
+            10
+          ]
+        },
+        {
+          "component": "map",
+          "at": [
+            252,
+            28
+          ]
+        },
+        {
+          "component": "quest",
+          "at": [
+            4,
+            54
+          ]
+        },
+        {
+          "component": "quest-icon",
+          "at": [
+            9,
+            58
+          ]
+        },
+        {
+          "component": "quest-label",
+          "at": [
+            24,
+            60
+          ]
+        },
+        {
+          "component": "talk",
+          "at": [
+            4,
+            100
+          ]
+        }
+      ]
+    },
+    {
+      "id": "inventory",
+      "title": "Inventory & equipment",
+      "size": [
+        320,
+        180
+      ],
+      "description": "Scroll the bag; hover the weapon slot.",
+      "children": [
+        {
+          "component": "world",
+          "at": [
+            0,
+            0
+          ]
+        },
+        {
+          "component": "dim",
+          "at": [
+            0,
+            0
+          ]
+        },
+        {
+          "component": "bag-panel",
+          "at": [
+            4,
+            4
+          ]
+        },
+        {
+          "component": "hero-figure",
+          "at": [
+            40,
+            30
+          ]
+        },
+        {
+          "component": "helmet-slot",
+          "at": [
+            12,
+            30
+          ]
+        },
+        {
+          "component": "armor-slot",
+          "at": [
+            12,
+            56
+          ]
+        },
+        {
+          "component": "boots-slot",
+          "at": [
+            12,
+            82
+          ]
+        },
+        {
+          "component": "weapon-slot",
+          "at": [
+            100,
+            30
+          ],
+          "tooltip": "weapon-tip",
+          "label": "Weapon"
+        },
+        {
+          "component": "shield-slot",
+          "at": [
+            100,
+            56
+          ]
+        },
+        {
+          "component": "ring-slot",
+          "at": [
+            100,
+            82
+          ]
+        },
+        {
+          "component": "stats",
+          "at": [
+            10,
+            112
+          ]
+        },
+        {
+          "component": "bag",
+          "at": [
+            144,
+            28
+          ]
+        },
+        {
+          "component": "use",
+          "at": [
+            144,
+            150
+          ]
+        },
+        {
+          "component": "drop",
+          "at": [
+            200,
+            150
+          ]
+        }
+      ]
+    },
+    {
+      "id": "battle",
+      "title": "Battle",
+      "size": [
+        320,
+        180
+      ],
+      "description": "Pick a command or a party member; Attack shows the damage.",
+      "children": [
+        {
+          "component": "field",
+          "at": [
+            0,
+            0
+          ]
+        },
+        {
+          "component": "ally",
+          "at": [
+            8,
+            82
+          ]
+        },
+        {
+          "component": "fighter",
+          "at": [
+            44,
+            82
+          ]
+        },
+        {
+          "component": "bat",
+          "at": [
+            236,
+            26
+          ]
+        },
+        {
+          "component": "slime",
+          "at": [
+            258,
+            80
+          ]
+        },
+        {
+          "component": "goblin",
+          "at": [
+            196,
+            70
+          ]
+        },
+        {
+          "component": "fireball",
+          "at": [
+            128,
+            72
+          ]
+        },
+        {
+          "component": "slash-fx",
+          "at": [
+            204,
+            76
+          ]
+        },
+        {
+          "component": "spark-fx",
+          "at": [
+            212,
+            80
+          ]
+        },
+        {
+          "component": "turn",
+          "at": [
+            80,
+            6
+          ]
+        },
+        {
+          "component": "commands",
+          "at": [
+            4,
+            120
+          ],
+          "action": "float:hit"
+        },
+        {
+          "component": "party",
+          "at": [
+            98,
+            120
+          ]
+        },
+        {
+          "component": "lead-hp",
+          "at": [
+            176,
+            132
+          ]
+        },
+        {
+          "component": "ally-hp",
+          "at": [
+            176,
+            154
+          ]
+        }
+      ]
+    },
+    {
+      "id": "shop",
+      "title": "Shop",
+      "size": [
+        320,
+        180
+      ],
+      "description": "Pick an item; Buy shows the cost, Leave asks to confirm.",
+      "children": [
+        {
+          "component": "world",
+          "at": [
+            0,
+            0
+          ]
+        },
+        {
+          "component": "dim",
+          "at": [
+            0,
+            0
+          ]
+        },
+        {
+          "component": "shop-panel",
+          "at": [
+            4,
+            4
+          ]
+        },
+        {
+          "component": "shopkeeper",
+          "at": [
+            14,
+            30
+          ]
+        },
+        {
+          "component": "greeting",
+          "at": [
+            12,
+            90
+          ]
+        },
+        {
+          "component": "greeting2",
+          "at": [
+            12,
+            101
+          ]
+        },
+        {
+          "component": "wallet",
+          "at": [
+            12,
+            132
+          ]
+        },
+        {
+          "component": "wares",
+          "at": [
+            112,
+            26
+          ]
+        },
+        {
+          "component": "buy",
+          "at": [
+            12,
+            150
+          ],
+          "action": "float:thanks"
+        },
+        {
+          "component": "leave",
+          "at": [
+            72,
+            150
+          ],
+          "action": "open:confirm"
+        }
+      ]
+    },
+    {
+      "id": "select",
+      "title": "Character select",
+      "size": [
+        320,
+        180
+      ],
+      "description": "Browse the cast with the arrows; faces stay minimal and emotes carry the mood.",
+      "children": [
+        {
+          "component": "field",
+          "at": [
+            0,
+            0
+          ]
+        },
+        {
+          "component": "showcase",
+          "at": [
+            6,
+            6
+          ]
+        },
+        {
+          "component": "pick-level",
+          "at": [
+            64,
+            10
+          ]
+        },
+        {
+          "component": "pick-name",
+          "at": [
+            8,
+            120
+          ]
+        },
+        {
+          "component": "pick-stats",
+          "at": [
+            6,
+            134
+          ]
+        },
+        {
+          "component": "pick-info",
+          "at": [
+            108,
+            116
+          ]
+        },
+        {
+          "component": "pick-title",
+          "at": [
+            110,
+            8
+          ]
+        },
+        {
+          "component": "pick-line1",
+          "at": [
+            114,
+            122
+          ]
+        },
+        {
+          "component": "pick-line2",
+          "at": [
+            114,
+            134
+          ]
+        },
+        {
+          "component": "cast-mage",
+          "at": [
+            128,
+            80
+          ]
+        },
+        {
+          "component": "cast-warrior",
+          "at": [
+            170,
+            80
+          ]
+        },
+        {
+          "component": "cast-summoner",
+          "at": [
+            212,
+            80
+          ]
+        },
+        {
+          "component": "cast-archer",
+          "at": [
+            254,
+            80
+          ]
+        },
+        {
+          "component": "emote-heart",
+          "at": [
+            132,
+            52
+          ]
+        },
+        {
+          "component": "emote-dots",
+          "at": [
+            174,
+            52
+          ]
+        },
+        {
+          "component": "emote-angry",
+          "at": [
+            258,
+            52
+          ]
+        },
+        {
+          "component": "pick-skill",
+          "at": [
+            288,
+            122
+          ]
+        },
+        {
+          "component": "prev",
+          "at": [
+            132,
+            154
+          ]
+        },
+        {
+          "component": "choose",
+          "at": [
+            162,
+            154
+          ]
+        },
+        {
+          "component": "next",
+          "at": [
+            236,
+            154
+          ]
+        }
+      ]
+    }
+  ],
+  "locales": {
+    "zh-CN": {
+      "label": "中文",
+      "name": "RPG 界面套件",
+      "screens": {
+        "hud": {
+          "title": "小镇 HUD",
+          "description": "点击腰带格子或按 1-6 切换；悬停查看物品说明。"
+        },
+        "dialogue": {
+          "title": "对话",
+          "description": "点击显示完整台词，再选择回答。"
+        },
+        "inventory": {
+          "title": "背包与装备",
+          "description": "滚动背包，悬停武器栏查看说明。"
+        },
+        "battle": {
+          "title": "战斗",
+          "description": "选择指令或队员；选“攻击”会显示伤害数字。"
+        },
+        "shop": {
+          "title": "商店",
+          "description": "选择商品；购买会显示花费，离开会弹出确认。"
+        },
+        "select": {
+          "title": "角色选择",
+          "description": "用箭头浏览角色；五官保持极简，用表情气泡表达情绪。"
+        }
+      }
+    }
+  }
+}

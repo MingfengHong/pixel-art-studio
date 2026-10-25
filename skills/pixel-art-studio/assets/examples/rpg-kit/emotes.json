@@ -1,0 +1,150 @@
+{
+ "version": 1,
+ "name": "emotes",
+ "canvas": [
+  12,
+  12
+ ],
+ "pivot": [
+  5,
+  11
+ ],
+ "palette": {
+  "o": "#2b1f30",
+  "w": "#ffffff",
+  "g": "#c9c3d8",
+  "r": "#e8434a",
+  "R": "#a32638",
+  "k": "#2b1f30",
+  "y": "#f3c955",
+  "b": "#4f86d6"
+ },
+ "frames": [
+  {
+   "name": "alert",
+   "duration_ms": 300,
+   "rows": [
+    "..oooooooo..",
+    ".owwwwwwwwo.",
+    "owwwwrrwwwwo",
+    "owwwwrrwwwwo",
+    "owwwwrrwwwwo",
+    "owwwwRRwwwwo",
+    "owwwwwwwwwwo",
+    "owwwwrrwwwgo",
+    ".owwwwwwwgo.",
+    "..oowwooooo.",
+    "....owo.....",
+    ".....o......"
+   ]
+  },
+  {
+   "name": "question",
+   "duration_ms": 300,
+   "rows": [
+    "..oooooooo..",
+    ".owwwwwwwwo.",
+    "owwwbbbbwwwo",
+    "owwbbwwbbwwo",
+    "owwwwwbbwwwo",
+    "owwwwbbwwwwo",
+    "owwwwwwwwwwo",
+    "owwwwbbwwwgo",
+    ".owwwwwwwgo.",
+    "..oowwooooo.",
+    "....owo.....",
+    ".....o......"
+   ]
+  },
+  {
+   "name": "heart",
+   "duration_ms": 300,
+   "rows": [
+    "..oooooooo..",
+    ".owwwwwwwwo.",
+    "owwrrwrrwwwo",
+    "owrrrrRrrwwo",
+    "owrrrrrrRwwo",
+    "owwrrrrRwwwo",
+    "owwwrrRwwwwo",
+    "owwwwRwwwwgo",
+    ".owwwwwwwgo.",
+    "..oowwooooo.",
+    "....owo.....",
+    ".....o......"
+   ]
+  },
+  {
+   "name": "angry",
+   "duration_ms": 300,
+   "rows": [
+    "..oooooooo..",
+    ".owwwwwwwwo.",
+    "owwrrwwrrwwo",
+    "owrrwwwwrrwo",
+    "owwwwwwwwwwo",
+    "owwwwwwwwwwo",
+    "owrrwwwwrrwo",
+    "owwrrwwrrwgo",
+    ".owwwwwwwgo.",
+    "..oowwooooo.",
+    "....owo.....",
+    ".....o......"
+   ]
+  },
+  {
+   "name": "dots",
+   "duration_ms": 300,
+   "rows": [
+    "..oooooooo..",
+    ".owwwwwwwwo.",
+    "owwwwwwwwwwo",
+    "owwwwwwwwwwo",
+    "owwwwwwwwwwo",
+    "owkkwkkwkkwo",
+    "owwwwwwwwwwo",
+    "owwwwwwwwwgo",
+    ".owwwwwwwgo.",
+    "..oowwooooo.",
+    "....owo.....",
+    ".....o......"
+   ]
+  },
+  {
+   "name": "note",
+   "duration_ms": 300,
+   "rows": [
+    "..oooooooo..",
+    ".owwwwwwwwo.",
+    "owwwwwkkkwwo",
+    "owwwwwkwkwwo",
+    "owwwwwkwkwwo",
+    "owwkkwkwkwwo",
+    "owkkkkkwkkwo",
+    "owwkkwwkkwgo",
+    ".owwwwwwwgo.",
+    "..oowwooooo.",
+    "....owo.....",
+    ".....o......"
+   ]
+  },
+  {
+   "name": "idea",
+   "duration_ms": 300,
+   "rows": [
+    "..oooooooo..",
+    ".owwwwwwwwo.",
+    "owwwyyyywwwo",
+    "owwyyyyyywwo",
+    "owwyyyyyywwo",
+    "owwwyyyywwwo",
+    "owwwwoowwwwo",
+    "owwwwoowwwgo",
+    ".owwwwwwwgo.",
+    "..oowwooooo.",
+    "....owo.....",
+    ".....o......"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,196 @@
+{
+  "name": "fireball-skill",
+  "canvas": [
+    96,
+    24
+  ],
+  "pivot": [
+    12,
+    23
+  ],
+  "frame_count": 18,
+  "duration_ms": 80,
+  "loop": true,
+  "layers": [
+    {
+      "id": "mage",
+      "source": "../rpg-kit/class-actions.json#mage-cast-a",
+      "pivot": [
+        12,
+        16
+      ],
+      "keys": [
+        {
+          "time": 0,
+          "x": 12,
+          "y": 23
+        },
+        {
+          "time": 0.1765,
+          "source": "../rpg-kit/class-actions.json#mage-cast-b",
+          "x": 12,
+          "y": 23
+        },
+        {
+          "time": 0.7647,
+          "source": "../rpg-kit/class-actions.json#mage-cast-a",
+          "x": 12,
+          "y": 23
+        },
+        {
+          "time": 1,
+          "x": 12,
+          "y": 23
+        }
+      ]
+    },
+    {
+      "id": "slime",
+      "source": "../rpg-kit/monsters.json#slime-a",
+      "pivot": [
+        8,
+        16
+      ],
+      "keys": [
+        {
+          "time": 0,
+          "x": 84,
+          "y": 23
+        },
+        {
+          "time": 0.2941,
+          "source": "../rpg-kit/monsters.json#slime-b",
+          "x": 84,
+          "y": 23
+        },
+        {
+          "time": 0.5882,
+          "source": "../rpg-kit/monsters.json#slime-hurt",
+          "x": 85,
+          "y": 23,
+          "hold": true
+        },
+        {
+          "time": 0.7647,
+          "source": "../rpg-kit/monsters.json#slime-a",
+          "x": 84,
+          "y": 23
+        },
+        {
+          "time": 1,
+          "x": 84,
+          "y": 23
+        }
+      ]
+    },
+    {
+      "id": "fireball",
+      "source": "../rpg-kit/projectiles.json#fireball-a",
+      "pivot": [
+        8,
+        8
+      ],
+      "keys": [
+        {
+          "time": 0,
+          "x": 30,
+          "y": 13,
+          "opacity": 0,
+          "hold": true
+        },
+        {
+          "time": 0.2353,
+          "x": 30,
+          "y": 13,
+          "opacity": 1
+        },
+        {
+          "time": 0.3529,
+          "source": "../rpg-kit/projectiles.json#fireball-b",
+          "x": 48,
+          "y": 13,
+          "opacity": 1
+        },
+        {
+          "time": 0.4706,
+          "source": "../rpg-kit/projectiles.json#fireball-a",
+          "x": 66,
+          "y": 13,
+          "opacity": 1
+        },
+        {
+          "time": 0.5294,
+          "x": 76,
+          "y": 13,
+          "opacity": 1,
+          "hold": true
+        },
+        {
+          "time": 0.5882,
+          "x": 76,
+          "y": 13,
+          "opacity": 0
+        },
+        {
+          "time": 1,
+          "x": 76,
+          "y": 13,
+          "opacity": 0
+        }
+      ]
+    },
+    {
+      "id": "burst",
+      "source": "../rpg-kit/projectiles.json#burst-a",
+      "pivot": [
+        8,
+        8
+      ],
+      "keys": [
+        {
+          "time": 0,
+          "x": 84,
+          "y": 14,
+          "opacity": 0,
+          "hold": true
+        },
+        {
+          "time": 0.5882,
+          "x": 84,
+          "y": 14,
+          "opacity": 1,
+          "hold": true
+        },
+        {
+          "time": 0.6471,
+          "source": "../rpg-kit/projectiles.json#burst-b",
+          "x": 84,
+          "y": 14,
+          "opacity": 1,
+          "hold": true
+        },
+        {
+          "time": 0.7647,
+          "source": "../rpg-kit/projectiles.json#burst-c",
+          "x": 84,
+          "y": 12,
+          "opacity": 0.85,
+          "hold": true
+        },
+        {
+          "time": 0.8824,
+          "x": 84,
+          "y": 10,
+          "opacity": 0,
+          "hold": true
+        },
+        {
+          "time": 1,
+          "x": 84,
+          "y": 10,
+          "opacity": 0
+        }
+      ]
+    }
+  ]
+}

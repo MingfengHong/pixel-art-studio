@@ -1,0 +1,249 @@
+{
+  "name": "battle-field",
+  "tile_size": 16,
+  "size": [
+    20,
+    12
+  ],
+  "tilesets": [
+    "inputs/tiles.json",
+    "inputs/props.json",
+    "inputs/big.json",
+    "inputs/hero.json"
+  ],
+  "background": [
+    {
+      "color": "#5fb6ea",
+      "from": 0,
+      "to": 23
+    },
+    {
+      "color": "#6cc0ef",
+      "from": 24,
+      "to": 47
+    },
+    {
+      "color": "#8dd1f4",
+      "from": 48,
+      "to": 71
+    },
+    {
+      "color": "#b2e2f8",
+      "from": 72,
+      "to": 191
+    }
+  ],
+  "layers": [
+    {
+      "name": "clouds",
+      "parallax": 0.1,
+      "rows": [
+        "....................",
+        "..<=>.........<==>..",
+        "........<>..........",
+        "....................",
+        "....................",
+        "....................",
+        "....................",
+        "....................",
+        "....................",
+        "....................",
+        "....................",
+        "...................."
+      ],
+      "legend": {
+        "<": "cloud-left",
+        "=": "cloud-mid",
+        ">": {
+          "tile": "cloud-left",
+          "flip": "x"
+        }
+      }
+    },
+    {
+      "name": "mountains",
+      "parallax": 0.25,
+      "rows": [
+        "....................",
+        "....^.......^.......",
+        ".../F\\...../F\\......",
+        "../FFF\\.../FFF\\..../",
+        "./FFFFF\\./FFFFF\\../F",
+        "FFFFFFFFFFFFFFFFFFFF",
+        "FFFFFFFFFFFFFFFFFFFF",
+        "....................",
+        "....................",
+        "....................",
+        "....................",
+        "...................."
+      ],
+      "legend": {
+        "^": "mountain-peak",
+        "/": "mountain-up",
+        "\\": {
+          "tile": "mountain-up",
+          "flip": "x"
+        },
+        "F": "mountain-fill"
+      },
+      "objects": [
+        {
+          "sprite": "windmill",
+          "at": [
+            40,
+            44
+          ]
+        }
+      ]
+    },
+    {
+      "name": "hills",
+      "parallax": 0.45,
+      "rows": [
+        "....................",
+        "....................",
+        "....................",
+        "....................",
+        "......./TT\\.........",
+        "..../TTFFFF\\..../T\\.",
+        "/TTTFFFFFFFFTTTTFFFT",
+        "FFFFFFFFFFFFFFFFFFFF",
+        "FFFFFFFFFFFFFFFFFFFF",
+        "....................",
+        "....................",
+        "...................."
+      ],
+      "legend": {
+        "/": "hill-up",
+        "\\": {
+          "tile": "hill-up",
+          "flip": "x"
+        },
+        "T": "hill-top",
+        "F": "hill-fill"
+      }
+    },
+    {
+      "name": "treeline",
+      "parallax": 0.7,
+      "rows": [
+        "....................",
+        "....................",
+        "....................",
+        "....................",
+        "....................",
+        "....................",
+        "TTTTTTTTTTTTTTTTTTTT",
+        "FFFFFFFFFFFFFFFFFFFF",
+        "....................",
+        "....................",
+        "....................",
+        "...................."
+      ],
+      "legend": {
+        "T": "trees-top",
+        "F": "trees-fill"
+      }
+    },
+    {
+      "name": "ground",
+      "rows": [
+        "....................",
+        "....................",
+        "....................",
+        "....................",
+        "....................",
+        "....................",
+        "....................",
+        "####################",
+        "####################",
+        "####################",
+        "####################",
+        "####################"
+      ],
+      "legend": {},
+      "terrain": {
+        "#": {
+          "top": [
+            "ground-top",
+            "ground-top",
+            "ground-top",
+            "ground-top-flowers"
+          ],
+          "top_left": "ground-top-left",
+          "top_right": {
+            "tile": "ground-top-left",
+            "flip": "x"
+          },
+          "left": "ground-left",
+          "right": {
+            "tile": "ground-left",
+            "flip": "x"
+          },
+          "fill": [
+            "ground-fill",
+            "ground-fill",
+            "ground-fill",
+            "ground-fill",
+            "ground-fill",
+            "ground-fill",
+            "ground-fill",
+            "ground-fill-stone"
+          ]
+        }
+      }
+    }
+  ],
+  "objects": [
+    {
+      "sprite": "bush",
+      "tile": [
+        1,
+        6
+      ],
+      "seat": 4
+    },
+    {
+      "sprite": "tuft",
+      "tile": [
+        6,
+        6
+      ],
+      "seat": 2
+    },
+    {
+      "sprite": "flowers",
+      "tile": [
+        9,
+        6
+      ],
+      "seat": 2
+    },
+    {
+      "sprite": "rock",
+      "tile": [
+        17,
+        6
+      ],
+      "seat": 3,
+      "shadow": true
+    },
+    {
+      "sprite": "tuft",
+      "tile": [
+        13,
+        6
+      ],
+      "seat": 2
+    },
+    {
+      "sprite": "bush",
+      "tile": [
+        19,
+        6
+      ],
+      "seat": 4,
+      "dx": 4
+    }
+  ]
+}

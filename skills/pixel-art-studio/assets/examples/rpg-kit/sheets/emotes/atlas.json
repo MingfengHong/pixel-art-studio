@@ -1,0 +1,114 @@
+{
+  "format": "pixel-art-studio-atlas-v1",
+  "name": "emotes",
+  "image": "atlas.png",
+  "canvas": [
+    12,
+    12
+  ],
+  "size": [
+    90,
+    12
+  ],
+  "padding": 1,
+  "frames": [
+    {
+      "name": "alert",
+      "rect": [
+        0,
+        0,
+        12,
+        12
+      ],
+      "duration_ms": 300,
+      "pivot": [
+        5,
+        11
+      ]
+    },
+    {
+      "name": "question",
+      "rect": [
+        13,
+        0,
+        12,
+        12
+      ],
+      "duration_ms": 300,
+      "pivot": [
+        5,
+        11
+      ]
+    },
+    {
+      "name": "heart",
+      "rect": [
+        26,
+        0,
+        12,
+        12
+      ],
+      "duration_ms": 300,
+      "pivot": [
+        5,
+        11
+      ]
+    },
+    {
+      "name": "angry",
+      "rect": [
+        39,
+        0,
+        12,
+        12
+      ],
+      "duration_ms": 300,
+      "pivot": [
+        5,
+        11
+      ]
+    },
+    {
+      "name": "dots",
+      "rect": [
+        52,
+        0,
+        12,
+        12
+      ],
+      "duration_ms": 300,
+      "pivot": [
+        5,
+        11
+      ]
+    },
+    {
+      "name": "note",
+      "rect": [
+        65,
+        0,
+        12,
+        12
+      ],
+      "duration_ms": 300,
+      "pivot": [
+        5,
+        11
+      ]
+    },
+    {
+      "name": "idea",
+      "rect": [
+        78,
+        0,
+        12,
+        12
+      ],
+      "duration_ms": 300,
+      "pivot": [
+        5,
+        11
+      ]
+    }
+  ]
+}

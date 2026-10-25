@@ -1,0 +1,156 @@
+{
+  "format": "pixel-art-studio-atlas-v1",
+  "name": "enemies",
+  "image": "atlas.png",
+  "canvas": [
+    24,
+    24
+  ],
+  "size": [
+    224,
+    49
+  ],
+  "padding": 1,
+  "frames": [
+    {
+      "name": "mushroom-a",
+      "rect": [
+        0,
+        0,
+        24,
+        24
+      ],
+      "duration_ms": 200,
+      "pivot": [
+        12,
+        23
+      ]
+    },
+    {
+      "name": "mushroom-b",
+      "rect": [
+        25,
+        0,
+        24,
+        24
+      ],
+      "duration_ms": 200,
+      "pivot": [
+        12,
+        23
+      ]
+    },
+    {
+      "name": "mushroom-hurt",
+      "rect": [
+        50,
+        0,
+        24,
+        24
+      ],
+      "duration_ms": 200,
+      "pivot": [
+        12,
+        23
+      ]
+    },
+    {
+      "name": "ghost-a",
+      "rect": [
+        75,
+        0,
+        24,
+        24
+      ],
+      "duration_ms": 200,
+      "pivot": [
+        12,
+        23
+      ]
+    },
+    {
+      "name": "ghost-b",
+      "rect": [
+        100,
+        0,
+        24,
+        24
+      ],
+      "duration_ms": 200,
+      "pivot": [
+        12,
+        23
+      ]
+    },
+    {
+      "name": "ghost-hurt",
+      "rect": [
+        125,
+        0,
+        24,
+        24
+      ],
+      "duration_ms": 200,
+      "pivot": [
+        12,
+        23
+      ]
+    },
+    {
+      "name": "skeleton-idle",
+      "rect": [
+        150,
+        0,
+        24,
+        24
+      ],
+      "duration_ms": 200,
+      "pivot": [
+        12,
+        23
+      ]
+    },
+    {
+      "name": "skeleton-attack-a",
+      "rect": [
+        175,
+        0,
+        24,
+        24
+      ],
+      "duration_ms": 200,
+      "pivot": [
+        12,
+        23
+      ]
+    },
+    {
+      "name": "skeleton-attack-b",
+      "rect": [
+        200,
+        0,
+        24,
+        24
+      ],
+      "duration_ms": 200,
+      "pivot": [
+        12,
+        23
+      ]
+    },
+    {
+      "name": "skeleton-hurt",
+      "rect": [
+        0,
+        25,
+        24,
+        24
+      ],
+      "duration_ms": 200,
+      "pivot": [
+        12,
+        23
+      ]
+    }
+  ]
+}

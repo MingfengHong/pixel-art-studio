@@ -1,0 +1,651 @@
+{
+  "tile_size": 16,
+  "size": [
+    20,
+    12
+  ],
+  "mask_bits": {
+    "north": 1,
+    "east": 2,
+    "south": 4,
+    "west": 8
+  },
+  "layers": [
+    {
+      "name": "ground",
+      "tiles": [
+        [
+          "grass-1",
+          "grass-1",
+          "grass-1",
+          "grass-3",
+          "grass-1",
+          "grass-2",
+          "grass-0",
+          "grass-0",
+          "grass-3",
+          "grass-1",
+          "grass-2",
+          "grass-0",
+          "grass-0",
+          "grass-0",
+          "grass-0",
+          "grass-0",
+          "grass-0",
+          "grass-0",
+          "grass-0",
+          "grass-2"
+        ],
+        [
+          "grass-1",
+          "grass-0",
+          "grass-1",
+          "grass-0",
+          "grass-1",
+          "grass-0",
+          "grass-0",
+          "grass-2",
+          "grass-0",
+          "grass-0",
+          "grass-3",
+          "grass-2",
+          "grass-0",
+          "grass-3",
+          "grass-0",
+          "grass-1",
+          "grass-0",
+          "grass-3",
+          "grass-1",
+          "grass-3"
+        ],
+        [
+          "grass-2",
+          "grass-0",
+          "grass-0",
+          "grass-0",
+          "grass-0",
+          "grass-0",
+          "grass-0",
+          "grass-1",
+          "grass-0",
+          "grass-1",
+          "grass-0",
+          "grass-0",
+          "grass-1",
+          "grass-0",
+          "grass-0",
+          "grass-0",
+          "grass-1",
+          "grass-0",
+          "grass-3",
+          "grass-0"
+        ],
+        [
+          "grass-1",
+          "grass-2",
+          "grass-0",
+          "grass-1",
+          "grass-0",
+          "grass-0",
+          "grass-0",
+          "grass-0",
+          "grass-0",
+          "grass-3",
+          "grass-0",
+          "grass-1",
+          "grass-2",
+          "grass-3",
+          "grass-0",
+          "grass-0",
+          "grass-0",
+          "grass-1",
+          "grass-0",
+          "grass-1"
+        ],
+        [
+          "grass-1",
+          "grass-2",
+          "grass-0",
+          "grass-3",
+          "grass-0",
+          "grass-0",
+          "grass-1",
+          "grass-2",
+          "grass-0",
+          "grass-2",
+          "grass-0",
+          "grass-0",
+          "path-04",
+          "grass-0",
+          "grass-0",
+          "grass-0",
+          "grass-0",
+          "grass-1",
+          "grass-3",
+          "grass-0"
+        ],
+        [
+          "path-10",
+          "path-10",
+          "path-10",
+          "path-10",
+          "path-10",
+          "path-10",
+          "path-10",
+          "path-10",
+          "path-10",
+          "path-14",
+          "path-10",
+          "path-10",
+          "path-11",
+          "path-10",
+          "path-10",
+          "path-10",
+          "path-10",
+          "path-10",
+          "path-10",
+          "path-10"
+        ],
+        [
+          "grass-0",
+          "grass-3",
+          "grass-0",
+          "grass-0",
+          "grass-0",
+          "grass-0",
+          "grass-2",
+          "grass-0",
+          "grass-0",
+          "path-05",
+          "grass-0",
+          "grass-2",
+          "grass-0",
+          "grass-0",
+          "grass-2",
+          "grass-0",
+          "grass-1",
+          "grass-3",
+          "grass-1",
+          "grass-1"
+        ],
+        [
+          "grass-0",
+          "farm-06",
+          "farm-14",
+          "farm-12",
+          "grass-0",
+          "grass-0",
+          "grass-2",
+          "grass-0",
+          "grass-0",
+          "path-05",
+          "grass-3",
+          "grass-2",
+          "grass-3",
+          "grass-0",
+          "grass-0",
+          "grass-1",
+          "grass-0",
+          "grass-0",
+          "grass-0",
+          "grass-0"
+        ],
+        [
+          "grass-0",
+          "farm-07",
+          "farm-15",
+          "farm-13",
+          "grass-3",
+          "grass-3",
+          "grass-1",
+          "grass-0",
+          "grass-0",
+          "path-05",
+          "grass-0",
+          "grass-0",
+          "grass-1",
+          "grass-2",
+          "grass-0",
+          "water-06",
+          "water-14",
+          "water-14",
+          "water-12",
+          "grass-1"
+        ],
+        [
+          "grass-1",
+          "farm-07",
+          "farm-15",
+          "farm-13",
+          "grass-1",
+          "grass-1",
+          "grass-1",
+          "grass-0",
+          "grass-1",
+          "path-05",
+          "grass-0",
+          "grass-0",
+          "grass-1",
+          "grass-1",
+          "water-06",
+          "water-15",
+          "water-15",
+          "water-15",
+          "water-15",
+          "water-14"
+        ],
+        [
+          "grass-0",
+          "farm-03",
+          "farm-11",
+          "farm-09",
+          "grass-3",
+          "grass-1",
+          "path-04",
+          "grass-0",
+          "grass-0",
+          "path-05",
+          "grass-0",
+          "grass-0",
+          "grass-1",
+          "grass-0",
+          "water-03",
+          "water-15",
+          "water-15",
+          "water-15",
+          "water-15",
+          "water-11"
+        ],
+        [
+          "grass-1",
+          "grass-1",
+          "grass-1",
+          "grass-0",
+          "grass-1",
+          "grass-1",
+          "path-05",
+          "grass-2",
+          "grass-0",
+          "path-05",
+          "grass-2",
+          "grass-2",
+          "grass-1",
+          "grass-3",
+          "grass-3",
+          "water-07",
+          "water-15",
+          "water-15",
+          "water-13",
+          "grass-0"
+        ]
+      ]
+    },
+    {
+      "name": "objects",
+      "objects": [
+        {
+          "source": "inputs/object-8.png",
+          "at": [
+            224,
+            30
+          ],
+          "shadow": false,
+          "scattered": true
+        },
+        {
+          "source": "inputs/object-17.png",
+          "at": [
+            112,
+            0
+          ],
+          "shadow": true
+        },
+        {
+          "source": "inputs/object-8.png",
+          "at": [
+            112,
+            47
+          ],
+          "shadow": false,
+          "scattered": true
+        },
+        {
+          "source": "inputs/object-17.png",
+          "at": [
+            224,
+            16
+          ],
+          "shadow": true
+        },
+        {
+          "source": "inputs/object-17.png",
+          "at": [
+            48,
+            16
+          ],
+          "shadow": true
+        },
+        {
+          "source": "inputs/object-7.png",
+          "at": [
+            226,
+            48
+          ],
+          "shadow": true
+        },
+        {
+          "source": "inputs/object-16.png",
+          "at": [
+            176,
+            32
+          ],
+          "depth": -8
+        },
+        {
+          "source": "inputs/object-8.png",
+          "at": [
+            64,
+            62
+          ],
+          "shadow": false,
+          "scattered": true
+        },
+        {
+          "source": "inputs/object-18.png",
+          "at": [
+            88,
+            32
+          ],
+          "shadow": true
+        },
+        {
+          "source": "inputs/object-17.png",
+          "at": [
+            256,
+            32
+          ],
+          "shadow": true
+        },
+        {
+          "source": "inputs/object-6.png",
+          "at": [
+            228,
+            64
+          ],
+          "shadow": true
+        },
+        {
+          "source": "inputs/object-12.png",
+          "at": [
+            160,
+            64
+          ],
+          "shadow": false
+        },
+        {
+          "source": "inputs/object-9.png",
+          "at": [
+            214,
+            64
+          ],
+          "shadow": false
+        },
+        {
+          "source": "inputs/object-8.png",
+          "at": [
+            136,
+            64
+          ],
+          "shadow": false
+        },
+        {
+          "source": "inputs/object-3.png",
+          "at": [
+            208,
+            80
+          ],
+          "shadow": true
+        },
+        {
+          "source": "inputs/object-5.png",
+          "at": [
+            64,
+            80
+          ],
+          "shadow": true
+        },
+        {
+          "source": "inputs/object-0.png",
+          "at": [
+            256,
+            80
+          ],
+          "shadow": true
+        },
+        {
+          "source": "inputs/object-4.png",
+          "at": [
+            100,
+            84
+          ],
+          "shadow": true
+        },
+        {
+          "source": "inputs/object-8.png",
+          "at": [
+            0,
+            94
+          ],
+          "shadow": false,
+          "scattered": true
+        },
+        {
+          "source": "inputs/object-8.png",
+          "at": [
+            256,
+            96
+          ],
+          "shadow": false
+        },
+        {
+          "source": "inputs/object-14.png",
+          "at": [
+            32,
+            96
+          ],
+          "shadow": false
+        },
+        {
+          "source": "inputs/object-14.png",
+          "at": [
+            176,
+            96
+          ],
+          "shadow": false
+        },
+        {
+          "source": "inputs/object-2.png",
+          "at": [
+            144,
+            96
+          ],
+          "shadow": true
+        },
+        {
+          "source": "inputs/object-8.png",
+          "at": [
+            112,
+            96
+          ],
+          "shadow": false,
+          "scattered": true
+        },
+        {
+          "source": "inputs/object-1.png",
+          "at": [
+            16,
+            110
+          ]
+        },
+        {
+          "source": "inputs/object-1.png",
+          "at": [
+            32,
+            110
+          ]
+        },
+        {
+          "source": "inputs/object-1.png",
+          "at": [
+            48,
+            110
+          ]
+        },
+        {
+          "source": "inputs/object-17.png",
+          "at": [
+            288,
+            80
+          ],
+          "shadow": true
+        },
+        {
+          "source": "inputs/object-1.png",
+          "at": [
+            16,
+            126
+          ]
+        },
+        {
+          "source": "inputs/object-1.png",
+          "at": [
+            32,
+            126
+          ]
+        },
+        {
+          "source": "inputs/object-1.png",
+          "at": [
+            48,
+            126
+          ]
+        },
+        {
+          "source": "inputs/object-17.png",
+          "at": [
+            144,
+            96
+          ],
+          "shadow": true
+        },
+        {
+          "source": "inputs/object-11.png",
+          "at": [
+            304,
+            128
+          ],
+          "shadow": true
+        },
+        {
+          "source": "inputs/object-15.png",
+          "at": [
+            80,
+            112
+          ],
+          "depth": -8
+        },
+        {
+          "source": "inputs/object-1.png",
+          "at": [
+            16,
+            142
+          ]
+        },
+        {
+          "source": "inputs/object-1.png",
+          "at": [
+            32,
+            142
+          ]
+        },
+        {
+          "source": "inputs/object-1.png",
+          "at": [
+            48,
+            142
+          ]
+        },
+        {
+          "source": "inputs/object-17.png",
+          "at": [
+            176,
+            112
+          ],
+          "shadow": true
+        },
+        {
+          "source": "inputs/object-6.png",
+          "at": [
+            130,
+            144
+          ],
+          "shadow": true
+        },
+        {
+          "source": "inputs/object-8.png",
+          "at": [
+            112,
+            144
+          ],
+          "shadow": false,
+          "scattered": true
+        },
+        {
+          "source": "inputs/object-1.png",
+          "at": [
+            16,
+            158
+          ]
+        },
+        {
+          "source": "inputs/object-1.png",
+          "at": [
+            32,
+            158
+          ]
+        },
+        {
+          "source": "inputs/object-1.png",
+          "at": [
+            48,
+            158
+          ]
+        },
+        {
+          "source": "inputs/object-10.png",
+          "at": [
+            176,
+            160
+          ],
+          "shadow": false
+        },
+        {
+          "source": "inputs/object-17.png",
+          "at": [
+            -16,
+            144
+          ],
+          "shadow": true
+        },
+        {
+          "source": "inputs/object-13.png",
+          "at": [
+            66,
+            176
+          ],
+          "shadow": true
+        }
+      ]
+    }
+  ]
+}

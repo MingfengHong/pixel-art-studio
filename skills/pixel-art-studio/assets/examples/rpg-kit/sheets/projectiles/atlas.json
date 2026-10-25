@@ -1,0 +1,128 @@
+{
+  "format": "pixel-art-studio-atlas-v1",
+  "name": "projectiles",
+  "image": "atlas.png",
+  "canvas": [
+    16,
+    16
+  ],
+  "size": [
+    135,
+    16
+  ],
+  "padding": 1,
+  "frames": [
+    {
+      "name": "burst-a",
+      "rect": [
+        0,
+        0,
+        16,
+        16
+      ],
+      "duration_ms": 140,
+      "pivot": [
+        8,
+        8
+      ]
+    },
+    {
+      "name": "burst-b",
+      "rect": [
+        17,
+        0,
+        16,
+        16
+      ],
+      "duration_ms": 140,
+      "pivot": [
+        8,
+        8
+      ]
+    },
+    {
+      "name": "burst-c",
+      "rect": [
+        34,
+        0,
+        16,
+        16
+      ],
+      "duration_ms": 140,
+      "pivot": [
+        8,
+        8
+      ]
+    },
+    {
+      "name": "fireball-a",
+      "rect": [
+        51,
+        0,
+        16,
+        16
+      ],
+      "duration_ms": 140,
+      "pivot": [
+        8,
+        8
+      ]
+    },
+    {
+      "name": "fireball-b",
+      "rect": [
+        68,
+        0,
+        16,
+        16
+      ],
+      "duration_ms": 140,
+      "pivot": [
+        8,
+        8
+      ]
+    },
+    {
+      "name": "arrow",
+      "rect": [
+        85,
+        0,
+        16,
+        16
+      ],
+      "duration_ms": 140,
+      "pivot": [
+        8,
+        8
+      ]
+    },
+    {
+      "name": "spirit-a",
+      "rect": [
+        102,
+        0,
+        16,
+        16
+      ],
+      "duration_ms": 140,
+      "pivot": [
+        8,
+        8
+      ]
+    },
+    {
+      "name": "spirit-b",
+      "rect": [
+        119,
+        0,
+        16,
+        16
+      ],
+      "duration_ms": 140,
+      "pivot": [
+        8,
+        8
+      ]
+    }
+  ]
+}

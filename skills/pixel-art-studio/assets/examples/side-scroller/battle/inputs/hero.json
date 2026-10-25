@@ -1,0 +1,92 @@
+{
+ "version": 1,
+ "name": "hero",
+ "canvas": [
+  16,
+  16
+ ],
+ "pivot": [
+  8,
+  15
+ ],
+ "palette": {
+  "a": "#3f2631",
+  "s": "#f7c282",
+  "S": "#e19a65",
+  "e": "#262b44",
+  "M": "#68386c",
+  "m": "#b55088",
+  "y": "#feae34",
+  "O": "#2ce8f5",
+  "o": "#ffffff",
+  "w": "#c28569"
+ },
+ "frames": [
+  {
+   "name": "hero-stand",
+   "duration_ms": 400,
+   "rows": [
+    "......aa........",
+    ".....aMMa.......",
+    "....aMMmMa......",
+    "....aMMMMa...aa.",
+    "...aMMyMMMa.aOOa",
+    "..aMMMMMMMMaaOoa",
+    "aaaaaaaaaaaaaaOa",
+    ".aMMMMMMMMMMMawa",
+    "..aaaasssssaaawa",
+    "...aaMSssseaawa.",
+    "....aaSsssSaawa.",
+    "....aMMmMMMaswa.",
+    "....aMMmMMMaawa.",
+    "...aMMMmMMMMawa.",
+    "...aMMMmMMMMMaa.",
+    "...aaaaaaaaaaa.."
+   ]
+  },
+  {
+   "name": "hero-walk-a",
+   "duration_ms": 160,
+   "rows": [
+    "......aa........",
+    ".....aMMa.......",
+    "....aMMmMa......",
+    "....aMMMMa...aa.",
+    "...aMMyMMMa.aOOa",
+    "..aMMMMMMMMaaOoa",
+    "aaaaaaaaaaaaaaOa",
+    ".aMMMMMMMMMMMawa",
+    "..aaaasssssaaawa",
+    "...aaMSssseaawa.",
+    "....aaSsssSaawa.",
+    "....aMMmMMMaswa.",
+    "....aMMmMMMaawa.",
+    "...aMMMmMMMMawa.",
+    "...aMMMmMMMMMaa.",
+    "..aaaaaaaaaaa..."
+   ]
+  },
+  {
+   "name": "hero-walk-b",
+   "duration_ms": 160,
+   "rows": [
+    "......aa........",
+    ".....aMMa.......",
+    "....aMMmMa......",
+    "....aMMMMa...aa.",
+    "...aMMyMMMa.aOOa",
+    "..aMMMMMMMMaaOoa",
+    "aaaaaaaaaaaaaaOa",
+    ".aMMMMMMMMMMMawa",
+    "..aaaasssssaaawa",
+    "...aaMSssseaawa.",
+    "....aaSsssSaawa.",
+    "....aMMmMMMaswa.",
+    "....aMMmMMMaawa.",
+    "...aMMMmMMMMawa.",
+    "...aMMMmMMMMMaa.",
+    "....aaaaaaaaaaa."
+   ]
+  }
+ ]
+}

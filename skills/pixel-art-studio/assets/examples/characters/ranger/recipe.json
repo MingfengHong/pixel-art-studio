@@ -1,0 +1,25 @@
+{
+  "name": "ranger",
+  "parts": [
+    "cap",
+    "beard"
+  ],
+  "colors": {
+    "hair": "#985b3e",
+    "hair_shadow": "#623c32",
+    "skin": "#c68b65",
+    "skin_shadow": "#925c46",
+    "top": "#70a27a",
+    "top_shadow": "#426b59",
+    "pants": "#a37c51",
+    "pants_shadow": "#71583e",
+    "shoes": "#514036",
+    "cap": "#cf9558",
+    "cap_shadow": "#936338"
+  },
+  "timing_ms": {
+    "stand": 800,
+    "idle": 180,
+    "step": 140
+  }
+}

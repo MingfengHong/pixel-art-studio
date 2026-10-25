@@ -1,0 +1,707 @@
+{
+  "description": "Compact 16\u00d716 human template with role colors and per-view parts. Overlay strokes are [row, column, text]. '.' is transparent.",
+  "canvas": [
+    16,
+    16
+  ],
+  "pivot": [
+    8,
+    16
+  ],
+  "roles": {
+    "o": "ink",
+    "H": "hair",
+    "h": "hair_shadow",
+    "S": "skin",
+    "s": "skin_shadow",
+    "E": "eyes",
+    "T": "top",
+    "t": "top_shadow",
+    "P": "pants",
+    "p": "pants_shadow",
+    "F": "shoes",
+    "W": "glint",
+    "C": "cap",
+    "c": "cap_shadow",
+    "A": "apron",
+    "a": "apron_shadow"
+  },
+  "colors": {
+    "ink": "#302638",
+    "hair": "#aa6840",
+    "hair_shadow": "#70402f",
+    "skin": "#e8ad7c",
+    "skin_shadow": "#bf7853",
+    "eyes": "#302638",
+    "top": "#5c9c83",
+    "top_shadow": "#36656b",
+    "pants": "#667085",
+    "pants_shadow": "#454456",
+    "shoes": "#403344",
+    "glint": "#fff4db",
+    "cap": "#cf8750",
+    "cap_shadow": "#935339",
+    "apron": "#e6d6a9",
+    "apron_shadow": "#b69b79"
+  },
+  "views": {
+    "front": [
+      "................",
+      ".....oooooo.....",
+      "....ohHHHHho....",
+      "...ohHHHHHHho...",
+      "...oHHHSHHSHo...",
+      "...oHSSSSSSHo...",
+      "...oSSESSSESo...",
+      "...osSSSSSSso...",
+      "...oosSSSSsoo...",
+      "...ooTTSSTToo...",
+      "...oTTTTTTTTo...",
+      "..oSStTTTTtSSo..",
+      "..oSSoTTTToSSo..",
+      "..oooPPPPPPooo..",
+      "....opPooPpo....",
+      "....oFFooFFo...."
+    ],
+    "back": [
+      "................",
+      ".....oooooo.....",
+      "....ohHHHHho....",
+      "...ohHHHHHHho...",
+      "...oHHHHHHHHo...",
+      "...oHHHHHHHHo...",
+      "...oHHHHHHHHo...",
+      "...ohHHHHHHho...",
+      "...oohhhhhhoo...",
+      "...ootTTTTtoo...",
+      "...oTTTTTTTTo...",
+      "..oSStTTTTtSSo..",
+      "..oSSoTTTToSSo..",
+      "..oooPPPPPPooo..",
+      "....opPooPpo....",
+      "....oFFooFFo...."
+    ],
+    "right": [
+      "................",
+      ".....oooooo.....",
+      "....ohHHHHho....",
+      "....oHHHHHHHo...",
+      "....oHHHHSSSo...",
+      "....oHHHSSSSSo..",
+      "....ohHHSSSESo..",
+      "....ohHHsSSSoo..",
+      ".....ohhssssoo..",
+      ".....ootTTToo...",
+      "....ootTTTTTo...",
+      "....otTSSTTTo...",
+      "....otTSSTTTo...",
+      "....ooPPPPoo....",
+      ".....opPooPpo...",
+      ".....oFFooFFo..."
+    ],
+    "front-right": [
+      "................",
+      ".....oooooo.....",
+      "....ohHHHHho....",
+      "...ohHHHHHHho...",
+      "...oHHHSHHHHo...",
+      "...oHSSSSSSSo...",
+      "...oSSSESSSEo...",
+      "...ohsSSSSSso...",
+      "...oohsSSSsoo...",
+      "....otTSSTToo...",
+      "...ootTTTTTTo...",
+      "..ooSStTTTTto...",
+      "..ooSSoTTTToo...",
+      "..oooPPPPPPoo...",
+      "....opPooPpo....",
+      "....oFFooFFo...."
+    ],
+    "back-right": [
+      "................",
+      ".....oooooo.....",
+      "....ohHHHHho....",
+      "...ohHHHHHHho...",
+      "...oHHHHHHHHo...",
+      "...oHHHHHHHHo...",
+      "...oHHHHHHHSo...",
+      "...ohHHHHHsso...",
+      "...oohhhhhhso...",
+      "....otTTTTToo...",
+      "...ootTTTTTTo...",
+      "..ooSStTTTTto...",
+      "..ooSSoTTTToo...",
+      "..oooPPPPPPoo...",
+      "....opPooPpo....",
+      "....oFFooFFo...."
+    ]
+  },
+  "parts": {
+    "glasses": {
+      "front": [
+        [
+          6,
+          5,
+          "oWoooWo"
+        ]
+      ],
+      "right": [
+        [
+          6,
+          10,
+          "oWo"
+        ]
+      ],
+      "front-right": [
+        [
+          6,
+          6,
+          "oWoooWo"
+        ]
+      ],
+      "back-right": []
+    },
+    "long-hair": {
+      "front": [
+        [
+          8,
+          3,
+          "oh"
+        ],
+        [
+          8,
+          11,
+          "ho"
+        ],
+        [
+          9,
+          3,
+          "oh"
+        ],
+        [
+          9,
+          11,
+          "ho"
+        ],
+        [
+          10,
+          3,
+          "oh"
+        ],
+        [
+          10,
+          11,
+          "ho"
+        ]
+      ],
+      "back": [
+        [
+          9,
+          5,
+          "hHHHHh"
+        ],
+        [
+          10,
+          5,
+          "hhHHhh"
+        ],
+        [
+          11,
+          6,
+          "hhhh"
+        ]
+      ],
+      "right": [
+        [
+          8,
+          5,
+          "ohh"
+        ],
+        [
+          9,
+          5,
+          "ohh"
+        ],
+        [
+          10,
+          5,
+          "ohh"
+        ]
+      ],
+      "front-right": [
+        [
+          8,
+          3,
+          "oh"
+        ],
+        [
+          8,
+          11,
+          "ho"
+        ],
+        [
+          9,
+          3,
+          "oh"
+        ],
+        [
+          9,
+          11,
+          "ho"
+        ],
+        [
+          10,
+          3,
+          "oh"
+        ],
+        [
+          10,
+          11,
+          "ho"
+        ]
+      ],
+      "back-right": [
+        [
+          9,
+          5,
+          "hHHHHh"
+        ],
+        [
+          10,
+          5,
+          "hhHHhh"
+        ],
+        [
+          11,
+          6,
+          "hhhh"
+        ]
+      ]
+    },
+    "beard": {
+      "front": [
+        [
+          7,
+          5,
+          "hSSSSh"
+        ],
+        [
+          8,
+          5,
+          "hhhhhh"
+        ]
+      ],
+      "right": [
+        [
+          7,
+          9,
+          "hhh"
+        ],
+        [
+          8,
+          8,
+          "hhhh"
+        ]
+      ],
+      "front-right": [
+        [
+          7,
+          5,
+          "hSSSSh"
+        ],
+        [
+          8,
+          5,
+          "hhhhhh"
+        ]
+      ],
+      "back-right": []
+    },
+    "cap": {
+      "front": [
+        [
+          2,
+          4,
+          "ocCCCCco"
+        ],
+        [
+          3,
+          3,
+          "ocCCCCCCco"
+        ],
+        [
+          4,
+          3,
+          "oooooooooo"
+        ]
+      ],
+      "back": [
+        [
+          2,
+          4,
+          "ocCCCCco"
+        ],
+        [
+          3,
+          3,
+          "ocCCCCCCco"
+        ],
+        [
+          4,
+          4,
+          "cccccccc"
+        ]
+      ],
+      "right": [
+        [
+          2,
+          4,
+          "ocCCCCco"
+        ],
+        [
+          3,
+          4,
+          "oCCCCCCco"
+        ],
+        [
+          4,
+          4,
+          "ocCCCCCCCCo"
+        ]
+      ],
+      "front-right": [
+        [
+          2,
+          4,
+          "ocCCCCco"
+        ],
+        [
+          3,
+          3,
+          "ocCCCCCCco"
+        ],
+        [
+          4,
+          3,
+          "oooooooooo"
+        ]
+      ],
+      "back-right": [
+        [
+          2,
+          4,
+          "ocCCCCco"
+        ],
+        [
+          3,
+          3,
+          "ocCCCCCCco"
+        ],
+        [
+          4,
+          4,
+          "cccccccc"
+        ]
+      ]
+    },
+    "coat": {
+      "front": [
+        [
+          10,
+          7,
+          "tTT"
+        ],
+        [
+          11,
+          8,
+          "t"
+        ],
+        [
+          12,
+          8,
+          "t"
+        ],
+        [
+          13,
+          5,
+          "tTTtTt"
+        ]
+      ],
+      "back": [
+        [
+          12,
+          6,
+          "TTTT"
+        ],
+        [
+          13,
+          5,
+          "tTTTTt"
+        ]
+      ],
+      "right": [
+        [
+          11,
+          10,
+          "t"
+        ],
+        [
+          12,
+          10,
+          "t"
+        ],
+        [
+          13,
+          6,
+          "tTTTt"
+        ]
+      ],
+      "front-right": [
+        [
+          10,
+          7,
+          "tTT"
+        ],
+        [
+          11,
+          8,
+          "t"
+        ],
+        [
+          12,
+          8,
+          "t"
+        ],
+        [
+          13,
+          5,
+          "tTTtTt"
+        ]
+      ],
+      "back-right": [
+        [
+          12,
+          6,
+          "TTTT"
+        ],
+        [
+          13,
+          5,
+          "tTTTTt"
+        ]
+      ]
+    },
+    "apron": {
+      "front": [
+        [
+          10,
+          6,
+          "AAAA"
+        ],
+        [
+          11,
+          5,
+          "AAAAAA"
+        ],
+        [
+          12,
+          6,
+          "AAAA"
+        ],
+        [
+          13,
+          5,
+          "aAAAAa"
+        ]
+      ],
+      "back": [
+        [
+          12,
+          6,
+          "aaaa"
+        ]
+      ],
+      "right": [
+        [
+          10,
+          10,
+          "AA"
+        ],
+        [
+          11,
+          10,
+          "AA"
+        ],
+        [
+          12,
+          10,
+          "AA"
+        ],
+        [
+          13,
+          10,
+          "aa"
+        ]
+      ],
+      "front-right": [
+        [
+          10,
+          6,
+          "AAAA"
+        ],
+        [
+          11,
+          5,
+          "AAAAAA"
+        ],
+        [
+          12,
+          6,
+          "AAAA"
+        ],
+        [
+          13,
+          5,
+          "aAAAAa"
+        ]
+      ],
+      "back-right": [
+        [
+          12,
+          6,
+          "aaaa"
+        ]
+      ]
+    }
+  },
+  "idle_band": [
+    0,
+    13
+  ],
+  "steps": {
+    "walk-a": {
+      "front": [
+        [
+          14,
+          9,
+          "FF"
+        ],
+        [
+          15,
+          9,
+          "oo"
+        ]
+      ],
+      "back": [
+        [
+          14,
+          9,
+          "FF"
+        ],
+        [
+          15,
+          9,
+          "oo"
+        ]
+      ],
+      "right": [
+        [
+          14,
+          10,
+          "FF"
+        ],
+        [
+          15,
+          10,
+          "oo"
+        ]
+      ],
+      "front-right": [
+        [
+          14,
+          9,
+          "FF"
+        ],
+        [
+          15,
+          9,
+          "oo"
+        ]
+      ],
+      "back-right": [
+        [
+          14,
+          9,
+          "FF"
+        ],
+        [
+          15,
+          9,
+          "oo"
+        ]
+      ]
+    },
+    "walk-b": {
+      "front": [
+        [
+          14,
+          5,
+          "FF"
+        ],
+        [
+          15,
+          5,
+          "oo"
+        ]
+      ],
+      "back": [
+        [
+          14,
+          5,
+          "FF"
+        ],
+        [
+          15,
+          5,
+          "oo"
+        ]
+      ],
+      "right": [
+        [
+          14,
+          6,
+          "FF"
+        ],
+        [
+          15,
+          6,
+          "oo"
+        ]
+      ],
+      "front-right": [
+        [
+          14,
+          5,
+          "FF"
+        ],
+        [
+          15,
+          5,
+          "oo"
+        ]
+      ],
+      "back-right": [
+        [
+          14,
+          5,
+          "FF"
+        ],
+        [
+          15,
+          5,
+          "oo"
+        ]
+      ]
+    }
+  }
+}

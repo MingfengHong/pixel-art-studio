@@ -1,0 +1,91 @@
+{
+  "version": 1,
+  "name": "potion-variants",
+  "canvas": [
+    16,
+    16
+  ],
+  "pivot": [
+    8,
+    16
+  ],
+  "palette": {
+    "a": "#2582c4ff",
+    "b": "#3f2631ff",
+    "c": "#8062bdff",
+    "d": "#8b9bb4ff",
+    "e": "#8fe6ffff",
+    "f": "#bd6c4aff",
+    "g": "#c0cbdcff",
+    "h": "#d0b8ffff",
+    "i": "#eaa56cff"
+  },
+  "frames": [
+    {
+      "name": "original",
+      "duration_ms": 100,
+      "rows": [
+        "................",
+        "................",
+        ".....bbbbbb.....",
+        "....bbbbbbbb....",
+        "....bbfiifbb....",
+        "....bbfiifbb....",
+        "....bbbddbbb....",
+        "....bbbggbbb....",
+        "...bbbggggbbb...",
+        "...bbdggggdbb...",
+        "...bbddddddbb...",
+        "...bbddddddbb...",
+        "...bbbddddbbb...",
+        "....bbbbbbbb....",
+        ".....bbbbbb.....",
+        "................"
+      ]
+    },
+    {
+      "name": "azure",
+      "duration_ms": 100,
+      "rows": [
+        "................",
+        "................",
+        ".....bbbbbb.....",
+        "....bbbbbbbb....",
+        "....bbfiifbb....",
+        "....bbfiifbb....",
+        "....bbbaabbb....",
+        "....bbbeebbb....",
+        "...bbbeeeebbb...",
+        "...bbaeeeeabb...",
+        "...bbaaaaaabb...",
+        "...bbaaaaaabb...",
+        "...bbbaaaabbb...",
+        "....bbbbbbbb....",
+        ".....bbbbbb.....",
+        "................"
+      ]
+    },
+    {
+      "name": "violet",
+      "duration_ms": 100,
+      "rows": [
+        "................",
+        "................",
+        ".....bbbbbb.....",
+        "....bbbbbbbb....",
+        "....bbfiifbb....",
+        "....bbfiifbb....",
+        "....bbbccbbb....",
+        "....bbbhhbbb....",
+        "...bbbhhhhbbb...",
+        "...bbchhhhcbb...",
+        "...bbccccccbb...",
+        "...bbccccccbb...",
+        "...bbbccccbbb...",
+        "....bbbbbbbb....",
+        ".....bbbbbb.....",
+        "................"
+      ]
+    }
+  ]
+}

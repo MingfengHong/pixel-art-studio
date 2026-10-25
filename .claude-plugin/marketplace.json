@@ -1,0 +1,31 @@
+{
+  "name": "pixel-art-studio",
+  "owner": {
+    "name": "Hong Mingfeng"
+  },
+  "metadata": {
+    "description": "Pixel art sprites, tilesets, scenes, game UI, and animation for coding agents"
+  },
+  "plugins": [
+    {
+      "name": "pixel-art-studio",
+      "description": "Create cohesive pixel art characters, props, tiles, scenes, game UI, and animation frames with editable sources and PNG atlases",
+      "source": "./",
+      "strict": false,
+      "license": "MIT",
+      "homepage": "https://github.com/MingfengHong/pixel-art-studio",
+      "keywords": [
+        "pixel-art",
+        "sprites",
+        "tileset",
+        "game-assets",
+        "game-ui",
+        "animation"
+      ],
+      "category": "design",
+      "skills": [
+        "./skills/pixel-art-studio"
+      ]
+    }
+  ]
+}

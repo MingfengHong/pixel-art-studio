@@ -1,0 +1,159 @@
+{
+ "version": 1,
+ "name": "monsters",
+ "canvas": [
+  16,
+  16
+ ],
+ "pivot": [
+  8,
+  16
+ ],
+ "palette": {
+  "o": "#241a2b",
+  "W": "#ffffff",
+  "L": "#b6f07a",
+  "G": "#6cc94e",
+  "D": "#3f9447",
+  "K": "#26613a",
+  "V": "#9b6ad6",
+  "X": "#6a3fa6",
+  "Y": "#c9a3f0",
+  "R": "#ff5a5a",
+  "F": "#ffe9e9"
+ },
+ "frames": [
+  {
+   "name": "slime-a",
+   "duration_ms": 220,
+   "rows": [
+    "................",
+    "................",
+    "................",
+    "................",
+    "................",
+    "......oooo......",
+    "....ooLLGGoo....",
+    "...oLLWLGGGGo...",
+    "..oLLGGGGGGGDo..",
+    "..oLGGoGGoGGDo..",
+    ".oLGGGoGGoGGDDo.",
+    ".oGGGGGGGGGGDDo.",
+    ".oGGGGGKKGGGDDo.",
+    ".oDGGGGGGGGDDKo.",
+    "..oKKKKKKKKKKo..",
+    "...oooooooooo..."
+   ]
+  },
+  {
+   "name": "slime-b",
+   "duration_ms": 220,
+   "rows": [
+    "................",
+    "................",
+    "................",
+    "................",
+    "................",
+    "................",
+    "................",
+    ".....oooooo.....",
+    "...ooLLLGGGoo...",
+    "..oLLWLGGGGGGo..",
+    ".oLLGGoGGoGGGDo.",
+    "oLGGGGoGGoGGGDDo",
+    "oGGGGGGKKGGGGDDo",
+    "oDGGGGGGGGGGDDKo",
+    ".oKKKKKKKKKKKKo.",
+    "..oooooooooooo.."
+   ]
+  },
+  {
+   "name": "slime-hurt",
+   "duration_ms": 220,
+   "rows": [
+    "................",
+    "................",
+    "................",
+    "................",
+    "................",
+    "......oooo......",
+    "....ooFFFFoo....",
+    "...oFFWFFFFFo...",
+    "..oFFLLLLLLLLo..",
+    "..oFLooLLooLLo..",
+    ".oFLLLLLLLLLLLo.",
+    ".oLLLLLoooLLLLo.",
+    ".oLLLLLLLLLLLLo.",
+    ".oGLLLLLLLLLLGo.",
+    "..oGGGGGGGGGGo..",
+    "...oooooooooo..."
+   ]
+  },
+  {
+   "name": "bat-a",
+   "duration_ms": 220,
+   "rows": [
+    "................",
+    "................",
+    ".oo..........oo.",
+    ".oXo........oXo.",
+    ".oXXo..oo..oXXo.",
+    ".oXVXooVVooXVXo.",
+    "..oXVVYVVVVVXo..",
+    "..oXVVoVVoVVXo..",
+    "...oVVRVVRVVo...",
+    "...ooVVVVVVoo...",
+    ".....oVWWVo.....",
+    "......oooo......",
+    "................",
+    "................",
+    "................",
+    "................"
+   ]
+  },
+  {
+   "name": "bat-b",
+   "duration_ms": 220,
+   "rows": [
+    "................",
+    "................",
+    "................",
+    "................",
+    ".......oo.......",
+    ".....ooVVoo.....",
+    "....oVYVVVVo....",
+    "..ooXVoVVoVXoo..",
+    ".oXXVVRVVRVVXXo.",
+    "oXVXoVVVVVVoXVXo",
+    "oXo.ooVWWVoo.oXo",
+    "oo....oooo....oo",
+    "................",
+    "................",
+    "................",
+    "................"
+   ]
+  },
+  {
+   "name": "bat-hurt",
+   "duration_ms": 220,
+   "rows": [
+    "................",
+    "................",
+    "................",
+    "................",
+    ".......oo.......",
+    ".....ooFFoo.....",
+    "....oFFFFFFo....",
+    "..ooYFoFFoFYoo..",
+    ".oYYFFFFFFFFYYo.",
+    "oYFYoFFooFFoYFYo",
+    "oYo.ooFFFFoo.oYo",
+    "oo....oooo....oo",
+    "................",
+    "................",
+    "................",
+    "................"
+   ]
+  }
+ ]
+}

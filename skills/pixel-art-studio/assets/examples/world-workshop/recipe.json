@@ -1,0 +1,337 @@
+{
+  "name": "river-town",
+  "tile_size": 16,
+  "seed": 5,
+  "map": [
+    "gggggggggggggggggggg",
+    "gggggggggggggggggggg",
+    "gggggggggggggggggggg",
+    "gggggggggggggggggggg",
+    "ggggggggggggpggggggg",
+    "pppppppppppppppppppp",
+    "gggggggggpgggggggggg",
+    "gfffgggggpgggggggggg",
+    "gfffgggggpgggggwwwwg",
+    "gfffgggggpggggwwwwww",
+    "gfffggpggpggggwwwwww",
+    "ggggggpggpgggggwwwwg"
+  ],
+  "objects": [
+    {
+      "source": "town.json#well",
+      "at": [
+        88,
+        32
+      ],
+      "shadow": true
+    },
+    {
+      "source": "town.json#shop",
+      "at": [
+        176,
+        32
+      ],
+      "depth": -8
+    },
+    {
+      "source": "town.json#house-blue",
+      "at": [
+        80,
+        112
+      ],
+      "depth": -8
+    },
+    {
+      "source": "town.json#tree",
+      "at": [
+        112,
+        0
+      ],
+      "shadow": true
+    },
+    {
+      "source": "town.json#tree",
+      "at": [
+        224,
+        16
+      ],
+      "shadow": true
+    },
+    {
+      "source": "town.json#tree",
+      "at": [
+        256,
+        32
+      ],
+      "shadow": true
+    },
+    {
+      "source": "town.json#tree",
+      "at": [
+        144,
+        96
+      ],
+      "shadow": true
+    },
+    {
+      "source": "town.json#tree",
+      "at": [
+        176,
+        112
+      ],
+      "shadow": true
+    },
+    {
+      "source": "town.json#tree",
+      "at": [
+        288,
+        80
+      ],
+      "shadow": true
+    },
+    {
+      "source": "town.json#tree",
+      "at": [
+        -16,
+        144
+      ],
+      "shadow": true
+    },
+    {
+      "source": "town.json#tree",
+      "at": [
+        48,
+        16
+      ],
+      "shadow": true
+    },
+    {
+      "source": "../side-scroller/props.json#crate",
+      "at": [
+        226,
+        48
+      ],
+      "shadow": true
+    },
+    {
+      "source": "../side-scroller/props.json#barrel",
+      "at": [
+        228,
+        64
+      ],
+      "shadow": true
+    },
+    {
+      "source": "../side-scroller/props.json#sign",
+      "at": [
+        160,
+        64
+      ],
+      "shadow": false
+    },
+    {
+      "source": "../side-scroller/props.json#lantern",
+      "at": [
+        214,
+        64
+      ],
+      "shadow": false
+    },
+    {
+      "source": "../side-scroller/props.json#barrel",
+      "at": [
+        130,
+        144
+      ],
+      "shadow": true
+    },
+    {
+      "source": "../side-scroller/props.json#mushrooms",
+      "at": [
+        176,
+        160
+      ],
+      "shadow": false
+    },
+    {
+      "source": "../side-scroller/props.json#flowers",
+      "at": [
+        136,
+        64
+      ],
+      "shadow": false
+    },
+    {
+      "source": "../side-scroller/props.json#flowers",
+      "at": [
+        256,
+        96
+      ],
+      "shadow": false
+    },
+    {
+      "source": "../side-scroller/props.json#tuft",
+      "at": [
+        32,
+        96
+      ],
+      "shadow": false
+    },
+    {
+      "source": "../side-scroller/props.json#tuft",
+      "at": [
+        176,
+        96
+      ],
+      "shadow": false
+    },
+    {
+      "source": "../side-scroller/props.json#rock",
+      "at": [
+        304,
+        128
+      ],
+      "shadow": true
+    },
+    {
+      "source": "../side-scroller/props.json#stump",
+      "at": [
+        66,
+        176
+      ],
+      "shadow": true
+    },
+    {
+      "source": "../rpg-kit/items.json#herb",
+      "at": [
+        16,
+        110
+      ]
+    },
+    {
+      "source": "../rpg-kit/items.json#herb",
+      "at": [
+        32,
+        110
+      ]
+    },
+    {
+      "source": "../rpg-kit/items.json#herb",
+      "at": [
+        48,
+        110
+      ]
+    },
+    {
+      "source": "../rpg-kit/items.json#herb",
+      "at": [
+        16,
+        126
+      ]
+    },
+    {
+      "source": "../rpg-kit/items.json#herb",
+      "at": [
+        32,
+        126
+      ]
+    },
+    {
+      "source": "../rpg-kit/items.json#herb",
+      "at": [
+        48,
+        126
+      ]
+    },
+    {
+      "source": "../rpg-kit/items.json#herb",
+      "at": [
+        16,
+        142
+      ]
+    },
+    {
+      "source": "../rpg-kit/items.json#herb",
+      "at": [
+        32,
+        142
+      ]
+    },
+    {
+      "source": "../rpg-kit/items.json#herb",
+      "at": [
+        48,
+        142
+      ]
+    },
+    {
+      "source": "../rpg-kit/items.json#herb",
+      "at": [
+        16,
+        158
+      ]
+    },
+    {
+      "source": "../rpg-kit/items.json#herb",
+      "at": [
+        32,
+        158
+      ]
+    },
+    {
+      "source": "../rpg-kit/items.json#herb",
+      "at": [
+        48,
+        158
+      ]
+    },
+    {
+      "source": "../rpg-kit/mage.json#down-stand",
+      "at": [
+        144,
+        96
+      ],
+      "shadow": true
+    },
+    {
+      "source": "../rpg-kit/merchant.json#right-stand",
+      "at": [
+        208,
+        80
+      ],
+      "shadow": true
+    },
+    {
+      "source": "../rpg-kit/warrior.json#down-stand",
+      "at": [
+        64,
+        80
+      ],
+      "shadow": true
+    },
+    {
+      "source": "../rpg-kit/archer.json#up-stand",
+      "at": [
+        256,
+        80
+      ],
+      "shadow": true
+    },
+    {
+      "source": "../rpg-kit/summoner.json#down-stand",
+      "at": [
+        100,
+        84
+      ],
+      "shadow": true
+    }
+  ],
+  "scatter": [
+    {
+      "source": "../side-scroller/props.json#flowers",
+      "count": 6,
+      "on": "g",
+      "seed": 9
+    }
+  ]
+}

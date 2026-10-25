@@ -1,0 +1,45 @@
+{
+  "name": "enchanted-potion",
+  "source": "original.png",
+  "operations": [
+    {
+      "op": "remove-background",
+      "color": "#efe3c8"
+    },
+    {
+      "op": "recolor",
+      "map": {
+        "#c0cbdc": "#e1a1ef",
+        "#8b9bb4": "#9f61c1"
+      }
+    },
+    {
+      "op": "outline",
+      "color": "#3d244f",
+      "width": 1
+    },
+    {
+      "op": "extend",
+      "size": [
+        32,
+        32
+      ],
+      "at": [
+        4,
+        4
+      ]
+    },
+    {
+      "op": "patch",
+      "source": "input-4-source.png",
+      "at": [
+        24,
+        3
+      ]
+    },
+    {
+      "op": "reduce-colors",
+      "colors": 12
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "format": "teaching-tile-layout-v1",
+  "tile_size": 16,
+  "columns": 7,
+  "rows": 5,
+  "pack": "Kenney Tiny Town 1.1",
+  "tile_path": "../../kenney/tiny-town/tile_NNNN.png",
+  "index_note": "Zero-based filename numbers, not spaced-sheet pixel coordinates.",
+  "layers": [
+    {"name": "ground", "tiles": [[0,0,0,0,0,0,0],[0,0,0,0,0,0,0],[0,0,12,13,14,0,0],[0,0,24,25,26,0,0],[0,0,36,37,38,0,0]]},
+    {"name": "objects", "tiles": [[4,null,48,49,50,null,null],[16,null,60,61,62,null,null],[null,null,72,74,75,null,4],[null,null,null,null,null,null,16],[null,null,null,null,null,null,null]]}
+  ]
+}

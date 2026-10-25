@@ -1,0 +1,24 @@
+{
+  "name": "researcher",
+  "parts": [
+    "long-hair",
+    "coat",
+    "glasses"
+  ],
+  "colors": {
+    "hair": "#66719a",
+    "hair_shadow": "#3e466c",
+    "skin": "#edb88e",
+    "skin_shadow": "#c48268",
+    "top": "#e0edf0",
+    "top_shadow": "#8daabb",
+    "pants": "#65627d",
+    "pants_shadow": "#454359",
+    "shoes": "#373345"
+  },
+  "timing_ms": {
+    "stand": 700,
+    "idle": 180,
+    "step": 160
+  }
+}

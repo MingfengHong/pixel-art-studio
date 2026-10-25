@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "name": "outline-free-beacon",
+  "canvas": [8, 8],
+  "pivot": [4, 8],
+  "palette": {"a": "#f2edd7", "b": "#8fb9a8", "c": "#3a6b73"},
+  "frames": [
+    {"name": "rest", "duration_ms": 400, "rows": ["........", "...bb...", "..baab..", ".baaaab.", "..baab..", "...cc...", "..cccc..", "........"]},
+    {"name": "pulse", "duration_ms": 200, "rows": ["...aa...", "..abba..", ".abaaaba", "abaaaaab", ".abaaaba", "..acca..", "..cccc..", "........"]}
+  ]
+}
